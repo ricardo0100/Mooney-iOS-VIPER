@@ -16,8 +16,12 @@ class AccountsPresenter: AccountsModuleInput, AccountsViewOutput, AccountsIntera
         interactor.showAccountsList()
     }
     
-    func show(_ accounts: [String]) {
-        view.show(accounts)
+    func presentAccountsList() {
+        
+    }
+    
+    func presentBlankstate() {
+        
     }
     
 }

@@ -20,7 +20,6 @@ class AccountsViewController: UITableViewController, AccountsViewInput {
         output.viewIsReady()
     }
 
-
     // MARK: AccountsViewInput
     func setupInitialState() {
     }
@@ -30,6 +29,7 @@ class AccountsViewController: UITableViewController, AccountsViewInput {
         tableView.reloadData()
     }
     
+    // MARK: UITableViewDataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return accounts.count
     }

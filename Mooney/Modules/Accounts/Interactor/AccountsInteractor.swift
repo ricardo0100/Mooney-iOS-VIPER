@@ -11,7 +11,7 @@ class AccountsInteractor: AccountsInteractorInput {
     weak var output: AccountsInteractorOutput!
 
     func showAccountsList() {
-        output.show(["Hey 1", "Hey 2"])
+        output.presentBlankstate()
     }
     
 }
