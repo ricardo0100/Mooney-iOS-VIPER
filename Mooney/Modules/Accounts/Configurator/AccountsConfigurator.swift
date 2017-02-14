@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DATAStack
 
 class AccountsModuleConfigurator {
 
@@ -25,7 +26,7 @@ class AccountsModuleConfigurator {
         presenter.view = viewController
         presenter.router = router
 
-        let interactor = AccountsInteractor()
+        let interactor = AccountsInteractor(dataStack: DATAStack(modelName: "MooneyDataModel"))
         interactor.output = presenter
 
         presenter.interactor = interactor

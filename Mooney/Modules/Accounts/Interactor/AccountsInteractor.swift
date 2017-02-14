@@ -6,11 +6,19 @@
 //  Copyright © 2017 ricardofilho.com.br. All rights reserved.
 //
 
-class AccountsInteractor: AccountsInteractorInput {
+import DATAStack
+
+class AccountsInteractor: AccountsInteractorInput, DatabaseAccessable {
 
     weak var output: AccountsInteractorOutput!
-
-    func showAccountsList() {
+    
+    var dataStack: DATAStack
+    
+    required init(dataStack: DATAStack) {
+        self.dataStack = dataStack
+    }
+    
+    func fetchAccountsList() {
         output.presentBlankstate()
     }
     

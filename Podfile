@@ -1,4 +1,15 @@
-target 'Mooney'
+def shared_pods
+    pod 'Sync', '~> 2'
+end
 
 use_frameworks!
-pod 'Sync', '~> 2'
+
+target 'Mooney' do
+    shared_pods
+end
+
+target 'MooneyTests' do
+    shared_pods
+end
+
+

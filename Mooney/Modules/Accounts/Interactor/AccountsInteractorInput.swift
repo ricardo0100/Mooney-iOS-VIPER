@@ -10,6 +10,6 @@ import Foundation
 
 protocol AccountsInteractorInput {
     
-    func showAccountsList()
-
+    func fetchAccountsList()
+    
 }

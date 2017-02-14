@@ -10,7 +10,7 @@ import Foundation
 
 protocol AccountsInteractorOutput: class {
     
-    func presentAccountsList()
+    func presentListWith(_ accounts: [Account])
 
     func presentBlankstate()
     

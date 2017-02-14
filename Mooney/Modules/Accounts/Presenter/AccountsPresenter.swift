@@ -13,15 +13,15 @@ class AccountsPresenter: AccountsModuleInput, AccountsViewOutput, AccountsIntera
     var router: AccountsRouterInput!
 
     func viewIsReady() {
-        interactor.showAccountsList()
+        interactor.fetchAccountsList()
     }
     
-    func presentAccountsList() {
-        
+    func presentListWith(_ accounts: [Account]) {
+        view.show(accounts)
     }
     
     func presentBlankstate() {
-        
+        view.showBlankstate()
     }
     
 }

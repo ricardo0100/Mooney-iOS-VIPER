@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import DATAStack
 
 @testable import Mooney
 
@@ -16,7 +17,7 @@ class AccountsInteractorTests: XCTestCase {
     var presenter: AccountsInteractorOutputDouble!
     
     override func setUp() {
-        interactor = AccountsInteractor()
+        interactor = AccountsInteractor(dataStack: DATAStack(modelName: "MooneyDataModel", storeType: .inMemory))
         presenter = AccountsInteractorOutputDouble()
         interactor.output = presenter
     }
@@ -24,6 +25,9 @@ class AccountsInteractorTests: XCTestCase {
     func testEmptyList() {
         interactor.showAccountsList()
         XCTAssertTrue(presenter.didPresentBlankstate)
+        XCTAssertEqual(presenter.accountsList.count, 0)
     }
+    
+    
     
 }

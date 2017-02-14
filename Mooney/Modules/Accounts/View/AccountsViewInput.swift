@@ -15,6 +15,8 @@ protocol AccountsViewInput: class {
 
     func setupInitialState()
     
-    func show(_ accounts: [String])
+    func show(_ accounts: [Account])
+    
+    func showBlankstate()
     
 }

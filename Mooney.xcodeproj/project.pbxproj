@@ -13,6 +13,7 @@
 		4C19A4184E6525FA081825AF /* AccountsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C957B0B6BAE8F361E371B90 /* AccountsPresenter.swift */; };
 		4DD41698DF996DD6A810E900 /* AccountsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D05085117B7731C9943A79A /* AccountsConfigurator.swift */; };
 		55E56D2D1E375AC46615AA02 /* AccountsInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7BE38D58F09F7C2CB9D8F2 /* AccountsInitializer.swift */; };
+		59B478334087C8A43FE443D3 /* Pods_MooneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE132653747F687A6C542A5E /* Pods_MooneyTests.framework */; };
 		75520A693C414B2895D83C81 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2290134312CE525414E795F /* AccountsViewController.swift */; };
 		76DA6E0059B74612C98B67D8 /* Pods_Mooney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F2839BE0688212E6F645AB /* Pods_Mooney.framework */; };
 		B4FDC621A426E695859A9BA8 /* AccountsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EDE6634C27E599EF38EBB5 /* AccountsViewInput.swift */; };
@@ -23,7 +24,7 @@
 		BA91009A1E50717C0006CAD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9100951E50717C0006CAD3 /* LaunchScreen.storyboard */; };
 		BA9100A71E50A4E10006CAD3 /* Accounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9100A61E50A4E10006CAD3 /* Accounts.storyboard */; };
 		BA9100AA1E5149B70006CAD3 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9100A91E5149B70006CAD3 /* Menu.storyboard */; };
-		BA9100AE1E514E250006CAD3 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9100AD1E514E250006CAD3 /* Database.swift */; };
+		BA9100AE1E514E250006CAD3 /* DatabaseAccessable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9100AD1E514E250006CAD3 /* DatabaseAccessable.swift */; };
 		BA9100B01E514E300006CAD3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9100AF1E514E300006CAD3 /* API.swift */; };
 		BAA71F011E5264C6009DB223 /* MooneyDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAA71EFF1E5264C6009DB223 /* MooneyDataModel.xcdatamodeld */; };
 		BAF142151E5334E4007C508B /* AccountsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF142141E5334E4007C508B /* AccountsInteractorTests.swift */; };
@@ -54,6 +55,7 @@
 		7283DAA7DBD4389FA3E6B928 /* AccountsViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsViewOutput.swift; sourceTree = "<group>"; };
 		73F86B07C74A91892363803C /* AccountsModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsModuleInput.swift; sourceTree = "<group>"; };
 		8D05085117B7731C9943A79A /* AccountsConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsConfigurator.swift; sourceTree = "<group>"; };
+		A35E3174360B94147366C779 /* Pods-MooneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MooneyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MooneyTests/Pods-MooneyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2290134312CE525414E795F /* AccountsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		BA145A321E5319B200358AE5 /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BA145A331E5319B200358AE5 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -64,18 +66,20 @@
 		BA9100961E50717C0006CAD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA9100A61E50A4E10006CAD3 /* Accounts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Accounts.storyboard; sourceTree = "<group>"; };
 		BA9100A91E5149B70006CAD3 /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
-		BA9100AD1E514E250006CAD3 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		BA9100AD1E514E250006CAD3 /* DatabaseAccessable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseAccessable.swift; sourceTree = "<group>"; };
 		BA9100AF1E514E300006CAD3 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		BAA71F001E5264C6009DB223 /* MooneyDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MooneyDataModel.xcdatamodel; sourceTree = "<group>"; };
 		BAF142121E5334E3007C508B /* MooneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MooneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF142141E5334E4007C508B /* AccountsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsInteractorTests.swift; sourceTree = "<group>"; };
 		BAF142161E5334E4007C508B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAF1421D1E5336D2007C508B /* AccountsInteractorOutputDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsInteractorOutputDouble.swift; sourceTree = "<group>"; };
+		BE132653747F687A6C542A5E /* Pods_MooneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MooneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A77B31185631B4A7AC8E2C /* Pods-Mooney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooney.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mooney/Pods-Mooney.release.xcconfig"; sourceTree = "<group>"; };
 		C95F2DAEB8A976757A947089 /* AccountsRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsRouterInput.swift; sourceTree = "<group>"; };
 		D31FACBC794D9A8D9374C2F8 /* Pods-Mooney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mooney/Pods-Mooney.debug.xcconfig"; sourceTree = "<group>"; };
 		EA7BE38D58F09F7C2CB9D8F2 /* AccountsInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsInitializer.swift; sourceTree = "<group>"; };
 		F4019656FC4EC5E7FA86B6AE /* AccountsInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsInteractorInput.swift; sourceTree = "<group>"; };
+		F9DFCF6B6E652230680C6B48 /* Pods-MooneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MooneyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MooneyTests/Pods-MooneyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59B478334087C8A43FE443D3 /* Pods_MooneyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				21F2839BE0688212E6F645AB /* Pods_Mooney.framework */,
+				BE132653747F687A6C542A5E /* Pods_MooneyTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,6 +116,8 @@
 			children = (
 				D31FACBC794D9A8D9374C2F8 /* Pods-Mooney.debug.xcconfig */,
 				C1A77B31185631B4A7AC8E2C /* Pods-Mooney.release.xcconfig */,
+				A35E3174360B94147366C779 /* Pods-MooneyTests.debug.xcconfig */,
+				F9DFCF6B6E652230680C6B48 /* Pods-MooneyTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -177,10 +185,10 @@
 			isa = PBXGroup;
 			children = (
 				BA91007D1E5069240006CAD3 /* Mooney */,
-				BA91007C1E5069240006CAD3 /* Products */,
+				BAF142131E5334E4007C508B /* MooneyTests */,
 				1179720A0BFC9224232F63C9 /* Frameworks */,
 				29DFE5605184D18AF26D39AB /* Pods */,
-				BAF142131E5334E4007C508B /* MooneyTests */,
+				BA91007C1E5069240006CAD3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -243,8 +251,8 @@
 		BA9100AB1E514DFE0006CAD3 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				BA9100AD1E514E250006CAD3 /* DatabaseAccessable.swift */,
 				BA145A211E53165200358AE5 /* Models */,
-				BA9100AD1E514E250006CAD3 /* Database.swift */,
 				BAA71EFF1E5264C6009DB223 /* MooneyDataModel.xcdatamodeld */,
 			);
 			path = Database;
@@ -321,9 +329,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAF1421B1E5334E4007C508B /* Build configuration list for PBXNativeTarget "MooneyTests" */;
 			buildPhases = (
+				56EB1C19E6CC9C0115E76266 /* [CP] Check Pods Manifest.lock */,
 				BAF1420E1E5334E3007C508B /* Sources */,
 				BAF1420F1E5334E3007C508B /* Frameworks */,
 				BAF142101E5334E3007C508B /* Resources */,
+				750BF11E47DB0824DE2056A5 /* [CP] Embed Pods Frameworks */,
+				EB7D314A520C93625D008624 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -398,6 +409,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		56EB1C19E6CC9C0115E76266 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		5C6B74A61091B51F191A3C86 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,6 +437,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mooney/Pods-Mooney-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		750BF11E47DB0824DE2056A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MooneyTests/Pods-MooneyTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7B3B650DE3B87DC3B7AB9763 /* [CP] Check Pods Manifest.lock */ = {
@@ -443,6 +484,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mooney/Pods-Mooney-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EB7D314A520C93625D008624 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MooneyTests/Pods-MooneyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -460,7 +516,7 @@
 				4C19A4184E6525FA081825AF /* AccountsPresenter.swift in Sources */,
 				20FEF5A73FE2A16C5729762D /* AccountsInteractorInput.swift in Sources */,
 				BAA71F011E5264C6009DB223 /* MooneyDataModel.xcdatamodeld in Sources */,
-				BA9100AE1E514E250006CAD3 /* Database.swift in Sources */,
+				BA9100AE1E514E250006CAD3 /* DatabaseAccessable.swift in Sources */,
 				DA4E69E658669F7562B31206 /* AccountsInteractorOutput.swift in Sources */,
 				42785AF1BBE6E5BE6A8EFAAE /* AccountsInteractor.swift in Sources */,
 				BFE5E15C72BDF4A87C9B9531 /* AccountsRouterInput.swift in Sources */,
@@ -623,6 +679,7 @@
 		};
 		BAF142191E5334E4007C508B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A35E3174360B94147366C779 /* Pods-MooneyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MooneyTests/Info.plist;
@@ -636,6 +693,7 @@
 		};
 		BAF1421A1E5334E4007C508B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9DFCF6B6E652230680C6B48 /* Pods-MooneyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MooneyTests/Info.plist;
@@ -675,6 +733,7 @@
 				BAF1421A1E5334E4007C508B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

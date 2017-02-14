@@ -12,7 +12,11 @@ class AccountsViewController: UITableViewController, AccountsViewInput {
 
     var output: AccountsViewOutput!
     
-    var accounts: [String] = []
+    var accounts: [Account] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -24,9 +28,13 @@ class AccountsViewController: UITableViewController, AccountsViewInput {
     func setupInitialState() {
     }
     
-    func show(_ accounts: [String]) {
+    func show(_ accounts: [Account]) {
         self.accounts = accounts
         tableView.reloadData()
+    }
+    
+    func showBlankstate() {
+        
     }
     
     // MARK: UITableViewDataSource
@@ -36,7 +44,7 @@ class AccountsViewController: UITableViewController, AccountsViewInput {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = accounts[indexPath.row]
+        cell.textLabel?.text = accounts[indexPath.row].name
         return cell
     }
     

@@ -7,7 +7,12 @@
 //
 
 import Foundation
+import DATAStack
 
-protocol Database {
+protocol DatabaseAccessable {
+    
+    var dataStack: DATAStack { get set }
+    
+    init(dataStack: DATAStack)
     
 }
