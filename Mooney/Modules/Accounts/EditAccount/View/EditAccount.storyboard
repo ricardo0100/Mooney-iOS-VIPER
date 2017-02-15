@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZOQ-Qq-Wun">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Thc-gc-1C4">
+            <objects>
+                <navigationController id="ZOQ-Qq-Wun" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YUc-za-k3y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5EP-bc-kCd" kind="relationship" relationship="rootViewController" id="gkE-HP-Fxf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KiG-9t-T3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391" y="157"/>
+        </scene>
+        <!--Editaccount View Controller-->
+        <scene sceneID="7PF-wO-1b5">
+            <objects>
+                <viewController id="5EP-bc-kCd" customClass="EditAccountViewController" customModule="Mooney" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jrs-Cx-M3D"/>
+                        <viewControllerLayoutGuide type="bottom" id="eKH-hR-uSb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j0U-7U-1iX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lst-h7-k06">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0dW-gf-ipf"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="mqD-zX-3Yt"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ta3-Gc-3lf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Dxk-n3-8Ws" customClass="EditAccountModuleInitializer" customModule="Mooney" customModuleProvider="target">
+                    <connections>
+                        <outlet property="editaccountViewController" destination="5EP-bc-kCd" id="5uY-s5-Rqc"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="446" y="156"/>
+        </scene>
+    </scenes>
+</document>

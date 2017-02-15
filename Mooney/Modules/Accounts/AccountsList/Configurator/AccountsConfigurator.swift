@@ -20,7 +20,7 @@ class AccountsModuleConfigurator {
 
     private func configure(viewController: AccountsViewController) {
 
-        let router = AccountsRouter()
+        let router = AccountsRouter(withRoot: viewController)
 
         let presenter = AccountsPresenter()
         presenter.view = viewController

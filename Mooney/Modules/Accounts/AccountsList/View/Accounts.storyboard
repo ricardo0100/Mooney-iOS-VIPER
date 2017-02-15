@@ -32,7 +32,7 @@
         <!--Accounts View Controller-->
         <scene sceneID="e85-VT-Utg">
             <objects>
-                <tableViewController id="BHw-c5-nDg" customClass="AccountsViewController" customModule="Mooney_iOS_VIPER" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="BHw-c5-nDg" customClass="AccountsViewController" customModule="Mooney" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="HO3-yv-dLQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,11 +42,11 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k1X-0M-ab0" id="W7t-xe-tkp">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Np-Ao-eGB">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -61,10 +61,16 @@
                             <outlet property="delegate" destination="BHw-c5-nDg" id="eIh-d0-eN5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="TIt-vx-f5f"/>
+                    <navigationItem key="navigationItem" id="TIt-vx-f5f">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="y42-1l-Kgy">
+                            <connections>
+                                <action selector="newAccountButtonTapped:" destination="BHw-c5-nDg" id="AVh-Rg-RdQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5f3-03-e4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="ish-c6-VwO" customClass="AccountsModuleInitializer" customModule="Mooney_iOS_VIPER" customModuleProvider="target">
+                <customObject id="ish-c6-VwO" customClass="AccountsModuleInitializer" customModule="Mooney" customModuleProvider="target">
                     <connections>
                         <outlet property="accountsViewController" destination="BHw-c5-nDg" id="i8H-xE-hb7"/>
                     </connections>

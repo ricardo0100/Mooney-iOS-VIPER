@@ -18,13 +18,17 @@ class AccountsViewController: UITableViewController, AccountsViewInput {
         }
     }
 
+    
     // MARK: Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
 
+    
     // MARK: AccountsViewInput
+    
     func setupInitialState() {
     }
     
@@ -37,7 +41,9 @@ class AccountsViewController: UITableViewController, AccountsViewInput {
         
     }
     
+    
     // MARK: UITableViewDataSource
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return accounts.count
     }
@@ -46,6 +52,13 @@ class AccountsViewController: UITableViewController, AccountsViewInput {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = accounts[indexPath.row].name
         return cell
+    }
+    
+    
+    //MARK: User events
+    
+    @IBAction func newAccountButtonTapped(_ sender: Any) {
+        output.presentNewAccountView()
     }
     
 }

@@ -1,12 +1,12 @@
 //
-//  AccountsAccountsViewOutput.swift
-//  Mooney-iOS-VIPER
+//  EditAccountEditAccountViewOutput.swift
+//  Mooney
 //
-//  Created by Ricardo Gehrke Filho on 12/02/2017.
+//  Created by Ricardo Gehrke Filho on 15/02/2017.
 //  Copyright © 2017 ricardofilho.com.br. All rights reserved.
 //
 
-protocol AccountsViewOutput {
+protocol EditAccountViewOutput {
 
     /**
         @author Ricardo Gehrke Filho
@@ -14,7 +14,4 @@ protocol AccountsViewOutput {
     */
 
     func viewIsReady()
-    
-    func presentNewAccountView()
-    
 }

@@ -9,5 +9,7 @@
 import Foundation
 
 protocol AccountsRouterInput {
+    
+    func presentNewAccountView()
 
 }

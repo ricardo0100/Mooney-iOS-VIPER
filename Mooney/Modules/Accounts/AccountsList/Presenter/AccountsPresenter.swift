@@ -28,4 +28,8 @@ class AccountsPresenter: AccountsModuleInput, AccountsViewOutput, AccountsIntera
         view.showAlert(with: title, and: message)
     }
     
+    func presentNewAccountView() {
+        router.presentNewAccountView()
+    }
+    
 }
