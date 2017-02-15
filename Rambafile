@@ -2,22 +2,22 @@
 company: ricardofilho.com.br
 
 ### Xcode project settings
-project_name: Mooney-iOS-VIPER
-xcodeproj_path: Mooney-iOS-VIPER.xcodeproj
+project_name: Mooney
+xcodeproj_path: Mooney.xcodeproj
 
 ### Code generation settings section
 # The main project target name
-project_target: Mooney-iOS-VIPER
+project_target: Mooney
 
 # The file path for new modules
-project_file_path: Mooney-iOS-VIPER/Modules
+project_file_path: Mooney/Modules
 
 # The Xcode group path to new modules
-project_group_path: Mooney-iOS-VIPER/Modules
+project_group_path: Mooney/Modules
 
 ### Templates
 templates:
 #- {name: local_template_name, local: 'absolute/file/path'}
 #- {name: remote_template_name, git: 'https://github.com/igrekde/remote_template'}
 #- {name: catalog_template_name}
-- {name: swifty_viper}
+- {name: swifty_viper, git: 'https://github.com/ricardo0100/VIPER-Template'}
