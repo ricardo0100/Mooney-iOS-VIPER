@@ -14,16 +14,21 @@ class AccountsInteractorOutputDouble: AccountsInteractorOutput {
     
     var didPresentAccountsList = false
     var didPresentBlankstate = false
+    var didPresentError = false
     
-    var accountsList: [Account] = []
+    var presentedAccounts: [Account] = []
     
     func presentListWith(_ accounts: [Account]) {
-        accountsList = accounts
+        presentedAccounts = accounts
         didPresentAccountsList = true
     }
     
     func presentBlankstate() {
         didPresentBlankstate = true
+    }
+    
+    func presentError(with title: String, and message: String) {
+        didPresentError = true
     }
     
 }

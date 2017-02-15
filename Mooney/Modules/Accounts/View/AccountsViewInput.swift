@@ -19,4 +19,6 @@ protocol AccountsViewInput: class {
     
     func showBlankstate()
     
+    func showAlert(with title: String, and message: String)
+    
 }

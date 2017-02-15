@@ -14,4 +14,6 @@ protocol AccountsInteractorOutput: class {
 
     func presentBlankstate()
     
+    func presentError(with title: String, and message: String)
+    
 }

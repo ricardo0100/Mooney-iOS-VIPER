@@ -26,9 +26,11 @@
 		BA9100AA1E5149B70006CAD3 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9100A91E5149B70006CAD3 /* Menu.storyboard */; };
 		BA9100AE1E514E250006CAD3 /* DatabaseAccessable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9100AD1E514E250006CAD3 /* DatabaseAccessable.swift */; };
 		BA9100B01E514E300006CAD3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9100AF1E514E300006CAD3 /* API.swift */; };
+		BAA510C21E545F9D00AE5F99 /* ViewController+AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA510C11E545F9D00AE5F99 /* ViewController+AlertMessages.swift */; };
+		BAA510C81E5475E100AE5F99 /* AccountsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA510C41E5475E100AE5F99 /* AccountsInteractorTests.swift */; };
+		BAA510C91E5475E100AE5F99 /* AccountsInteractorOutputDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA510C61E5475E100AE5F99 /* AccountsInteractorOutputDouble.swift */; };
+		BAA510CB1E54761A00AE5F99 /* DatabaseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA510CA1E54761A00AE5F99 /* DatabaseUtils.swift */; };
 		BAA71F011E5264C6009DB223 /* MooneyDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAA71EFF1E5264C6009DB223 /* MooneyDataModel.xcdatamodeld */; };
-		BAF142151E5334E4007C508B /* AccountsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF142141E5334E4007C508B /* AccountsInteractorTests.swift */; };
-		BAF1421E1E5336D2007C508B /* AccountsInteractorOutputDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1421D1E5336D2007C508B /* AccountsInteractorOutputDouble.swift */; };
 		BFE5E15C72BDF4A87C9B9531 /* AccountsRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95F2DAEB8A976757A947089 /* AccountsRouterInput.swift */; };
 		CDCD23C2D9B53A5A47FBCE5F /* AccountsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2351AA38C7B70C57B03D20DC /* AccountsRouter.swift */; };
 		DA4E69E658669F7562B31206 /* AccountsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAE579A4490CAC99268D80C /* AccountsInteractorOutput.swift */; };
@@ -68,11 +70,13 @@
 		BA9100A91E5149B70006CAD3 /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		BA9100AD1E514E250006CAD3 /* DatabaseAccessable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseAccessable.swift; sourceTree = "<group>"; };
 		BA9100AF1E514E300006CAD3 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		BAA510C11E545F9D00AE5F99 /* ViewController+AlertMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+AlertMessages.swift"; sourceTree = "<group>"; };
+		BAA510C41E5475E100AE5F99 /* AccountsInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsInteractorTests.swift; sourceTree = "<group>"; };
+		BAA510C61E5475E100AE5F99 /* AccountsInteractorOutputDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsInteractorOutputDouble.swift; sourceTree = "<group>"; };
+		BAA510CA1E54761A00AE5F99 /* DatabaseUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseUtils.swift; sourceTree = "<group>"; };
 		BAA71F001E5264C6009DB223 /* MooneyDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MooneyDataModel.xcdatamodel; sourceTree = "<group>"; };
 		BAF142121E5334E3007C508B /* MooneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MooneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAF142141E5334E4007C508B /* AccountsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsInteractorTests.swift; sourceTree = "<group>"; };
 		BAF142161E5334E4007C508B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAF1421D1E5336D2007C508B /* AccountsInteractorOutputDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsInteractorOutputDouble.swift; sourceTree = "<group>"; };
 		BE132653747F687A6C542A5E /* Pods_MooneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MooneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A77B31185631B4A7AC8E2C /* Pods-Mooney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooney.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mooney/Pods-Mooney.release.xcconfig"; sourceTree = "<group>"; };
 		C95F2DAEB8A976757A947089 /* AccountsRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsRouterInput.swift; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 				BA9100AC1E514DFE0006CAD3 /* Network */,
 				BA9100901E50717C0006CAD3 /* Application */,
 				BA9100931E50717C0006CAD3 /* Resources */,
+				BAA510C01E545F5300AE5F99 /* Utils */,
 			);
 			path = Mooney;
 			sourceTree = "<group>";
@@ -266,6 +271,38 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		BAA510C01E545F5300AE5F99 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BAA510C11E545F9D00AE5F99 /* ViewController+AlertMessages.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BAA510C31E5475E100AE5F99 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				BAA510C41E5475E100AE5F99 /* AccountsInteractorTests.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
+		BAA510C51E5475E100AE5F99 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				BAA510C61E5475E100AE5F99 /* AccountsInteractorOutputDouble.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		BAA510C71E5475E100AE5F99 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BAA510CA1E54761A00AE5F99 /* DatabaseUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		BAF1420B1E532CE8007C508B /* Account */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,19 +315,12 @@
 		BAF142131E5334E4007C508B /* MooneyTests */ = {
 			isa = PBXGroup;
 			children = (
-				BAF1421C1E5336C3007C508B /* Doubles */,
-				BAF142141E5334E4007C508B /* AccountsInteractorTests.swift */,
+				BAA510C31E5475E100AE5F99 /* Accounts */,
+				BAA510C51E5475E100AE5F99 /* Doubles */,
+				BAA510C71E5475E100AE5F99 /* Utils */,
 				BAF142161E5334E4007C508B /* Info.plist */,
 			);
 			path = MooneyTests;
-			sourceTree = "<group>";
-		};
-		BAF1421C1E5336C3007C508B /* Doubles */ = {
-			isa = PBXGroup;
-			children = (
-				BAF1421D1E5336D2007C508B /* AccountsInteractorOutputDouble.swift */,
-			);
-			path = Doubles;
 			sourceTree = "<group>";
 		};
 		F12C947EAEB60885D2045A76 /* Presenter */ = {
@@ -518,6 +548,7 @@
 				BAA71F011E5264C6009DB223 /* MooneyDataModel.xcdatamodeld in Sources */,
 				BA9100AE1E514E250006CAD3 /* DatabaseAccessable.swift in Sources */,
 				DA4E69E658669F7562B31206 /* AccountsInteractorOutput.swift in Sources */,
+				BAA510C21E545F9D00AE5F99 /* ViewController+AlertMessages.swift in Sources */,
 				42785AF1BBE6E5BE6A8EFAAE /* AccountsInteractor.swift in Sources */,
 				BFE5E15C72BDF4A87C9B9531 /* AccountsRouterInput.swift in Sources */,
 				CDCD23C2D9B53A5A47FBCE5F /* AccountsRouter.swift in Sources */,
@@ -531,8 +562,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAF142151E5334E4007C508B /* AccountsInteractorTests.swift in Sources */,
-				BAF1421E1E5336D2007C508B /* AccountsInteractorOutputDouble.swift in Sources */,
+				BAA510C91E5475E100AE5F99 /* AccountsInteractorOutputDouble.swift in Sources */,
+				BAA510C81E5475E100AE5F99 /* AccountsInteractorTests.swift in Sources */,
+				BAA510CB1E54761A00AE5F99 /* DatabaseUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

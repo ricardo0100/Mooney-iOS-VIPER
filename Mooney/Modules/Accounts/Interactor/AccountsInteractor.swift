@@ -19,7 +19,16 @@ class AccountsInteractor: AccountsInteractorInput, DatabaseAccessable {
     }
     
     func fetchAccountsList() {
-        output.presentBlankstate()
+        do {
+            let accounts = try dataStack.mainContext.fetch(Account.fetchRequest()) as [Account]
+            if accounts.count == 0 {
+                output.presentBlankstate()
+            } else {
+                output.presentListWith(accounts)
+            }
+        } catch {
+            output.presentError(with: "Oops!", and: "Error fetching accounts!")
+        }
     }
     
 }

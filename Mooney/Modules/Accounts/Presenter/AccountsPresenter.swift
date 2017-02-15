@@ -24,4 +24,8 @@ class AccountsPresenter: AccountsModuleInput, AccountsViewOutput, AccountsIntera
         view.showBlankstate()
     }
     
+    func presentError(with title: String, and message: String) {
+        view.showAlert(with: title, and: message)
+    }
+    
 }
