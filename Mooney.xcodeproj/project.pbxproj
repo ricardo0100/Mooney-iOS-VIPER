@@ -168,11 +168,7 @@
 		9F88196556CA99BBA51B9C2D /* Accounts */ = {
 			isa = PBXGroup;
 			children = (
-				96A0EFCA7D0BE2CF078B403D /* View */,
-				F12C947EAEB60885D2045A76 /* Presenter */,
-				7C2C6745BFDE7A7823A73DDA /* Interactor */,
-				4D2438D4708B9F7FEE5F2237 /* Router */,
-				9B5BAB3C21B5338ED39CEA56 /* Configurator */,
+				BAC411E81E54E8300021273D /* AccountsList */,
 			);
 			path = Accounts;
 			sourceTree = "<group>";
@@ -301,6 +297,18 @@
 				BAA510CA1E54761A00AE5F99 /* DatabaseUtils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		BAC411E81E54E8300021273D /* AccountsList */ = {
+			isa = PBXGroup;
+			children = (
+				96A0EFCA7D0BE2CF078B403D /* View */,
+				F12C947EAEB60885D2045A76 /* Presenter */,
+				7C2C6745BFDE7A7823A73DDA /* Interactor */,
+				4D2438D4708B9F7FEE5F2237 /* Router */,
+				9B5BAB3C21B5338ED39CEA56 /* Configurator */,
+			);
+			path = AccountsList;
 			sourceTree = "<group>";
 		};
 		BAF1420B1E532CE8007C508B /* Account */ = {
