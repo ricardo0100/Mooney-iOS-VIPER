@@ -14,4 +14,9 @@ protocol EditAccountViewInput: class {
     */
 
     func setupInitialState()
+    
+    func presentValidationError(for field: String, and message: String)
+    
+    func presentError(with title: String, and message: String)
+    
 }

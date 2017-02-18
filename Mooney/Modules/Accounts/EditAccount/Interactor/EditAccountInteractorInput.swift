@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import CoreData
 
 protocol EditAccountInteractorInput {
+    
+    func saveAccount(with name: String)
 
 }

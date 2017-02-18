@@ -9,5 +9,11 @@
 import Foundation
 
 protocol EditAccountInteractorOutput: class {
+    
+    func presentSuccess()
+    
+    func presentValidationError(for field: String, and message: String)
+    
+    func presentError(with title: String, and message: String)
 
 }

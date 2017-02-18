@@ -8,7 +8,7 @@
 
 import DATAStack
 
-class AccountsInteractor: AccountsInteractorInput, DatabaseAccessable {
+class AccountsInteractor: AccountsInteractorInput {
 
     weak var output: AccountsInteractorOutput!
     

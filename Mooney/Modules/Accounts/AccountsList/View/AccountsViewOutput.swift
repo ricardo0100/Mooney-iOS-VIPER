@@ -17,4 +17,6 @@ protocol AccountsViewOutput {
     
     func presentNewAccountView()
     
+    func refreshAccountsList()
+    
 }

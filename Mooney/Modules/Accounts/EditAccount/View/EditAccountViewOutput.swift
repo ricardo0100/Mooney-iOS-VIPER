@@ -14,4 +14,9 @@ protocol EditAccountViewOutput {
     */
 
     func viewIsReady()
+    
+    func cancel()
+    
+    func save(with name: String)
+    
 }

@@ -7,5 +7,7 @@
 //
 
 protocol AccountsModuleInput: class {
+    
+    func refreshAccountsList()
 
 }

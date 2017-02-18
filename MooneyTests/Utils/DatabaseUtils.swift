@@ -19,4 +19,8 @@ class DatabaseUtils {
         try! context.save()
     }
     
+    static func fetchAccounts(in context: NSManagedObjectContext) -> [Account] {
+        return try! context.fetch(Account.fetchRequest()) as [Account]
+    }
+    
 }

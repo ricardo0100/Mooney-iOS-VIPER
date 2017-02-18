@@ -26,6 +26,7 @@ class AccountsInteractorTests: XCTestCase {
     
     func testPresentEmptyList() {
         interactor.fetchAccountsList()
+        
         XCTAssertTrue(presenter.didPresentBlankstate)
         XCTAssertEqual(presenter.presentedAccounts.count, 0)
     }
@@ -33,6 +34,7 @@ class AccountsInteractorTests: XCTestCase {
     func testPresentOneAccount() {
         DatabaseUtils.createAccount(with: "Banco do Brasil", in: dataStack.mainContext)
         interactor.fetchAccountsList()
+        
         XCTAssertTrue(presenter.didPresentAccountsList)
         XCTAssertEqual(presenter.presentedAccounts.count, 1)
         XCTAssertEqual(presenter.presentedAccounts[0].name, "Banco do Brasil")

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DATAStack
 
 class EditAccountModuleConfigurator {
 
@@ -19,13 +20,13 @@ class EditAccountModuleConfigurator {
 
     private func configure(viewController: EditAccountViewController) {
 
-        let router = EditAccountRouter()
+        let router = EditAccountRouter(withRoot: viewController)
 
         let presenter = EditAccountPresenter()
         presenter.view = viewController
         presenter.router = router
 
-        let interactor = EditAccountInteractor()
+        let interactor = EditAccountInteractor(dataStack: DATAStack(modelName: "MooneyDataModel"))
         interactor.output = presenter
 
         presenter.interactor = interactor

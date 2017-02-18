@@ -15,4 +15,25 @@ class EditAccountPresenter: EditAccountModuleInput, EditAccountViewOutput, EditA
     func viewIsReady() {
 
     }
+    
+    func save(with name: String) {
+        interactor.saveAccount(with: name)
+    }
+    
+    func cancel() {
+        router.dismissViewController()
+    }
+    
+    func presentSuccess() {
+        router.dismissViewController()
+    }
+    
+    func presentValidationError(for field: String, and message: String) {
+        
+    }
+    
+    func presentError(with title: String, and message: String) {
+        view.presentError(with: title, and: message)
+    }
+    
 }

@@ -1,30 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZOQ-Qq-Wun">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5EP-bc-kCd">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="Thc-gc-1C4">
-            <objects>
-                <navigationController id="ZOQ-Qq-Wun" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YUc-za-k3y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="5EP-bc-kCd" kind="relationship" relationship="rootViewController" id="gkE-HP-Fxf"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KiG-9t-T3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-391" y="157"/>
-        </scene>
         <!--Editaccount View Controller-->
         <scene sceneID="7PF-wO-1b5">
             <objects>
@@ -36,12 +21,67 @@
                     <view key="view" contentMode="scaleToFill" id="j0U-7U-1iX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6N-jN-I8g">
+                                <rect key="frame" x="16" y="36" width="288" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaV-QL-1dq" customClass="RoundedCornerButton" customModule="Mooney" customModuleProvider="target">
+                                <rect key="frame" x="16" y="132" width="136" height="32"/>
+                                <color key="backgroundColor" red="0.10980392156862745" green="0.11372549019607843" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" red="0.84313725490196079" green="0.85490196078431369" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="5EP-bc-kCd" eventType="touchUpInside" id="aG5-ky-PYH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjU-0V-xO5" customClass="RoundedCornerButton" customModule="Mooney" customModuleProvider="target">
+                                <rect key="frame" x="168" y="132" width="136" height="32"/>
+                                <color key="backgroundColor" red="0.10980392156862745" green="0.11372549019607843" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" red="0.84313725490196079" green="0.85490196078431369" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="5EP-bc-kCd" eventType="touchUpInside" id="LXe-S4-0R8"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Account name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="46H-xh-hBQ" customClass="RoundedFlatTextField" customModule="Mooney" customModuleProvider="target">
+                                <rect key="frame" x="16" y="76" width="288" height="40"/>
+                                <color key="backgroundColor" red="0.84313725490196079" green="0.85490196078431369" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="jiL-pP-85V"/>
+                                </constraints>
+                                <color key="textColor" red="0.10980392156862745" green="0.11372549019607843" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="alphabet"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32549019607843138" green="0.47843137254901957" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="J6N-jN-I8g" firstAttribute="top" secondItem="Jrs-Cx-M3D" secondAttribute="bottom" constant="16" id="1Dq-ee-QR2"/>
+                            <constraint firstItem="BjU-0V-xO5" firstAttribute="leading" secondItem="FaV-QL-1dq" secondAttribute="trailing" constant="16" id="51j-gJ-gv1"/>
+                            <constraint firstItem="BjU-0V-xO5" firstAttribute="top" secondItem="FaV-QL-1dq" secondAttribute="top" id="5rR-Uk-rpa"/>
+                            <constraint firstItem="46H-xh-hBQ" firstAttribute="leading" secondItem="j0U-7U-1iX" secondAttribute="leadingMargin" id="AxV-QJ-Now"/>
+                            <constraint firstItem="FaV-QL-1dq" firstAttribute="width" secondItem="BjU-0V-xO5" secondAttribute="width" id="C57-4F-mJs"/>
+                            <constraint firstItem="46H-xh-hBQ" firstAttribute="top" secondItem="J6N-jN-I8g" secondAttribute="bottom" constant="16" id="JMu-v2-K6o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J6N-jN-I8g" secondAttribute="trailing" id="OEr-hU-ieY"/>
+                            <constraint firstItem="FaV-QL-1dq" firstAttribute="top" secondItem="46H-xh-hBQ" secondAttribute="bottom" constant="16" id="UUw-Al-BMP"/>
+                            <constraint firstItem="46H-xh-hBQ" firstAttribute="trailing" secondItem="j0U-7U-1iX" secondAttribute="trailingMargin" id="aZJ-dW-1Ar"/>
+                            <constraint firstItem="BjU-0V-xO5" firstAttribute="trailing" secondItem="j0U-7U-1iX" secondAttribute="trailingMargin" id="eeD-LC-vwY"/>
+                            <constraint firstItem="J6N-jN-I8g" firstAttribute="leading" secondItem="j0U-7U-1iX" secondAttribute="leadingMargin" id="kYQ-Tx-Loi"/>
+                            <constraint firstItem="FaV-QL-1dq" firstAttribute="leading" secondItem="j0U-7U-1iX" secondAttribute="leadingMargin" id="wyy-Pb-FK5"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Lst-h7-k06">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0dW-gf-ipf"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="mqD-zX-3Yt"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="accountNameTextField" destination="46H-xh-hBQ" id="ih9-rD-L9N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ta3-Gc-3lf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="Dxk-n3-8Ws" customClass="EditAccountModuleInitializer" customModule="Mooney" customModuleProvider="target">
@@ -50,7 +90,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="446" y="156"/>
+            <point key="canvasLocation" x="444.375" y="155.28169014084509"/>
         </scene>
     </scenes>
 </document>

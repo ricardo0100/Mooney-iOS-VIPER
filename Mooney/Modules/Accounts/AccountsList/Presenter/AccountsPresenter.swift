@@ -32,4 +32,8 @@ class AccountsPresenter: AccountsModuleInput, AccountsViewOutput, AccountsIntera
         router.presentNewAccountView()
     }
     
+    func refreshAccountsList() {
+        interactor.fetchAccountsList()
+    }
+    
 }

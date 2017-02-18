@@ -9,5 +9,7 @@
 import Foundation
 
 protocol EditAccountRouterInput {
+    
+    func dismissViewController()
 
 }

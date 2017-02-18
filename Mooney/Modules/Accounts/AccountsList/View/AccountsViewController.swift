@@ -25,7 +25,12 @@ class AccountsViewController: UITableViewController, AccountsViewInput {
         super.viewDidLoad()
         output.viewIsReady()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        output.refreshAccountsList()
+    }
+    
     
     // MARK: AccountsViewInput
     
@@ -34,7 +39,6 @@ class AccountsViewController: UITableViewController, AccountsViewInput {
     
     func show(_ accounts: [Account]) {
         self.accounts = accounts
-        tableView.reloadData()
     }
     
     func showBlankstate() {
