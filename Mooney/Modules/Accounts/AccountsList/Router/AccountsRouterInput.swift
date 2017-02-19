@@ -10,6 +10,6 @@ import Foundation
 
 protocol AccountsRouterInput {
     
-    func presentNewAccountView()
+    func presentEditView(for account: Account?)
 
 }

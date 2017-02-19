@@ -13,11 +13,11 @@ class EditAccountPresenter: EditAccountModuleInput, EditAccountViewOutput, EditA
     var router: EditAccountRouterInput!
 
     func viewIsReady() {
-
+        
     }
     
-    func save(with name: String) {
-        interactor.saveAccount(with: name)
+    func save(account object: Account?, with name: String) {
+        interactor.save(account: object, with: name)
     }
     
     func cancel() {
@@ -29,7 +29,7 @@ class EditAccountPresenter: EditAccountModuleInput, EditAccountViewOutput, EditA
     }
     
     func presentValidationError(for field: String, and message: String) {
-        
+        view.presentValidationError(for: field, and: message)
     }
     
     func presentError(with title: String, and message: String) {

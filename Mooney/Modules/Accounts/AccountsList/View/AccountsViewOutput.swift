@@ -19,4 +19,6 @@ protocol AccountsViewOutput {
     
     func refreshAccountsList()
     
+    func presentEditView(for account: Account)
+    
 }

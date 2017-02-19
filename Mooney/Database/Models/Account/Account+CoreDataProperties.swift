@@ -15,6 +15,10 @@ extension Account {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Account> {
         return NSFetchRequest<Account>(entityName: "Account");
     }
+    
+    @nonobjc public class func newObject(in context: NSManagedObjectContext) -> Account {
+        return NSEntityDescription.insertNewObject(forEntityName: "Account", into: context) as! Account
+    }
 
     @NSManaged public var id: Int64
     @NSManaged public var name: String?

@@ -25,17 +25,36 @@ class EditAccountInteractorTests: XCTestCase {
     }
     
     func testPresentValidationErrorForEmptyName() {
-        interactor.saveAccount(with: "")
+        interactor.save(account: nil, with: "")
         
         XCTAssertTrue(presenter.didPresentValidationError)
     }
     
     func testPresentSuccess() {
-        interactor.saveNewAccount(with: "Banco do Brasil")
+        interactor.save(account: nil, with: "Banco do Brasil")
         let accounts = DatabaseUtils.fetchAccounts(in: dataStack.mainContext)
         
         XCTAssertTrue(presenter.didPresentSuccess)
         XCTAssertEqual(accounts.count, 1)
+    }
+    
+    func testPresentSuccessForEditedAccount() {
+        let account = DatabaseUtils.createAccount(with: "Banco do Brasil", in: dataStack.mainContext)
+        interactor.save(account: account, with: "Santander")
+        let accounts = DatabaseUtils.fetchAccounts(in: dataStack.mainContext)
+        XCTAssertEqual(accounts[0].name, "Santander")
+    }
+    
+    func testPresentValidationErrorForEmptyNameForEditedAccount() {
+        let account = DatabaseUtils.createAccount(with: "Banco do Brasil", in: dataStack.mainContext)
+        interactor.save(account: account, with: "")
+        XCTAssertTrue(presenter.didPresentValidationError)
+    }
+    
+    func testNewAccountGetDiscartedAfterValidationErrorAndCancelation() {
+        interactor.save(account: nil, with: "")
+        let accounts = DatabaseUtils.fetchAccounts(in: dataStack.mainContext)
+        XCTAssertEqual(accounts.count, 0)
     }
     
 }

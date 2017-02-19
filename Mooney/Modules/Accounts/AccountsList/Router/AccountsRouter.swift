@@ -11,15 +11,18 @@ import UIKit
 class AccountsRouter: AccountsRouterInput {
     
     let rootViewController: UIViewController
+    let editAccountViewController: EditAccountViewController
+    
+    let storyBoard = UIStoryboard(name: "EditAccount", bundle: nil)
     
     init(withRoot viewController: UIViewController) {
-        self.rootViewController = viewController
+        editAccountViewController = storyBoard.instantiateInitialViewController() as! EditAccountViewController
+        rootViewController = viewController
     }
-    
-    func presentNewAccountView() {
-        let storyBoard = UIStoryboard(name: "EditAccount", bundle: nil)
-        let viewController = storyBoard.instantiateInitialViewController()
-        self.rootViewController.present(viewController!, animated: true, completion: nil)
+        
+    func presentEditView(for account: Account?) {
+        editAccountViewController.account = account
+        rootViewController.present(editAccountViewController, animated: true, completion: nil)
     }
 
 }

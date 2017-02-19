@@ -29,11 +29,15 @@ class AccountsPresenter: AccountsModuleInput, AccountsViewOutput, AccountsIntera
     }
     
     func presentNewAccountView() {
-        router.presentNewAccountView()
+        router.presentEditView(for: nil)
     }
     
     func refreshAccountsList() {
         interactor.fetchAccountsList()
+    }
+    
+    func presentEditView(for account: Account) {
+        router.presentEditView(for: account)
     }
     
 }

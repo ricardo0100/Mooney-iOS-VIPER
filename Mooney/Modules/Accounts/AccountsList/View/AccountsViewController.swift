@@ -58,6 +58,11 @@ class AccountsViewController: UITableViewController, AccountsViewInput {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let account = self.accounts[indexPath.row]
+        output.presentEditView(for: account)
+    }
+    
     
     //MARK: User events
     

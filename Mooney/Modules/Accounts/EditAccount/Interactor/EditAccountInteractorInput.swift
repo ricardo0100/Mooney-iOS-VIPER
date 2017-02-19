@@ -11,6 +11,6 @@ import CoreData
 
 protocol EditAccountInteractorInput {
     
-    func saveAccount(with name: String)
+    func save(account object: Account?, with name: String)
 
 }

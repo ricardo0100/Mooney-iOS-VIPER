@@ -32,7 +32,7 @@ class AccountsInteractorTests: XCTestCase {
     }
     
     func testPresentOneAccount() {
-        DatabaseUtils.createAccount(with: "Banco do Brasil", in: dataStack.mainContext)
+        _ = DatabaseUtils.createAccount(with: "Banco do Brasil", in: dataStack.mainContext)
         interactor.fetchAccountsList()
         
         XCTAssertTrue(presenter.didPresentAccountsList)

@@ -14,10 +14,18 @@ class EditAccountViewController: UIViewController, EditAccountViewInput {
 
     @IBOutlet weak var accountNameTextField: RoundedFlatTextField!
     
+    var account: Account?
+    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        clearFields()
+        updateFieldsWithAccountData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,22 +44,35 @@ class EditAccountViewController: UIViewController, EditAccountViewInput {
         
     }
     
+    
+    // MARK: User Interaction
     @IBAction func cancelButtonTapped(_ sender: RoundedCornerButton) {
         output.cancel()
     }
     
     @IBAction func saveButtonTapped(_ sender: RoundedCornerButton) {
         if let name = accountNameTextField.text {
-            output.save(with: name)
+            output.save(account: account, with: name)
         }
     }
     
+    
+    //MARK: View Manipulation
     func presentValidationError(for field: String, and message: String) {
-        
+        showAlert(with: "Error in \(field)", and: message)
     }
     
     func presentError(with title: String, and message: String) {
         showAlert(with: title, and: message)
     }
     
+    func clearFields() {
+        accountNameTextField.text = nil
+    }
+    
+    func updateFieldsWithAccountData() {
+        if let account = account {
+            accountNameTextField.text = account.name
+        }
+    }
 }
