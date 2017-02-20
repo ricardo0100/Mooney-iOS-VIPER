@@ -26,6 +26,15 @@
 		A52C52FACBBCECE154883F5A /* EditAccountInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BE9BFCC4CFD41EE71A13CE /* EditAccountInitializer.swift */; };
 		B4CA0D2B87D92F510C0CB6CD /* EditAccountConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263FAFF0FB743E12BCF1B30 /* EditAccountConfigurator.swift */; };
 		B4FDC621A426E695859A9BA8 /* AccountsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EDE6634C27E599EF38EBB5 /* AccountsViewInput.swift */; };
+		BA04B8061E5B1FC100DF823F /* ListResourcesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B7FD1E5B1FC100DF823F /* ListResourcesInteractor.swift */; };
+		BA04B8071E5B1FC100DF823F /* ListResourcesInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B7FE1E5B1FC100DF823F /* ListResourcesInteractorInput.swift */; };
+		BA04B8081E5B1FC100DF823F /* ListResourcesInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B7FF1E5B1FC100DF823F /* ListResourcesInteractorOutput.swift */; };
+		BA04B8091E5B1FC100DF823F /* ListResourcesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B8011E5B1FC100DF823F /* ListResourcesPresenter.swift */; };
+		BA04B80A1E5B1FC100DF823F /* ListResourcesPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B8021E5B1FC100DF823F /* ListResourcesPresenterInput.swift */; };
+		BA04B80B1E5B1FC100DF823F /* ListResourcesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B8041E5B1FC100DF823F /* ListResourcesViewInput.swift */; };
+		BA04B80C1E5B1FC100DF823F /* ListResourcesViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B8051E5B1FC100DF823F /* ListResourcesViewOutput.swift */; };
+		BA04B8161E5B276400DF823F /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B8151E5B276400DF823F /* BaseEntity.swift */; };
+		BA04B8181E5B28A800DF823F /* ListResourcesRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B8171E5B28A800DF823F /* ListResourcesRouterInput.swift */; };
 		BA145A341E5319B200358AE5 /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA145A321E5319B200358AE5 /* Account+CoreDataClass.swift */; };
 		BA145A351E5319B200358AE5 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA145A331E5319B200358AE5 /* Account+CoreDataProperties.swift */; };
 		BA7D10A41E57C18C0066FFA2 /* RoundedFlatTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D10A31E57C18C0066FFA2 /* RoundedFlatTextField.swift */; };
@@ -83,6 +92,15 @@
 		A35E3174360B94147366C779 /* Pods-MooneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MooneyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MooneyTests/Pods-MooneyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE1C412D3E5B288E0B1B3E0C /* EditAccountViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditAccountViewOutput.swift; sourceTree = "<group>"; };
 		B2290134312CE525414E795F /* AccountsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		BA04B7FD1E5B1FC100DF823F /* ListResourcesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesInteractor.swift; sourceTree = "<group>"; };
+		BA04B7FE1E5B1FC100DF823F /* ListResourcesInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesInteractorInput.swift; sourceTree = "<group>"; };
+		BA04B7FF1E5B1FC100DF823F /* ListResourcesInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesInteractorOutput.swift; sourceTree = "<group>"; };
+		BA04B8011E5B1FC100DF823F /* ListResourcesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesPresenter.swift; sourceTree = "<group>"; };
+		BA04B8021E5B1FC100DF823F /* ListResourcesPresenterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesPresenterInput.swift; sourceTree = "<group>"; };
+		BA04B8041E5B1FC100DF823F /* ListResourcesViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesViewInput.swift; sourceTree = "<group>"; };
+		BA04B8051E5B1FC100DF823F /* ListResourcesViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesViewOutput.swift; sourceTree = "<group>"; };
+		BA04B8151E5B276400DF823F /* BaseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
+		BA04B8171E5B28A800DF823F /* ListResourcesRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesRouterInput.swift; sourceTree = "<group>"; };
 		BA145A321E5319B200358AE5 /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BA145A331E5319B200358AE5 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA7D10A31E57C18C0066FFA2 /* RoundedFlatTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedFlatTextField.swift; sourceTree = "<group>"; };
@@ -228,6 +246,69 @@
 			path = Accounts;
 			sourceTree = "<group>";
 		};
+		BA04B7FA1E5B1FC100DF823F /* BaseModules */ = {
+			isa = PBXGroup;
+			children = (
+				BA04B7FB1E5B1FC100DF823F /* ListResources */,
+			);
+			path = BaseModules;
+			sourceTree = "<group>";
+		};
+		BA04B7FB1E5B1FC100DF823F /* ListResources */ = {
+			isa = PBXGroup;
+			children = (
+				BA04B8031E5B1FC100DF823F /* View */,
+				BA04B7FC1E5B1FC100DF823F /* Interactor */,
+				BA04B8001E5B1FC100DF823F /* Presenter */,
+				BA04B8101E5B269100DF823F /* Router */,
+			);
+			path = ListResources;
+			sourceTree = "<group>";
+		};
+		BA04B7FC1E5B1FC100DF823F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BA04B7FE1E5B1FC100DF823F /* ListResourcesInteractorInput.swift */,
+				BA04B7FF1E5B1FC100DF823F /* ListResourcesInteractorOutput.swift */,
+				BA04B7FD1E5B1FC100DF823F /* ListResourcesInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BA04B8001E5B1FC100DF823F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BA04B8011E5B1FC100DF823F /* ListResourcesPresenter.swift */,
+				BA04B8021E5B1FC100DF823F /* ListResourcesPresenterInput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BA04B8031E5B1FC100DF823F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA04B8041E5B1FC100DF823F /* ListResourcesViewInput.swift */,
+				BA04B8051E5B1FC100DF823F /* ListResourcesViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA04B8101E5B269100DF823F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BA04B8171E5B28A800DF823F /* ListResourcesRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BA04B8141E5B276400DF823F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				BA04B8151E5B276400DF823F /* BaseEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		BA145A211E53165200358AE5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				BA91009B1E50824B0006CAD3 /* Modules */,
+				BA04B8141E5B276400DF823F /* Entity */,
 				BA9100AB1E514DFE0006CAD3 /* Database */,
 				BA9100AC1E514DFE0006CAD3 /* Network */,
 				BA9100901E50717C0006CAD3 /* Application */,
@@ -291,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				BA9100A81E5149AD0006CAD3 /* Menu */,
+				BA04B7FA1E5B1FC100DF823F /* BaseModules */,
 				9F88196556CA99BBA51B9C2D /* Accounts */,
 			);
 			path = Modules;
@@ -661,7 +744,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA04B8071E5B1FC100DF823F /* ListResourcesInteractorInput.swift in Sources */,
 				BA9100971E50717C0006CAD3 /* AppDelegate.swift in Sources */,
+				BA04B8091E5B1FC100DF823F /* ListResourcesPresenter.swift in Sources */,
+				BA04B80C1E5B1FC100DF823F /* ListResourcesViewOutput.swift in Sources */,
 				B4FDC621A426E695859A9BA8 /* AccountsViewInput.swift in Sources */,
 				DA68D313ACCD22E73548A4ED /* AccountsViewOutput.swift in Sources */,
 				75520A693C414B2895D83C81 /* AccountsViewController.swift in Sources */,
@@ -674,24 +760,30 @@
 				BACC7BA71E55272D007BEECA /* RoundedCornerButton.swift in Sources */,
 				DA4E69E658669F7562B31206 /* AccountsInteractorOutput.swift in Sources */,
 				42785AF1BBE6E5BE6A8EFAAE /* AccountsInteractor.swift in Sources */,
+				BA04B80B1E5B1FC100DF823F /* ListResourcesViewInput.swift in Sources */,
 				BFE5E15C72BDF4A87C9B9531 /* AccountsRouterInput.swift in Sources */,
 				CDCD23C2D9B53A5A47FBCE5F /* AccountsRouter.swift in Sources */,
 				4DD41698DF996DD6A810E900 /* AccountsConfigurator.swift in Sources */,
+				BA04B8081E5B1FC100DF823F /* ListResourcesInteractorOutput.swift in Sources */,
 				55E56D2D1E375AC46615AA02 /* AccountsInitializer.swift in Sources */,
 				BA145A341E5319B200358AE5 /* Account+CoreDataClass.swift in Sources */,
 				0C20FD73C4FD5CA8818C3505 /* EditAccountViewInput.swift in Sources */,
 				8F018966FB6496D4714BB3C0 /* EditAccountViewOutput.swift in Sources */,
+				BA04B8061E5B1FC100DF823F /* ListResourcesInteractor.swift in Sources */,
 				C6990D4A8E301E58C6FEFAD1 /* EditAccountViewController.swift in Sources */,
+				BA04B8181E5B28A800DF823F /* ListResourcesRouterInput.swift in Sources */,
 				BA7D10A41E57C18C0066FFA2 /* RoundedFlatTextField.swift in Sources */,
 				BACC7BA91E55275D007BEECA /* UIViewExtensions.swift in Sources */,
 				BACC7BA61E55272D007BEECA /* UIViewControllerExtensions.swift in Sources */,
 				F9982945946748A65A33CDD1 /* EditAccountModuleInput.swift in Sources */,
 				5B4E71AB8A1B95C515B11A04 /* EditAccountPresenter.swift in Sources */,
+				BA04B8161E5B276400DF823F /* BaseEntity.swift in Sources */,
 				DDCB3C72D638F2A1E8A5BC47 /* EditAccountInteractorInput.swift in Sources */,
 				8AC274CA2A710BCEF597CA8E /* EditAccountInteractorOutput.swift in Sources */,
 				4D5C476261EBE9E57757EB02 /* EditAccountInteractor.swift in Sources */,
 				901BCF28392EAA1E1DC27E15 /* EditAccountRouterInput.swift in Sources */,
 				2C41C6A546E8E06162ABB6F1 /* EditAccountRouter.swift in Sources */,
+				BA04B80A1E5B1FC100DF823F /* ListResourcesPresenterInput.swift in Sources */,
 				B4CA0D2B87D92F510C0CB6CD /* EditAccountConfigurator.swift in Sources */,
 				A52C52FACBBCECE154883F5A /* EditAccountInitializer.swift in Sources */,
 			);

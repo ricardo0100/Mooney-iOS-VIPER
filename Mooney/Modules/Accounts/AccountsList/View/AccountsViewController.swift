@@ -61,10 +61,6 @@ class AccountsViewController: UITableViewController, AccountsViewInput {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
             let account = self.accounts[indexPath.row]
@@ -72,7 +68,8 @@ class AccountsViewController: UITableViewController, AccountsViewInput {
         }
         
         let editAction = UITableViewRowAction(style: .normal, title: "Edit") { (action, indexPath) in
-            self.output.presentEditViewForAccount(at: indexPath.row)
+            let account = self.accounts[indexPath.row]
+            self.output.presentEditView(for: account)
         }
         
         return [deleteAction, editAction]

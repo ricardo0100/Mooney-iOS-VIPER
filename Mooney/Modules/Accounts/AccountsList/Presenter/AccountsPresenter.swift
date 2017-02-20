@@ -12,9 +12,6 @@ class AccountsPresenter: AccountsModuleInput, AccountsViewOutput, AccountsIntera
     var interactor: AccountsInteractorInput!
     var router: AccountsRouterInput!
     
-    var accountsToPresent: [Account] = []
-    
-    
     // MARK: AccountModuleInput
     func reloadAccountsList() {
         interactor.fetchAccountsList()
@@ -34,8 +31,7 @@ class AccountsPresenter: AccountsModuleInput, AccountsViewOutput, AccountsIntera
         interactor.fetchAccountsList()
     }
     
-    func presentEditViewForAccount(at index: Int) {
-        let account = accountsToPresent[index]
+    func presentEditView(for account: Account) {
         router.presentEditView(for: account)
     }
     
@@ -46,7 +42,6 @@ class AccountsPresenter: AccountsModuleInput, AccountsViewOutput, AccountsIntera
     
     // MARK: AccountsInteractorOutput
     func presentListWith(_ accounts: [Account]) {
-        accountsToPresent = accounts
         view.showList(with: accounts)
     }
     

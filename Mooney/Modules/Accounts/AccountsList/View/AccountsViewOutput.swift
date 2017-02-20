@@ -14,7 +14,7 @@ protocol AccountsViewOutput {
     
     func refreshAccountsList()
     
-    func presentEditViewForAccount(at index: Int)
+    func presentEditView(for account: Account)
         
     func deleteAccount(_ account: Account, at index: Int)
     
