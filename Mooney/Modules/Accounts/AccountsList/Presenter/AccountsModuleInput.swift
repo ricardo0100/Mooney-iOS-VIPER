@@ -8,6 +8,6 @@
 
 protocol AccountsModuleInput: class {
     
-    func refreshAccountsList()
+    func reloadAccountsList()
 
 }

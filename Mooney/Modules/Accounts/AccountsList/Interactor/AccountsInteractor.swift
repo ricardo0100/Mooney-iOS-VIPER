@@ -31,4 +31,14 @@ class AccountsInteractor: AccountsInteractorInput {
         }
     }
     
+    func deleteAccount(_ account: Account, at index: Int) {
+        do {
+            dataStack.mainContext.delete(account)
+            try dataStack.mainContext.save()
+            output.presentSuccessForAccountDeletionAt(index)
+        } catch {
+            output.presentError(with: "Oops!", and: "Error deleting account!")
+        }
+    }
+    
 }

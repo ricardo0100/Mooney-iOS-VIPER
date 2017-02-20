@@ -15,10 +15,12 @@ protocol AccountsViewInput: class {
 
     func setupInitialState()
     
-    func show(_ accounts: [Account])
+    func showList(with accounts: [Account])
     
     func showBlankstate()
     
     func showAlert(with title: String, and message: String)
+    
+    func removeFromViewListAccount(at index: Int)
     
 }

@@ -8,17 +8,14 @@
 
 protocol AccountsViewOutput {
 
-    /**
-        @author Ricardo Gehrke Filho
-        Notify presenter that view is ready
-    */
-
     func viewIsReady()
     
     func presentNewAccountView()
     
     func refreshAccountsList()
     
-    func presentEditView(for account: Account)
+    func presentEditViewForAccount(at index: Int)
+        
+    func deleteAccount(_ account: Account, at index: Int)
     
 }

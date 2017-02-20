@@ -40,4 +40,10 @@ class AccountsInteractorTests: XCTestCase {
         XCTAssertEqual(presenter.presentedAccounts[0].name, "Banco do Brasil")
     }
     
+    func testDeleteAccountPresentSuccess() {
+        let account = DatabaseUtils.createAccount(with: "Banco do Brasil", in: dataStack.mainContext)
+        interactor.deleteAccount(account, at: 0)
+        XCTAssertTrue(presenter.didPresentSuccessForAccountDeletionAt)
+    }
+    
 }

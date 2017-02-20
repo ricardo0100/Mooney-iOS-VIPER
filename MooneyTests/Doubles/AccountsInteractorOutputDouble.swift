@@ -15,6 +15,7 @@ class AccountsInteractorOutputDouble: AccountsInteractorOutput {
     var didPresentAccountsList = false
     var didPresentBlankstate = false
     var didPresentError = false
+    var didPresentSuccessForAccountDeletionAt = false
     
     var presentedAccounts: [Account] = []
     
@@ -29,6 +30,10 @@ class AccountsInteractorOutputDouble: AccountsInteractorOutput {
     
     func presentError(with title: String, and message: String) {
         didPresentError = true
+    }
+    
+    func presentSuccessForAccountDeletionAt(_ index: Int) {
+        didPresentSuccessForAccountDeletionAt = true
     }
     
 }

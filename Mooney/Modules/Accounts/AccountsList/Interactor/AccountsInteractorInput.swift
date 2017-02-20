@@ -12,4 +12,6 @@ protocol AccountsInteractorInput {
     
     func fetchAccountsList()
     
+    func deleteAccount(_ account: Account, at index: Int)
+    
 }

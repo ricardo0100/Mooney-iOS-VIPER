@@ -11,21 +11,19 @@ class AccountsPresenter: AccountsModuleInput, AccountsViewOutput, AccountsIntera
     weak var view: AccountsViewInput!
     var interactor: AccountsInteractorInput!
     var router: AccountsRouterInput!
-
-    func viewIsReady() {
+    
+    var accountsToPresent: [Account] = []
+    
+    
+    // MARK: AccountModuleInput
+    func reloadAccountsList() {
         interactor.fetchAccountsList()
     }
     
-    func presentListWith(_ accounts: [Account]) {
-        view.show(accounts)
-    }
     
-    func presentBlankstate() {
-        view.showBlankstate()
-    }
-    
-    func presentError(with title: String, and message: String) {
-        view.showAlert(with: title, and: message)
+    // MARK: AccountsViewOutput
+    func viewIsReady() {
+        interactor.fetchAccountsList()
     }
     
     func presentNewAccountView() {
@@ -36,8 +34,32 @@ class AccountsPresenter: AccountsModuleInput, AccountsViewOutput, AccountsIntera
         interactor.fetchAccountsList()
     }
     
-    func presentEditView(for account: Account) {
+    func presentEditViewForAccount(at index: Int) {
+        let account = accountsToPresent[index]
         router.presentEditView(for: account)
+    }
+    
+    func deleteAccount(_ account: Account, at index: Int) {
+        interactor.deleteAccount(account, at: index)
+    }
+    
+    
+    // MARK: AccountsInteractorOutput
+    func presentListWith(_ accounts: [Account]) {
+        accountsToPresent = accounts
+        view.showList(with: accounts)
+    }
+    
+    func presentBlankstate() {
+        view.showBlankstate()
+    }
+    
+    func presentError(with title: String, and message: String) {
+        view.showAlert(with: title, and: message)
+    }
+    
+    func presentSuccessForAccountDeletionAt(_ index: Int) {
+        view.removeFromViewListAccount(at: index)
     }
     
 }

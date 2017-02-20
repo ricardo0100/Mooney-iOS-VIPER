@@ -16,4 +16,6 @@ protocol AccountsInteractorOutput: class {
     
     func presentError(with title: String, and message: String)
     
+    func presentSuccessForAccountDeletionAt(_ index: Int)
+    
 }
