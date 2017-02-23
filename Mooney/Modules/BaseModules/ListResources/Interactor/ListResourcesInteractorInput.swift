@@ -6,10 +6,12 @@
 //  Copyright © 2017 ricardofilho.com.br. All rights reserved.
 //
 
+import CoreData
+
 protocol ListResourcesInteractorInput {
     
-    func fetchResourcesList()
+    func fetchList()
     
-    func deleteResource(_ resource: BaseEntity, at index: Int)
+    func deleteResource(_ resource: NSManagedObject)
     
 }

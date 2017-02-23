@@ -1,59 +1,77 @@
 //
-//  AccountsAccountsPresenter.swift
-//  Mooney-iOS-VIPER
+//  ListResourcesPresenter.swift
+//  Mooney
 //
-//  Created by Ricardo Gehrke Filho on 12/02/2017.
-//  Copyright © 2017 ricardofilho.com.br. All rights reserved.
+//  Created by Ricardo Gehrke Filho on 21/02/17.
+//  Copyright © 2017 Ricardo Gehrke Filho. All rights reserved.
 //
 
-class ListResourcesPresenter<Resource: BaseEntity>: ListResourcesPresenterInput, ListResourcesViewOutput, ListResourcesInteractorOutput {
+import CoreData
+
+class ListResourcesPresenter<Entity: BaseEntity, Model: BaseModel>: ListResourcesViewOutput, ListResourcesInteractorInput, ListResourcesInteractorOutput {
     
-    weak var view: AccountsViewInput!
-    var interactor: AccountsInteractorInput!
-    var router: AccountsRouterInput!
+    var view: ListResourcesViewInput!
+    var interactor: ListResourcesInteractor<Model>!
     
-    
-    //MARK: ListResourcesPresenterInput
-    
-    func reloadList() {
-        
-    }
+    private var items: [Entity] = []
     
     
     //MARK: ListResourcesViewOutput
     
-    func presentNewResourceView() {
-        
-    }
-    
     func refreshResourcesList() {
+        interactor.fetchList()
+    }
+    
+    func numberOfItems() -> Int {
+        return items.count
+    }
+    
+    func resourceForItem(at index: Int) -> BaseEntity {
+        return items[index]
+    }
+    
+    func didTapNewButton() {
         
     }
     
-    func presentEditResourceView(for resource: BaseEntity) {
+    func didSelectItem(at index: Int) {
         
     }
     
-    func deleteResource(_ resource: BaseEntity, at index: Int) {
+    func didTapDeleteActionFotItem(at index: Int) {
+        
+    }
+    
+    func didTapEditActionFotItem(at index: Int) {
+        
+    }
+    
+    
+    //MARK: ListResourcesInteractorInput
+    
+    func fetchList() {
+        
+    }
+    
+    func deleteResource(_ resource: NSManagedObject) {
         
     }
     
     
     //MARK: ListResourcesInteractorOutput
     
-    func presentListWith(_ resources: [BaseEntity]) {
-        
+    func presentList(with items: [BaseModel]) {
+        if items.isEmpty {
+            view.showBlankstate()
+        } else {
+            self.items = items.map({ (modelObject) -> Entity in
+                return modelObject.convertToEntity()
+            })
+            view.showList()
+        }
     }
     
-    func presentBlankstate() {
-        
-    }
-    
-    func presentError(with title: String, and message: String) {
-        
-    }
-    
-    func presentSuccessForResourceDeletionAt(_ index: Int) {
+    func presentError() {
         
     }
     

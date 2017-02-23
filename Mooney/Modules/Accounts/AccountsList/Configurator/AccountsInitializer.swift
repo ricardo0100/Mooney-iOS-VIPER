@@ -12,7 +12,7 @@ class AccountsModuleInitializer: NSObject {
 
     //Connect with object on storyboard
     @IBOutlet weak var accountsViewController: AccountsViewController!
-
+    
     override func awakeFromNib() {
         let configurator = AccountsModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: accountsViewController)

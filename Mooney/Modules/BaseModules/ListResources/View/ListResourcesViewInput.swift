@@ -1,5 +1,5 @@
 //
-//  AccountsAccountsViewInput.swift
+//  ListResourcesViewInput.swift
 //  Mooney-iOS-VIPER
 //
 //  Created by Ricardo Gehrke Filho on 12/02/2017.
@@ -8,7 +8,7 @@
 
 protocol ListResourcesViewInput: class {
     
-    func showList(with accounts: [BaseEntity])
+    func showList()
     
     func showBlankstate()
     

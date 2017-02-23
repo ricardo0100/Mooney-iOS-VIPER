@@ -8,30 +8,33 @@
 
 import DATAStack
 
-class ListResourcesInteractor<Entity: BaseEntity>: ListResourcesInteractorInput {
+class ListResourcesInteractor<Model: BaseModel>: ListResourcesInteractorInput {
 
     weak var output: ListResourcesInteractorOutput!
     
-    func fetchResourcesList() {
+    var dataStack: DATAStack
+    var entityName: String
+    
+    init(with dataStack: DATAStack, andEntityName name: String) {
+        self.dataStack = dataStack
+        self.entityName = name
+    }
+    
+    func fetchList() {
         do {
-            let resources = try Entity.fetchAll()
-            if resources.count == 0 {
-                output.presentBlankstate()
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+            if let result = try dataStack.mainContext.fetch(fetchRequest) as? [Model] {
+                output.presentList(with: result)
             } else {
-                output.presentListWith(resources)
+                output.presentError()
             }
         } catch {
-            output.presentError(with: "Oops!", and: "Error fetching!")
+            output.presentError()
         }
     }
     
-    func deleteResource(_ resource: BaseEntity, at index: Int) {
-        do {
-            try resource.delete()
-            output.presentSuccessForResourceDeletionAt(index)
-        } catch {
-            output.presentError(with: "Oops!", and: "Error deleting!")
-        }
+    func deleteResource(_ resource: NSManagedObject) {
+        
     }
     
 }

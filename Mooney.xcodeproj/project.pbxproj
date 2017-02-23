@@ -7,60 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C20FD73C4FD5CA8818C3505 /* EditAccountViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F732A9D3D45C19CBB5F0D466 /* EditAccountViewInput.swift */; };
-		123AD8D2B6F4FEC7D3E77BDB /* AccountsModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F86B07C74A91892363803C /* AccountsModuleInput.swift */; };
-		20FEF5A73FE2A16C5729762D /* AccountsInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4019656FC4EC5E7FA86B6AE /* AccountsInteractorInput.swift */; };
-		2C41C6A546E8E06162ABB6F1 /* EditAccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EF01DC493EAC6A4B219154 /* EditAccountRouter.swift */; };
-		42785AF1BBE6E5BE6A8EFAAE /* AccountsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B298E08B33F605C2E1BCF7C /* AccountsInteractor.swift */; };
-		4C19A4184E6525FA081825AF /* AccountsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C957B0B6BAE8F361E371B90 /* AccountsPresenter.swift */; };
-		4D5C476261EBE9E57757EB02 /* EditAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D98592090C9B615263203 /* EditAccountInteractor.swift */; };
 		4DD41698DF996DD6A810E900 /* AccountsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D05085117B7731C9943A79A /* AccountsConfigurator.swift */; };
 		55E56D2D1E375AC46615AA02 /* AccountsInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7BE38D58F09F7C2CB9D8F2 /* AccountsInitializer.swift */; };
 		59B478334087C8A43FE443D3 /* Pods_MooneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE132653747F687A6C542A5E /* Pods_MooneyTests.framework */; };
-		5B4E71AB8A1B95C515B11A04 /* EditAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC37BD393A4E4E277BC836EE /* EditAccountPresenter.swift */; };
 		75520A693C414B2895D83C81 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2290134312CE525414E795F /* AccountsViewController.swift */; };
 		76DA6E0059B74612C98B67D8 /* Pods_Mooney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F2839BE0688212E6F645AB /* Pods_Mooney.framework */; };
-		8AC274CA2A710BCEF597CA8E /* EditAccountInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C7CF958BE4EBB6D5C1FCD /* EditAccountInteractorOutput.swift */; };
-		8F018966FB6496D4714BB3C0 /* EditAccountViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1C412D3E5B288E0B1B3E0C /* EditAccountViewOutput.swift */; };
-		901BCF28392EAA1E1DC27E15 /* EditAccountRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E35B6AB6A0D61A68C392C3B /* EditAccountRouterInput.swift */; };
-		A52C52FACBBCECE154883F5A /* EditAccountInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BE9BFCC4CFD41EE71A13CE /* EditAccountInitializer.swift */; };
-		B4CA0D2B87D92F510C0CB6CD /* EditAccountConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263FAFF0FB743E12BCF1B30 /* EditAccountConfigurator.swift */; };
-		B4FDC621A426E695859A9BA8 /* AccountsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EDE6634C27E599EF38EBB5 /* AccountsViewInput.swift */; };
 		BA04B8061E5B1FC100DF823F /* ListResourcesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B7FD1E5B1FC100DF823F /* ListResourcesInteractor.swift */; };
 		BA04B8071E5B1FC100DF823F /* ListResourcesInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B7FE1E5B1FC100DF823F /* ListResourcesInteractorInput.swift */; };
 		BA04B8081E5B1FC100DF823F /* ListResourcesInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B7FF1E5B1FC100DF823F /* ListResourcesInteractorOutput.swift */; };
-		BA04B8091E5B1FC100DF823F /* ListResourcesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B8011E5B1FC100DF823F /* ListResourcesPresenter.swift */; };
 		BA04B80A1E5B1FC100DF823F /* ListResourcesPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B8021E5B1FC100DF823F /* ListResourcesPresenterInput.swift */; };
 		BA04B80B1E5B1FC100DF823F /* ListResourcesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B8041E5B1FC100DF823F /* ListResourcesViewInput.swift */; };
 		BA04B80C1E5B1FC100DF823F /* ListResourcesViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B8051E5B1FC100DF823F /* ListResourcesViewOutput.swift */; };
-		BA04B8161E5B276400DF823F /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B8151E5B276400DF823F /* BaseEntity.swift */; };
 		BA04B8181E5B28A800DF823F /* ListResourcesRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B8171E5B28A800DF823F /* ListResourcesRouterInput.swift */; };
-		BA145A341E5319B200358AE5 /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA145A321E5319B200358AE5 /* Account+CoreDataClass.swift */; };
-		BA145A351E5319B200358AE5 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA145A331E5319B200358AE5 /* Account+CoreDataProperties.swift */; };
+		BA6FA1AE1E5E86300036F28F /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FA1AA1E5E86300036F28F /* AccountModel.swift */; };
+		BA6FA1B01E5E86300036F28F /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FA1AC1E5E86300036F28F /* BaseModel.swift */; };
+		BA6FA1B51E5E894D0036F28F /* EntityConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FA1B41E5E894D0036F28F /* EntityConvertible.swift */; };
+		BA6FA1B71E5E89BE0036F28F /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FA1B61E5E89BE0036F28F /* Entity.swift */; };
+		BA6FA1B91E5F02380036F28F /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FA1B81E5F02380036F28F /* Account.swift */; };
 		BA7D10A41E57C18C0066FFA2 /* RoundedFlatTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D10A31E57C18C0066FFA2 /* RoundedFlatTextField.swift */; };
-		BA7D10A61E57D49C0066FFA2 /* EditAccountInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D10A51E57D49C0066FFA2 /* EditAccountInteractorTests.swift */; };
-		BA7D10A81E57D52F0066FFA2 /* EditAccountInteractorOutputDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D10A71E57D52F0066FFA2 /* EditAccountInteractorOutputDouble.swift */; };
 		BA9100971E50717C0006CAD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9100911E50717C0006CAD3 /* AppDelegate.swift */; };
 		BA9100991E50717C0006CAD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9100941E50717C0006CAD3 /* Assets.xcassets */; };
 		BA91009A1E50717C0006CAD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9100951E50717C0006CAD3 /* LaunchScreen.storyboard */; };
 		BA9100A71E50A4E10006CAD3 /* Accounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9100A61E50A4E10006CAD3 /* Accounts.storyboard */; };
 		BA9100AA1E5149B70006CAD3 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9100A91E5149B70006CAD3 /* Menu.storyboard */; };
 		BA9100B01E514E300006CAD3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9100AF1E514E300006CAD3 /* API.swift */; };
-		BAA510C81E5475E100AE5F99 /* AccountsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA510C41E5475E100AE5F99 /* AccountsInteractorTests.swift */; };
-		BAA510C91E5475E100AE5F99 /* AccountsInteractorOutputDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA510C61E5475E100AE5F99 /* AccountsInteractorOutputDouble.swift */; };
 		BAA510CB1E54761A00AE5F99 /* DatabaseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA510CA1E54761A00AE5F99 /* DatabaseUtils.swift */; };
 		BAA71F011E5264C6009DB223 /* MooneyDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAA71EFF1E5264C6009DB223 /* MooneyDataModel.xcdatamodeld */; };
-		BAC411EA1E54F2180021273D /* EditAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC411E91E54F2180021273D /* EditAccount.storyboard */; };
 		BACC7BA61E55272D007BEECA /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACC7BA31E55272D007BEECA /* UIViewControllerExtensions.swift */; };
 		BACC7BA71E55272D007BEECA /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACC7BA51E55272D007BEECA /* RoundedCornerButton.swift */; };
 		BACC7BA91E55275D007BEECA /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACC7BA81E55275D007BEECA /* UIViewExtensions.swift */; };
-		BFE5E15C72BDF4A87C9B9531 /* AccountsRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95F2DAEB8A976757A947089 /* AccountsRouterInput.swift */; };
-		C6990D4A8E301E58C6FEFAD1 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94AF0CC1FCCE9576EE055C /* EditAccountViewController.swift */; };
-		CDCD23C2D9B53A5A47FBCE5F /* AccountsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2351AA38C7B70C57B03D20DC /* AccountsRouter.swift */; };
-		DA4E69E658669F7562B31206 /* AccountsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAE579A4490CAC99268D80C /* AccountsInteractorOutput.swift */; };
-		DA68D313ACCD22E73548A4ED /* AccountsViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7283DAA7DBD4389FA3E6B928 /* AccountsViewOutput.swift */; };
-		DDCB3C72D638F2A1E8A5BC47 /* EditAccountInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C7C6BAC46FAA77BD6273FA /* EditAccountInteractorInput.swift */; };
-		F9982945946748A65A33CDD1 /* EditAccountModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D35C34AE94B9FDB5B5EFD4 /* EditAccountModuleInput.swift */; };
+		BAD3AF731E5DD1F500150F82 /* ListResourcesViewInputDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3AF721E5DD1F500150F82 /* ListResourcesViewInputDouble.swift */; };
+		BAD7CEAF1E5D2D05005B18E3 /* ListResourcesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD7CEAE1E5D2D05005B18E3 /* ListResourcesPresenter.swift */; };
+		BAD7CEB61E5DB7A1005B18E3 /* ListResourcesInteractorOutputDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD7CEB41E5DB7A1005B18E3 /* ListResourcesInteractorOutputDouble.swift */; };
+		BAD7CEB71E5DB7A1005B18E3 /* ListResourcesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD7CEB51E5DB7A1005B18E3 /* ListResourcesInteractorTests.swift */; };
+		BAD7CEB91E5DC08E005B18E3 /* ListResourcesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD7CEB81E5DC08E005B18E3 /* ListResourcesPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,38 +54,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0AAE579A4490CAC99268D80C /* AccountsInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsInteractorOutput.swift; sourceTree = "<group>"; };
-		1B298E08B33F605C2E1BCF7C /* AccountsInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsInteractor.swift; sourceTree = "<group>"; };
 		21F2839BE0688212E6F645AB /* Pods_Mooney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mooney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2351AA38C7B70C57B03D20DC /* AccountsRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsRouter.swift; sourceTree = "<group>"; };
-		4C1D98592090C9B615263203 /* EditAccountInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditAccountInteractor.swift; sourceTree = "<group>"; };
-		5263FAFF0FB743E12BCF1B30 /* EditAccountConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditAccountConfigurator.swift; sourceTree = "<group>"; };
-		5C957B0B6BAE8F361E371B90 /* AccountsPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsPresenter.swift; sourceTree = "<group>"; };
-		61EF01DC493EAC6A4B219154 /* EditAccountRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditAccountRouter.swift; sourceTree = "<group>"; };
-		63EDE6634C27E599EF38EBB5 /* AccountsViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsViewInput.swift; sourceTree = "<group>"; };
-		7283DAA7DBD4389FA3E6B928 /* AccountsViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsViewOutput.swift; sourceTree = "<group>"; };
-		73F86B07C74A91892363803C /* AccountsModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsModuleInput.swift; sourceTree = "<group>"; };
-		7D94AF0CC1FCCE9576EE055C /* EditAccountViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
 		8D05085117B7731C9943A79A /* AccountsConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsConfigurator.swift; sourceTree = "<group>"; };
-		8E35B6AB6A0D61A68C392C3B /* EditAccountRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditAccountRouterInput.swift; sourceTree = "<group>"; };
-		91D35C34AE94B9FDB5B5EFD4 /* EditAccountModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditAccountModuleInput.swift; sourceTree = "<group>"; };
 		A35E3174360B94147366C779 /* Pods-MooneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MooneyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MooneyTests/Pods-MooneyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AE1C412D3E5B288E0B1B3E0C /* EditAccountViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditAccountViewOutput.swift; sourceTree = "<group>"; };
 		B2290134312CE525414E795F /* AccountsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		BA04B7FD1E5B1FC100DF823F /* ListResourcesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesInteractor.swift; sourceTree = "<group>"; };
 		BA04B7FE1E5B1FC100DF823F /* ListResourcesInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesInteractorInput.swift; sourceTree = "<group>"; };
 		BA04B7FF1E5B1FC100DF823F /* ListResourcesInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesInteractorOutput.swift; sourceTree = "<group>"; };
-		BA04B8011E5B1FC100DF823F /* ListResourcesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesPresenter.swift; sourceTree = "<group>"; };
 		BA04B8021E5B1FC100DF823F /* ListResourcesPresenterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesPresenterInput.swift; sourceTree = "<group>"; };
 		BA04B8041E5B1FC100DF823F /* ListResourcesViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesViewInput.swift; sourceTree = "<group>"; };
 		BA04B8051E5B1FC100DF823F /* ListResourcesViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesViewOutput.swift; sourceTree = "<group>"; };
-		BA04B8151E5B276400DF823F /* BaseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
 		BA04B8171E5B28A800DF823F /* ListResourcesRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesRouterInput.swift; sourceTree = "<group>"; };
-		BA145A321E5319B200358AE5 /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BA145A331E5319B200358AE5 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA6FA1AA1E5E86300036F28F /* AccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
+		BA6FA1AC1E5E86300036F28F /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		BA6FA1B41E5E894D0036F28F /* EntityConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityConvertible.swift; sourceTree = "<group>"; };
+		BA6FA1B61E5E89BE0036F28F /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		BA6FA1B81E5F02380036F28F /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		BA7D10A31E57C18C0066FFA2 /* RoundedFlatTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedFlatTextField.swift; sourceTree = "<group>"; };
-		BA7D10A51E57D49C0066FFA2 /* EditAccountInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAccountInteractorTests.swift; sourceTree = "<group>"; };
-		BA7D10A71E57D52F0066FFA2 /* EditAccountInteractorOutputDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAccountInteractorOutputDouble.swift; sourceTree = "<group>"; };
 		BA91007B1E5069240006CAD3 /* Mooney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mooney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9100911E50717C0006CAD3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA9100921E50717C0006CAD3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,27 +79,22 @@
 		BA9100A61E50A4E10006CAD3 /* Accounts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Accounts.storyboard; sourceTree = "<group>"; };
 		BA9100A91E5149B70006CAD3 /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		BA9100AF1E514E300006CAD3 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		BAA510C41E5475E100AE5F99 /* AccountsInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsInteractorTests.swift; sourceTree = "<group>"; };
-		BAA510C61E5475E100AE5F99 /* AccountsInteractorOutputDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsInteractorOutputDouble.swift; sourceTree = "<group>"; };
 		BAA510CA1E54761A00AE5F99 /* DatabaseUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseUtils.swift; sourceTree = "<group>"; };
 		BAA71F001E5264C6009DB223 /* MooneyDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MooneyDataModel.xcdatamodel; sourceTree = "<group>"; };
-		BAC411E91E54F2180021273D /* EditAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditAccount.storyboard; sourceTree = "<group>"; };
 		BACC7BA31E55272D007BEECA /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		BACC7BA51E55272D007BEECA /* RoundedCornerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
 		BACC7BA81E55275D007BEECA /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		BAD3AF721E5DD1F500150F82 /* ListResourcesViewInputDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesViewInputDouble.swift; sourceTree = "<group>"; };
+		BAD7CEAE1E5D2D05005B18E3 /* ListResourcesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesPresenter.swift; sourceTree = "<group>"; };
+		BAD7CEB41E5DB7A1005B18E3 /* ListResourcesInteractorOutputDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesInteractorOutputDouble.swift; sourceTree = "<group>"; };
+		BAD7CEB51E5DB7A1005B18E3 /* ListResourcesInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesInteractorTests.swift; sourceTree = "<group>"; };
+		BAD7CEB81E5DC08E005B18E3 /* ListResourcesPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesPresenterTests.swift; sourceTree = "<group>"; };
 		BAF142121E5334E3007C508B /* MooneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MooneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF142161E5334E4007C508B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC37BD393A4E4E277BC836EE /* EditAccountPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditAccountPresenter.swift; sourceTree = "<group>"; };
 		BE132653747F687A6C542A5E /* Pods_MooneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MooneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A77B31185631B4A7AC8E2C /* Pods-Mooney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooney.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mooney/Pods-Mooney.release.xcconfig"; sourceTree = "<group>"; };
-		C4C7C6BAC46FAA77BD6273FA /* EditAccountInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditAccountInteractorInput.swift; sourceTree = "<group>"; };
-		C95F2DAEB8A976757A947089 /* AccountsRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsRouterInput.swift; sourceTree = "<group>"; };
 		D31FACBC794D9A8D9374C2F8 /* Pods-Mooney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mooney/Pods-Mooney.debug.xcconfig"; sourceTree = "<group>"; };
-		DD5C7CF958BE4EBB6D5C1FCD /* EditAccountInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditAccountInteractorOutput.swift; sourceTree = "<group>"; };
-		E1BE9BFCC4CFD41EE71A13CE /* EditAccountInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditAccountInitializer.swift; sourceTree = "<group>"; };
 		EA7BE38D58F09F7C2CB9D8F2 /* AccountsInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsInitializer.swift; sourceTree = "<group>"; };
-		F4019656FC4EC5E7FA86B6AE /* AccountsInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsInteractorInput.swift; sourceTree = "<group>"; };
-		F732A9D3D45C19CBB5F0D466 /* EditAccountViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditAccountViewInput.swift; sourceTree = "<group>"; };
 		F9DFCF6B6E652230680C6B48 /* Pods-MooneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MooneyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MooneyTests/Pods-MooneyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,54 +138,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		4D2438D4708B9F7FEE5F2237 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				C95F2DAEB8A976757A947089 /* AccountsRouterInput.swift */,
-				2351AA38C7B70C57B03D20DC /* AccountsRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		7C2C6745BFDE7A7823A73DDA /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				F4019656FC4EC5E7FA86B6AE /* AccountsInteractorInput.swift */,
-				0AAE579A4490CAC99268D80C /* AccountsInteractorOutput.swift */,
-				1B298E08B33F605C2E1BCF7C /* AccountsInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		86677F584761294C051E02E5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BAC411E91E54F2180021273D /* EditAccount.storyboard */,
-				F732A9D3D45C19CBB5F0D466 /* EditAccountViewInput.swift */,
-				AE1C412D3E5B288E0B1B3E0C /* EditAccountViewOutput.swift */,
-				7D94AF0CC1FCCE9576EE055C /* EditAccountViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		96A0EFCA7D0BE2CF078B403D /* View */ = {
 			isa = PBXGroup;
 			children = (
 				BA9100A61E50A4E10006CAD3 /* Accounts.storyboard */,
-				63EDE6634C27E599EF38EBB5 /* AccountsViewInput.swift */,
-				7283DAA7DBD4389FA3E6B928 /* AccountsViewOutput.swift */,
 				B2290134312CE525414E795F /* AccountsViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		9A76975F30D39F1E17CC73C0 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				8E35B6AB6A0D61A68C392C3B /* EditAccountRouterInput.swift */,
-				61EF01DC493EAC6A4B219154 /* EditAccountRouter.swift */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		9B5BAB3C21B5338ED39CEA56 /* Configurator */ = {
@@ -241,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				BAC411E81E54E8300021273D /* AccountsList */,
-				E5CB40234C60A869543E0396 /* EditAccount */,
 			);
 			path = Accounts;
 			sourceTree = "<group>";
@@ -278,8 +196,8 @@
 		BA04B8001E5B1FC100DF823F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				BA04B8011E5B1FC100DF823F /* ListResourcesPresenter.swift */,
 				BA04B8021E5B1FC100DF823F /* ListResourcesPresenterInput.swift */,
+				BAD7CEAE1E5D2D05005B18E3 /* ListResourcesPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -304,7 +222,9 @@
 		BA04B8141E5B276400DF823F /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				BA04B8151E5B276400DF823F /* BaseEntity.swift */,
+				BA6FA1B41E5E894D0036F28F /* EntityConvertible.swift */,
+				BA6FA1B61E5E89BE0036F28F /* Entity.swift */,
+				BA6FA1B81E5F02380036F28F /* Account.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -312,9 +232,26 @@
 		BA145A211E53165200358AE5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BAF1420B1E532CE8007C508B /* Account */,
+				BA6FA1AA1E5E86300036F28F /* AccountModel.swift */,
+				BA6FA1AC1E5E86300036F28F /* BaseModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BA5CBCDA1E5C868F00F829FF /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BA5CBCDB1E5C868F00F829FF /* BaseModules */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		BA5CBCDB1E5C868F00F829FF /* BaseModules */ = {
+			isa = PBXGroup;
+			children = (
+				BAD7CEB31E5DB7A1005B18E3 /* ListResources */,
+			);
+			path = BaseModules;
 			sourceTree = "<group>";
 		};
 		BA9100721E5069230006CAD3 = {
@@ -404,24 +341,6 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		BAA510C31E5475E100AE5F99 /* Accounts */ = {
-			isa = PBXGroup;
-			children = (
-				BAA510C41E5475E100AE5F99 /* AccountsInteractorTests.swift */,
-				BA7D10A51E57D49C0066FFA2 /* EditAccountInteractorTests.swift */,
-			);
-			path = Accounts;
-			sourceTree = "<group>";
-		};
-		BAA510C51E5475E100AE5F99 /* Doubles */ = {
-			isa = PBXGroup;
-			children = (
-				BAA510C61E5475E100AE5F99 /* AccountsInteractorOutputDouble.swift */,
-				BA7D10A71E57D52F0066FFA2 /* EditAccountInteractorOutputDouble.swift */,
-			);
-			path = Doubles;
-			sourceTree = "<group>";
-		};
 		BAA510C71E5475E100AE5F99 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,9 +353,6 @@
 			isa = PBXGroup;
 			children = (
 				96A0EFCA7D0BE2CF078B403D /* View */,
-				F12C947EAEB60885D2045A76 /* Presenter */,
-				7C2C6745BFDE7A7823A73DDA /* Interactor */,
-				4D2438D4708B9F7FEE5F2237 /* Router */,
 				9B5BAB3C21B5338ED39CEA56 /* Configurator */,
 			);
 			path = AccountsList;
@@ -469,74 +385,25 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		BAF1420B1E532CE8007C508B /* Account */ = {
+		BAD7CEB31E5DB7A1005B18E3 /* ListResources */ = {
 			isa = PBXGroup;
 			children = (
-				BA145A321E5319B200358AE5 /* Account+CoreDataClass.swift */,
-				BA145A331E5319B200358AE5 /* Account+CoreDataProperties.swift */,
+				BAD7CEB51E5DB7A1005B18E3 /* ListResourcesInteractorTests.swift */,
+				BAD7CEB81E5DC08E005B18E3 /* ListResourcesPresenterTests.swift */,
+				BAD7CEB41E5DB7A1005B18E3 /* ListResourcesInteractorOutputDouble.swift */,
+				BAD3AF721E5DD1F500150F82 /* ListResourcesViewInputDouble.swift */,
 			);
-			path = Account;
+			path = ListResources;
 			sourceTree = "<group>";
 		};
 		BAF142131E5334E4007C508B /* MooneyTests */ = {
 			isa = PBXGroup;
 			children = (
-				BAA510C31E5475E100AE5F99 /* Accounts */,
-				BAA510C51E5475E100AE5F99 /* Doubles */,
+				BA5CBCDA1E5C868F00F829FF /* Modules */,
 				BAA510C71E5475E100AE5F99 /* Utils */,
 				BAF142161E5334E4007C508B /* Info.plist */,
 			);
 			path = MooneyTests;
-			sourceTree = "<group>";
-		};
-		BE3CA85F2CE00D9CDCB79D5A /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				91D35C34AE94B9FDB5B5EFD4 /* EditAccountModuleInput.swift */,
-				BC37BD393A4E4E277BC836EE /* EditAccountPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		DF845EC30430D5F2D48FE54B /* Configurator */ = {
-			isa = PBXGroup;
-			children = (
-				5263FAFF0FB743E12BCF1B30 /* EditAccountConfigurator.swift */,
-				E1BE9BFCC4CFD41EE71A13CE /* EditAccountInitializer.swift */,
-			);
-			path = Configurator;
-			sourceTree = "<group>";
-		};
-		E5CB40234C60A869543E0396 /* EditAccount */ = {
-			isa = PBXGroup;
-			children = (
-				86677F584761294C051E02E5 /* View */,
-				BE3CA85F2CE00D9CDCB79D5A /* Presenter */,
-				EA4F54019560A2EBEED535AF /* Interactor */,
-				9A76975F30D39F1E17CC73C0 /* Router */,
-				DF845EC30430D5F2D48FE54B /* Configurator */,
-			);
-			name = EditAccount;
-			path = Mooney/Modules/Accounts/EditAccount;
-			sourceTree = SOURCE_ROOT;
-		};
-		EA4F54019560A2EBEED535AF /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				C4C7C6BAC46FAA77BD6273FA /* EditAccountInteractorInput.swift */,
-				DD5C7CF958BE4EBB6D5C1FCD /* EditAccountInteractorOutput.swift */,
-				4C1D98592090C9B615263203 /* EditAccountInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		F12C947EAEB60885D2045A76 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				73F86B07C74A91892363803C /* AccountsModuleInput.swift */,
-				5C957B0B6BAE8F361E371B90 /* AccountsPresenter.swift */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -629,7 +496,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAC411EA1E54F2180021273D /* EditAccount.storyboard in Resources */,
 				BA9100A71E50A4E10006CAD3 /* Accounts.storyboard in Resources */,
 				BA91009A1E50717C0006CAD3 /* LaunchScreen.storyboard in Resources */,
 				BA9100991E50717C0006CAD3 /* Assets.xcassets in Resources */,
@@ -746,46 +612,27 @@
 			files = (
 				BA04B8071E5B1FC100DF823F /* ListResourcesInteractorInput.swift in Sources */,
 				BA9100971E50717C0006CAD3 /* AppDelegate.swift in Sources */,
-				BA04B8091E5B1FC100DF823F /* ListResourcesPresenter.swift in Sources */,
+				BA6FA1AE1E5E86300036F28F /* AccountModel.swift in Sources */,
 				BA04B80C1E5B1FC100DF823F /* ListResourcesViewOutput.swift in Sources */,
-				B4FDC621A426E695859A9BA8 /* AccountsViewInput.swift in Sources */,
-				DA68D313ACCD22E73548A4ED /* AccountsViewOutput.swift in Sources */,
+				BA6FA1B01E5E86300036F28F /* BaseModel.swift in Sources */,
+				BA6FA1B91E5F02380036F28F /* Account.swift in Sources */,
 				75520A693C414B2895D83C81 /* AccountsViewController.swift in Sources */,
 				BA9100B01E514E300006CAD3 /* API.swift in Sources */,
-				123AD8D2B6F4FEC7D3E77BDB /* AccountsModuleInput.swift in Sources */,
-				BA145A351E5319B200358AE5 /* Account+CoreDataProperties.swift in Sources */,
-				4C19A4184E6525FA081825AF /* AccountsPresenter.swift in Sources */,
-				20FEF5A73FE2A16C5729762D /* AccountsInteractorInput.swift in Sources */,
 				BAA71F011E5264C6009DB223 /* MooneyDataModel.xcdatamodeld in Sources */,
 				BACC7BA71E55272D007BEECA /* RoundedCornerButton.swift in Sources */,
-				DA4E69E658669F7562B31206 /* AccountsInteractorOutput.swift in Sources */,
-				42785AF1BBE6E5BE6A8EFAAE /* AccountsInteractor.swift in Sources */,
+				BA6FA1B51E5E894D0036F28F /* EntityConvertible.swift in Sources */,
 				BA04B80B1E5B1FC100DF823F /* ListResourcesViewInput.swift in Sources */,
-				BFE5E15C72BDF4A87C9B9531 /* AccountsRouterInput.swift in Sources */,
-				CDCD23C2D9B53A5A47FBCE5F /* AccountsRouter.swift in Sources */,
 				4DD41698DF996DD6A810E900 /* AccountsConfigurator.swift in Sources */,
 				BA04B8081E5B1FC100DF823F /* ListResourcesInteractorOutput.swift in Sources */,
 				55E56D2D1E375AC46615AA02 /* AccountsInitializer.swift in Sources */,
-				BA145A341E5319B200358AE5 /* Account+CoreDataClass.swift in Sources */,
-				0C20FD73C4FD5CA8818C3505 /* EditAccountViewInput.swift in Sources */,
-				8F018966FB6496D4714BB3C0 /* EditAccountViewOutput.swift in Sources */,
+				BA6FA1B71E5E89BE0036F28F /* Entity.swift in Sources */,
 				BA04B8061E5B1FC100DF823F /* ListResourcesInteractor.swift in Sources */,
-				C6990D4A8E301E58C6FEFAD1 /* EditAccountViewController.swift in Sources */,
 				BA04B8181E5B28A800DF823F /* ListResourcesRouterInput.swift in Sources */,
 				BA7D10A41E57C18C0066FFA2 /* RoundedFlatTextField.swift in Sources */,
 				BACC7BA91E55275D007BEECA /* UIViewExtensions.swift in Sources */,
 				BACC7BA61E55272D007BEECA /* UIViewControllerExtensions.swift in Sources */,
-				F9982945946748A65A33CDD1 /* EditAccountModuleInput.swift in Sources */,
-				5B4E71AB8A1B95C515B11A04 /* EditAccountPresenter.swift in Sources */,
-				BA04B8161E5B276400DF823F /* BaseEntity.swift in Sources */,
-				DDCB3C72D638F2A1E8A5BC47 /* EditAccountInteractorInput.swift in Sources */,
-				8AC274CA2A710BCEF597CA8E /* EditAccountInteractorOutput.swift in Sources */,
-				4D5C476261EBE9E57757EB02 /* EditAccountInteractor.swift in Sources */,
-				901BCF28392EAA1E1DC27E15 /* EditAccountRouterInput.swift in Sources */,
-				2C41C6A546E8E06162ABB6F1 /* EditAccountRouter.swift in Sources */,
 				BA04B80A1E5B1FC100DF823F /* ListResourcesPresenterInput.swift in Sources */,
-				B4CA0D2B87D92F510C0CB6CD /* EditAccountConfigurator.swift in Sources */,
-				A52C52FACBBCECE154883F5A /* EditAccountInitializer.swift in Sources */,
+				BAD7CEAF1E5D2D05005B18E3 /* ListResourcesPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,11 +640,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA7D10A61E57D49C0066FFA2 /* EditAccountInteractorTests.swift in Sources */,
-				BAA510C91E5475E100AE5F99 /* AccountsInteractorOutputDouble.swift in Sources */,
-				BAA510C81E5475E100AE5F99 /* AccountsInteractorTests.swift in Sources */,
+				BAD7CEB91E5DC08E005B18E3 /* ListResourcesPresenterTests.swift in Sources */,
+				BAD7CEB71E5DB7A1005B18E3 /* ListResourcesInteractorTests.swift in Sources */,
+				BAD7CEB61E5DB7A1005B18E3 /* ListResourcesInteractorOutputDouble.swift in Sources */,
+				BAD3AF731E5DD1F500150F82 /* ListResourcesViewInputDouble.swift in Sources */,
 				BAA510CB1E54761A00AE5F99 /* DatabaseUtils.swift in Sources */,
-				BA7D10A81E57D52F0066FFA2 /* EditAccountInteractorOutputDouble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

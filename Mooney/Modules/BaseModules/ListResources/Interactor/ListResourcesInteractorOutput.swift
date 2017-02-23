@@ -6,14 +6,12 @@
 //  Copyright © 2017 ricardofilho.com.br. All rights reserved.
 //
 
+import CoreData
+
 protocol ListResourcesInteractorOutput: class {
     
-    func presentListWith(_ resources: [BaseEntity])
-
-    func presentBlankstate()
+    func presentList(with items: [BaseModel])
     
-    func presentError(with title: String, and message: String)
-    
-    func presentSuccessForResourceDeletionAt(_ index: Int)
+    func presentError()
     
 }

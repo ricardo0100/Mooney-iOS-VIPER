@@ -20,13 +20,10 @@ class AccountsModuleConfigurator {
 
     private func configure(viewController: AccountsViewController) {
 
-        let router = AccountsRouter(withRoot: viewController)
-
-        let presenter = AccountsPresenter()
+        let presenter = ListResourcesPresenter<Account, AccountModel>()
         presenter.view = viewController
-        presenter.router = router
-
-        let interactor = AccountsInteractor(dataStack: DATAStack(modelName: "MooneyDataModel"))
+        
+        let interactor = ListResourcesInteractor<AccountModel>(with: DATAStack(modelName: "MooneyDataModel"), andEntityName: "Account")
         interactor.output = presenter
 
         presenter.interactor = interactor

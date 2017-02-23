@@ -8,12 +8,18 @@
 
 protocol ListResourcesViewOutput {
     
-    func presentNewResourceView()
-    
     func refreshResourcesList()
     
-    func presentEditResourceView(for resource: BaseEntity)
+    func numberOfItems() -> Int
     
-    func deleteResource(_ resource: BaseEntity, at index: Int)
+    func resourceForItem(at index: Int) -> BaseEntity
+    
+    func didTapNewButton()
+    
+    func didSelectItem(at index: Int)
+    
+    func didTapDeleteActionFotItem(at index: Int)
+    
+    func didTapEditActionFotItem(at index: Int)
     
 }
