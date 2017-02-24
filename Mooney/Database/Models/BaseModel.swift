@@ -9,14 +9,10 @@
 import Foundation
 import CoreData
 
-class BaseModel: NSManagedObject, EntityConvertible {
+class BaseModel: NSManagedObject {
 
     @NSManaged public var id: Int64
     @NSManaged public var createdAt: NSDate?
     @NSManaged public var updatedAt: NSDate?
-    
-    func convertToEntity<T : BaseEntity>() -> T {
-        fatalError("Implement this in subclass")
-    }
     
 }

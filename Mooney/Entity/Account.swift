@@ -12,8 +12,9 @@ struct Account: BaseEntity {
     
     var name: String
     
-    init(name: String) {
-        self.name = name
+    init(object: BaseModel) {
+        let account = object as! AccountModel
+        self.name = account.name!
     }
     
 }

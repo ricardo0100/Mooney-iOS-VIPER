@@ -24,15 +24,27 @@ class ListResourcesInteractorTests: XCTestCase {
     
     func testListResourcesInteractorOutputDidPresentBlankState() {
         interactor.fetchList()
+        
         XCTAssertEqual(output.presentedList.count, 0, "List should be empty!")
         XCTAssertFalse(output.didPresentError)
     }
     
     func testListResourcesInteractorOutputDidPresentList() {
-        _ = DatabaseUtils.createAccount(with: "Banco do Brasil 🇧🇷", in: interactor.dataStack.mainContext)
+        DatabaseUtils.createAccount(with: "Banco do Brasil 🇧🇷", in: interactor.dataStack.mainContext)
         interactor.fetchList()
+        
         XCTAssertEqual(output.presentedList.count, 1, "List should have one item!")
         XCTAssertFalse(output.didPresentError)
+    }
+    
+    func testListResourceInteractorDidDeleteResource() {
+        DatabaseUtils.createAccount(with: "Banco do Brasil 🇧🇷", in: interactor.dataStack.mainContext)
+        interactor.fetchList()
+        
+        XCTAssertTrue(interactor.deleteResource(output.presentedList[0]))
+        
+        interactor.fetchList()
+        XCTAssertEqual(output.presentedList.count, 0, "List should be empty!")
     }
     
 }

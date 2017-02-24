@@ -33,8 +33,14 @@ class ListResourcesInteractor<Model: BaseModel>: ListResourcesInteractorInput {
         }
     }
     
-    func deleteResource(_ resource: NSManagedObject) {
-        
+    func deleteResource(_ resource: BaseModel) -> Bool {
+        dataStack.mainContext.delete(resource)
+        do {
+            try dataStack.mainContext.save()
+            return true
+        } catch {
+            return false
+        }
     }
     
 }

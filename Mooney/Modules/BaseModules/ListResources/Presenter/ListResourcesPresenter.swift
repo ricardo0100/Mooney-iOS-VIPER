@@ -8,12 +8,12 @@
 
 import CoreData
 
-class ListResourcesPresenter<Entity: BaseEntity, Model: BaseModel>: ListResourcesViewOutput, ListResourcesInteractorInput, ListResourcesInteractorOutput {
+class ListResourcesPresenter<Entity: BaseEntity, Model: BaseModel>: ListResourcesViewOutput,  ListResourcesInteractorOutput {
     
     var view: ListResourcesViewInput!
     var interactor: ListResourcesInteractor<Model>!
     
-    private var items: [Entity] = []
+    private var items: [BaseModel] = []
     
     
     //MARK: ListResourcesViewOutput
@@ -27,7 +27,7 @@ class ListResourcesPresenter<Entity: BaseEntity, Model: BaseModel>: ListResource
     }
     
     func resourceForItem(at index: Int) -> BaseEntity {
-        return items[index]
+        return Entity(object: items[index])
     }
     
     func didTapNewButton() {
@@ -39,7 +39,12 @@ class ListResourcesPresenter<Entity: BaseEntity, Model: BaseModel>: ListResource
     }
     
     func didTapDeleteActionFotItem(at index: Int) {
-        
+        if interactor.deleteResource(items[index]) {
+            items.remove(at: index)
+            view.removeCellFromList(at: index)
+        } else {
+            view.showAlert(with: "Oops", and: "Error deleting item!")
+        }
     }
     
     func didTapEditActionFotItem(at index: Int) {
@@ -47,26 +52,13 @@ class ListResourcesPresenter<Entity: BaseEntity, Model: BaseModel>: ListResource
     }
     
     
-    //MARK: ListResourcesInteractorInput
-    
-    func fetchList() {
-        
-    }
-    
-    func deleteResource(_ resource: NSManagedObject) {
-        
-    }
-    
-    
     //MARK: ListResourcesInteractorOutput
     
     func presentList(with items: [BaseModel]) {
+        self.items = items
         if items.isEmpty {
             view.showBlankstate()
         } else {
-            self.items = items.map({ (modelObject) -> Entity in
-                return modelObject.convertToEntity()
-            })
             view.showList()
         }
     }

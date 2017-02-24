@@ -17,9 +17,4 @@ class AccountModel: BaseModel {
     
     @NSManaged public var name: String?
     
-    override func convertToEntity<T : BaseEntity>() -> T {
-        let account = Account(name: self.name!)
-        return account as! T
-    }
-        
 }

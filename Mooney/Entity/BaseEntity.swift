@@ -1,5 +1,5 @@
 //
-//  ResourceEntity.swift
+//  Entity.swift
 //  Mooney
 //
 //  Created by Ricardo Gehrke Filho on 23/02/17.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-protocol EntityConvertible {
+protocol BaseEntity {
     
-    func convertToEntity<T: BaseEntity>() -> T
+    init(object: BaseModel)
     
 }

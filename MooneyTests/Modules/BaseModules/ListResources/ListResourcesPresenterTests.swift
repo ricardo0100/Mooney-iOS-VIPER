@@ -57,4 +57,12 @@ class ListResourcesPresenterTests: XCTestCase {
         XCTAssertEqual(account.name, "Banco do Brasil")
     }
     
+    func testPresenterDidRemoveResourceFromView() {
+        DatabaseUtils.createAccount(with: "Banco do Brasil", in: dataStack.mainContext)
+        DatabaseUtils.createAccount(with: "Banco do Canadá", in: dataStack.mainContext)
+        presenter.refreshResourcesList()
+        presenter.didTapDeleteActionFotItem(at: 0)
+        XCTAssertEqual(presenter.numberOfItems(), 1)
+    }
+    
 }

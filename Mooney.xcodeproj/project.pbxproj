@@ -21,8 +21,7 @@
 		BA04B8181E5B28A800DF823F /* ListResourcesRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B8171E5B28A800DF823F /* ListResourcesRouterInput.swift */; };
 		BA6FA1AE1E5E86300036F28F /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FA1AA1E5E86300036F28F /* AccountModel.swift */; };
 		BA6FA1B01E5E86300036F28F /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FA1AC1E5E86300036F28F /* BaseModel.swift */; };
-		BA6FA1B51E5E894D0036F28F /* EntityConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FA1B41E5E894D0036F28F /* EntityConvertible.swift */; };
-		BA6FA1B71E5E89BE0036F28F /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FA1B61E5E89BE0036F28F /* Entity.swift */; };
+		BA6FA1B71E5E89BE0036F28F /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FA1B61E5E89BE0036F28F /* BaseEntity.swift */; };
 		BA6FA1B91E5F02380036F28F /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FA1B81E5F02380036F28F /* Account.swift */; };
 		BA7D10A41E57C18C0066FFA2 /* RoundedFlatTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D10A31E57C18C0066FFA2 /* RoundedFlatTextField.swift */; };
 		BA9100971E50717C0006CAD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9100911E50717C0006CAD3 /* AppDelegate.swift */; };
@@ -67,8 +66,7 @@
 		BA04B8171E5B28A800DF823F /* ListResourcesRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesRouterInput.swift; sourceTree = "<group>"; };
 		BA6FA1AA1E5E86300036F28F /* AccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		BA6FA1AC1E5E86300036F28F /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
-		BA6FA1B41E5E894D0036F28F /* EntityConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityConvertible.swift; sourceTree = "<group>"; };
-		BA6FA1B61E5E89BE0036F28F /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		BA6FA1B61E5E89BE0036F28F /* BaseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
 		BA6FA1B81E5F02380036F28F /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		BA7D10A31E57C18C0066FFA2 /* RoundedFlatTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedFlatTextField.swift; sourceTree = "<group>"; };
 		BA91007B1E5069240006CAD3 /* Mooney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mooney.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,8 +220,7 @@
 		BA04B8141E5B276400DF823F /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				BA6FA1B41E5E894D0036F28F /* EntityConvertible.swift */,
-				BA6FA1B61E5E89BE0036F28F /* Entity.swift */,
+				BA6FA1B61E5E89BE0036F28F /* BaseEntity.swift */,
 				BA6FA1B81E5F02380036F28F /* Account.swift */,
 			);
 			path = Entity;
@@ -620,12 +617,11 @@
 				BA9100B01E514E300006CAD3 /* API.swift in Sources */,
 				BAA71F011E5264C6009DB223 /* MooneyDataModel.xcdatamodeld in Sources */,
 				BACC7BA71E55272D007BEECA /* RoundedCornerButton.swift in Sources */,
-				BA6FA1B51E5E894D0036F28F /* EntityConvertible.swift in Sources */,
 				BA04B80B1E5B1FC100DF823F /* ListResourcesViewInput.swift in Sources */,
 				4DD41698DF996DD6A810E900 /* AccountsConfigurator.swift in Sources */,
 				BA04B8081E5B1FC100DF823F /* ListResourcesInteractorOutput.swift in Sources */,
 				55E56D2D1E375AC46615AA02 /* AccountsInitializer.swift in Sources */,
-				BA6FA1B71E5E89BE0036F28F /* Entity.swift in Sources */,
+				BA6FA1B71E5E89BE0036F28F /* BaseEntity.swift in Sources */,
 				BA04B8061E5B1FC100DF823F /* ListResourcesInteractor.swift in Sources */,
 				BA04B8181E5B28A800DF823F /* ListResourcesRouterInput.swift in Sources */,
 				BA7D10A41E57C18C0066FFA2 /* RoundedFlatTextField.swift in Sources */,
