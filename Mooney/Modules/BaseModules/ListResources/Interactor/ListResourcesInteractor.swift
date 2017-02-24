@@ -23,6 +23,7 @@ class ListResourcesInteractor<Model: BaseModel>: ListResourcesInteractorInput {
     func fetchList() {
         do {
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+            fetchRequest.sortDescriptors = [NSSortDescriptor.init(key: "updatedAt", ascending: false)]
             if let result = try dataStack.mainContext.fetch(fetchRequest) as? [Model] {
                 output.presentList(with: result)
             } else {

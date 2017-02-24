@@ -13,11 +13,11 @@ import CoreData
 
 class DatabaseUtils {
     
-    static func createAccount(with name: String, in context: NSManagedObjectContext) {
+    static func createAccount(with name: String, in context: NSManagedObjectContext, and date: NSDate) {
         let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context) as! AccountModel
         account.name = name
-        account.createdAt = NSDate()
-        account.updatedAt = NSDate()
+        account.createdAt = date
+        account.updatedAt = date
         try! context.save()
     }
     

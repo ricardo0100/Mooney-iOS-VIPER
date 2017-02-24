@@ -28,12 +28,11 @@ class ListResourcesPresenterTests: XCTestCase {
     
     func testPresentBlankstate() {
         presenter.refreshResourcesList()
-        
-        XCTAssertTrue(view.didShowBlankstate)
+        XCTAssertTrue(view.showingBlankstate)
     }
     
     func testPresentListWithOneItem() {
-        DatabaseUtils.createAccount(with: "Banco do Brasil", in: dataStack.mainContext)
+        DatabaseUtils.createAccount(with: "Banco do Brasil", in: dataStack.mainContext, and: NSDate())
         presenter.refreshResourcesList()
         
         XCTAssertTrue(view.didShowList)
@@ -41,8 +40,8 @@ class ListResourcesPresenterTests: XCTestCase {
     }
     
     func testPresentListWithTwoItems() {
-        DatabaseUtils.createAccount(with: "Banco do Brasil", in: dataStack.mainContext)
-        DatabaseUtils.createAccount(with: "Banco do Canadá", in: dataStack.mainContext)
+        DatabaseUtils.createAccount(with: "Banco do Brasil", in: dataStack.mainContext, and: NSDate())
+        DatabaseUtils.createAccount(with: "Banco do Canadá", in: dataStack.mainContext, and: NSDate())
         presenter.refreshResourcesList()
         
         XCTAssertTrue(view.didShowList)
@@ -50,7 +49,7 @@ class ListResourcesPresenterTests: XCTestCase {
     }
     
     func testPresentListWithCorrectItem() {
-        DatabaseUtils.createAccount(with: "Banco do Brasil", in: dataStack.mainContext)
+        DatabaseUtils.createAccount(with: "Banco do Brasil", in: dataStack.mainContext, and: NSDate())
         presenter.refreshResourcesList()
         
         let account = presenter.resourceForItem(at: 0) as! Account
@@ -58,11 +57,37 @@ class ListResourcesPresenterTests: XCTestCase {
     }
     
     func testPresenterDidRemoveResourceFromView() {
-        DatabaseUtils.createAccount(with: "Banco do Brasil", in: dataStack.mainContext)
-        DatabaseUtils.createAccount(with: "Banco do Canadá", in: dataStack.mainContext)
+        let now = NSDate()
+        DatabaseUtils.createAccount(with: "Banco do Brasil", in: dataStack.mainContext, and: now)
+        DatabaseUtils.createAccount(with: "Banco do Canadá", in: dataStack.mainContext, and: now.addingTimeInterval(1))
+        
         presenter.refreshResourcesList()
         presenter.didTapDeleteActionFotItem(at: 0)
+    
         XCTAssertEqual(presenter.numberOfItems(), 1)
+        let account = presenter.resourceForItem(at: 0) as! Account
+        XCTAssertEqual(account.name, "Banco do Brasil")
+    }
+    
+    func testPresenterDidHideBlankstateAfterAddItem() {
+        presenter.refreshResourcesList()
+        XCTAssertTrue(view.showingBlankstate)
+        
+        DatabaseUtils.createAccount(with: "Banco do Brasil", in: dataStack.mainContext, and: NSDate())
+        presenter.refreshResourcesList()
+        XCTAssertFalse(view.showingBlankstate)
+    }
+    
+    func testPresenterShowBlankstateAfterDeleteLastItem() {
+        presenter.refreshResourcesList()
+        XCTAssertTrue(view.showingBlankstate)
+        
+        DatabaseUtils.createAccount(with: "Banco do Brasil", in: dataStack.mainContext, and: NSDate())
+        presenter.refreshResourcesList()
+        XCTAssertFalse(view.showingBlankstate)
+        
+        presenter.didTapDeleteActionFotItem(at: 0)
+        XCTAssertTrue(view.showingBlankstate)
     }
     
 }

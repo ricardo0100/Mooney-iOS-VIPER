@@ -30,7 +30,7 @@ class ListResourcesInteractorTests: XCTestCase {
     }
     
     func testListResourcesInteractorOutputDidPresentList() {
-        DatabaseUtils.createAccount(with: "Banco do Brasil 🇧🇷", in: interactor.dataStack.mainContext)
+        DatabaseUtils.createAccount(with: "Banco do Brasil 🇧🇷", in: interactor.dataStack.mainContext, and: NSDate())
         interactor.fetchList()
         
         XCTAssertEqual(output.presentedList.count, 1, "List should have one item!")
@@ -38,13 +38,26 @@ class ListResourcesInteractorTests: XCTestCase {
     }
     
     func testListResourceInteractorDidDeleteResource() {
-        DatabaseUtils.createAccount(with: "Banco do Brasil 🇧🇷", in: interactor.dataStack.mainContext)
+        DatabaseUtils.createAccount(with: "Banco do Brasil 🇧🇷", in: interactor.dataStack.mainContext, and: NSDate())
         interactor.fetchList()
         
         XCTAssertTrue(interactor.deleteResource(output.presentedList[0]))
         
         interactor.fetchList()
         XCTAssertEqual(output.presentedList.count, 0, "List should be empty!")
+    }
+    
+    func testListResourceInteractorDidPresentListOrderedByUpdateTime() {
+        let now = NSDate()
+        DatabaseUtils.createAccount(with: "Banco do Brasil", in: interactor.dataStack.mainContext, and: now)
+        DatabaseUtils.createAccount(with: "Banco do Canadá", in: interactor.dataStack.mainContext, and: now.addingTimeInterval(1))
+        interactor.fetchList()
+        
+        let account0 = output.presentedList[0] as! AccountModel
+        let account1 = output.presentedList[1] as! AccountModel
+        
+        XCTAssertEqual(account0.name!, "Banco do Canadá")
+        XCTAssertEqual(account1.name!, "Banco do Brasil")
     }
     
 }

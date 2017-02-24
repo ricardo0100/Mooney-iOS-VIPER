@@ -12,6 +12,8 @@ protocol ListResourcesViewInput: class {
     
     func showBlankstate()
     
+    func hideBlankstate()
+    
     func showAlert(with title: String, and message: String)
     
     func removeCellFromList(at index: Int)

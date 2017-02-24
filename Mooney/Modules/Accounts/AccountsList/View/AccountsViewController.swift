@@ -12,8 +12,16 @@ class AccountsViewController: UITableViewController, ListResourcesViewInput {
 
     var output: ListResourcesViewOutput!
     
+    @IBOutlet var blankstateView: UIView!
+    
     
     // MARK: Life cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.addSubview(blankstateView)
+        blankstateView.isHidden = true
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -28,7 +36,11 @@ class AccountsViewController: UITableViewController, ListResourcesViewInput {
     }
     
     func showBlankstate() {
-        
+        blankstateView.isHidden = false
+    }
+    
+    func hideBlankstate() {
+        blankstateView.isHidden = true
     }
     
     func removeCellFromList(at index: Int) {

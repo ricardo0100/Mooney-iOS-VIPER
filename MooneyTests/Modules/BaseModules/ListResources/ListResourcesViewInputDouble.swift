@@ -13,7 +13,7 @@ import Foundation
 class ListResourcesViewInputDouble: ListResourcesViewInput {
     
     var didShowList = false
-    var didShowBlankstate = false
+    var showingBlankstate = false
     var didShowAlert = false
     var didRemoveCellFromList = false
     
@@ -22,7 +22,11 @@ class ListResourcesViewInputDouble: ListResourcesViewInput {
     }
     
     func showBlankstate() {
-        didShowBlankstate = true
+        showingBlankstate = true
+    }
+    
+    func hideBlankstate() {
+        showingBlankstate = false
     }
     
     func showAlert(with title: String, and message: String) {

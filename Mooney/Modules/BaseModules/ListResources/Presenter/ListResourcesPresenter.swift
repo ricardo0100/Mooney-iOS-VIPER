@@ -42,6 +42,9 @@ class ListResourcesPresenter<Entity: BaseEntity, Model: BaseModel>: ListResource
         if interactor.deleteResource(items[index]) {
             items.remove(at: index)
             view.removeCellFromList(at: index)
+            if items.isEmpty {
+                view.showBlankstate()
+            }
         } else {
             view.showAlert(with: "Oops", and: "Error deleting item!")
         }
@@ -59,6 +62,7 @@ class ListResourcesPresenter<Entity: BaseEntity, Model: BaseModel>: ListResource
         if items.isEmpty {
             view.showBlankstate()
         } else {
+            view.hideBlankstate()
             view.showList()
         }
     }
