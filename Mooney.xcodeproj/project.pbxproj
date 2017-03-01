@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4DD41698DF996DD6A810E900 /* AccountsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D05085117B7731C9943A79A /* AccountsConfigurator.swift */; };
 		55E56D2D1E375AC46615AA02 /* AccountsInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7BE38D58F09F7C2CB9D8F2 /* AccountsInitializer.swift */; };
 		59B478334087C8A43FE443D3 /* Pods_MooneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE132653747F687A6C542A5E /* Pods_MooneyTests.framework */; };
-		75520A693C414B2895D83C81 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2290134312CE525414E795F /* AccountsViewController.swift */; };
+		75520A693C414B2895D83C81 /* ListAccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2290134312CE525414E795F /* ListAccountsViewController.swift */; };
 		76DA6E0059B74612C98B67D8 /* Pods_Mooney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F2839BE0688212E6F645AB /* Pods_Mooney.framework */; };
 		BA04B8061E5B1FC100DF823F /* ListResourcesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B7FD1E5B1FC100DF823F /* ListResourcesInteractor.swift */; };
 		BA04B8071E5B1FC100DF823F /* ListResourcesInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B7FE1E5B1FC100DF823F /* ListResourcesInteractorInput.swift */; };
 		BA04B8081E5B1FC100DF823F /* ListResourcesInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B7FF1E5B1FC100DF823F /* ListResourcesInteractorOutput.swift */; };
-		BA04B80A1E5B1FC100DF823F /* ListResourcesPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B8021E5B1FC100DF823F /* ListResourcesPresenterInput.swift */; };
+		BA04B80A1E5B1FC100DF823F /* ListResourcesModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B8021E5B1FC100DF823F /* ListResourcesModuleInput.swift */; };
 		BA04B80B1E5B1FC100DF823F /* ListResourcesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B8041E5B1FC100DF823F /* ListResourcesViewInput.swift */; };
 		BA04B80C1E5B1FC100DF823F /* ListResourcesViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B8051E5B1FC100DF823F /* ListResourcesViewOutput.swift */; };
 		BA04B8181E5B28A800DF823F /* ListResourcesRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04B8171E5B28A800DF823F /* ListResourcesRouterInput.swift */; };
+		BA37F1A21E65BF7300D21569 /* EditResourcesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA37F1A11E65BF7300D21569 /* EditResourcesViewInput.swift */; };
+		BA37F1A41E65BFED00D21569 /* EditResourcesViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA37F1A31E65BFED00D21569 /* EditResourcesViewOutput.swift */; };
+		BA37F1A61E65C19E00D21569 /* EditResourcesInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA37F1A51E65C19E00D21569 /* EditResourcesInteractorOutput.swift */; };
+		BA37F1A81E65C1F000D21569 /* EditResourcesInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA37F1A71E65C1F000D21569 /* EditResourcesInteractorInput.swift */; };
+		BA37F1AA1E65C1FC00D21569 /* EditResourcesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA37F1A91E65C1FC00D21569 /* EditResourcesInteractor.swift */; };
+		BA37F1AC1E65DCB200D21569 /* EditResourcesModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA37F1AB1E65DCB200D21569 /* EditResourcesModuleInput.swift */; };
+		BA37F1AE1E65DDE400D21569 /* EditResourcesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA37F1AD1E65DDE400D21569 /* EditResourcesPresenter.swift */; };
+		BA37F1B11E65E0F700D21569 /* EditResourcesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA37F1B01E65E0F700D21569 /* EditResourcesInteractorTests.swift */; };
+		BA37F1B31E65E11A00D21569 /* EditResourcesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA37F1B21E65E11A00D21569 /* EditResourcesPresenterTests.swift */; };
 		BA6FA1AE1E5E86300036F28F /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FA1AA1E5E86300036F28F /* AccountModel.swift */; };
 		BA6FA1B01E5E86300036F28F /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FA1AC1E5E86300036F28F /* BaseModel.swift */; };
 		BA6FA1B71E5E89BE0036F28F /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FA1B61E5E89BE0036F28F /* BaseEntity.swift */; };
@@ -27,19 +35,23 @@
 		BA9100971E50717C0006CAD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9100911E50717C0006CAD3 /* AppDelegate.swift */; };
 		BA9100991E50717C0006CAD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9100941E50717C0006CAD3 /* Assets.xcassets */; };
 		BA91009A1E50717C0006CAD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9100951E50717C0006CAD3 /* LaunchScreen.storyboard */; };
-		BA9100A71E50A4E10006CAD3 /* Accounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9100A61E50A4E10006CAD3 /* Accounts.storyboard */; };
+		BA9100A71E50A4E10006CAD3 /* ListAccounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9100A61E50A4E10006CAD3 /* ListAccounts.storyboard */; };
 		BA9100AA1E5149B70006CAD3 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9100A91E5149B70006CAD3 /* Menu.storyboard */; };
 		BA9100B01E514E300006CAD3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9100AF1E514E300006CAD3 /* API.swift */; };
+		BA9FC12B1E6A355A00F49B47 /* EditAccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9FC12A1E6A355A00F49B47 /* EditAccountRouter.swift */; };
+		BA9FC12E1E6A359100F49B47 /* EditResourcesRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9FC12D1E6A359100F49B47 /* EditResourcesRouterInput.swift */; };
 		BAA510CB1E54761A00AE5F99 /* DatabaseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA510CA1E54761A00AE5F99 /* DatabaseUtils.swift */; };
 		BAA71F011E5264C6009DB223 /* MooneyDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAA71EFF1E5264C6009DB223 /* MooneyDataModel.xcdatamodeld */; };
+		BAB5568D1E69A5C300DDC1E6 /* ListAccountsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB5568C1E69A5C300DDC1E6 /* ListAccountsRouter.swift */; };
+		BAB556931E69A7AA00DDC1E6 /* EditAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB556921E69A7AA00DDC1E6 /* EditAccount.storyboard */; };
+		BAB556951E69A82300DDC1E6 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB556941E69A82300DDC1E6 /* EditAccountViewController.swift */; };
 		BACC7BA61E55272D007BEECA /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACC7BA31E55272D007BEECA /* UIViewControllerExtensions.swift */; };
 		BACC7BA71E55272D007BEECA /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACC7BA51E55272D007BEECA /* RoundedCornerButton.swift */; };
 		BACC7BA91E55275D007BEECA /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACC7BA81E55275D007BEECA /* UIViewExtensions.swift */; };
-		BAD3AF731E5DD1F500150F82 /* ListResourcesViewInputDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3AF721E5DD1F500150F82 /* ListResourcesViewInputDouble.swift */; };
 		BAD7CEAF1E5D2D05005B18E3 /* ListResourcesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD7CEAE1E5D2D05005B18E3 /* ListResourcesPresenter.swift */; };
-		BAD7CEB61E5DB7A1005B18E3 /* ListResourcesInteractorOutputDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD7CEB41E5DB7A1005B18E3 /* ListResourcesInteractorOutputDouble.swift */; };
 		BAD7CEB71E5DB7A1005B18E3 /* ListResourcesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD7CEB51E5DB7A1005B18E3 /* ListResourcesInteractorTests.swift */; };
 		BAD7CEB91E5DC08E005B18E3 /* ListResourcesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD7CEB81E5DC08E005B18E3 /* ListResourcesPresenterTests.swift */; };
+		BAEBD9971E67037B00790295 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEBD9961E67037B00790295 /* CategoryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,16 +66,24 @@
 
 /* Begin PBXFileReference section */
 		21F2839BE0688212E6F645AB /* Pods_Mooney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mooney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D05085117B7731C9943A79A /* AccountsConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsConfigurator.swift; sourceTree = "<group>"; };
 		A35E3174360B94147366C779 /* Pods-MooneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MooneyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MooneyTests/Pods-MooneyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B2290134312CE525414E795F /* AccountsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		B2290134312CE525414E795F /* ListAccountsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ListAccountsViewController.swift; sourceTree = "<group>"; };
 		BA04B7FD1E5B1FC100DF823F /* ListResourcesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesInteractor.swift; sourceTree = "<group>"; };
 		BA04B7FE1E5B1FC100DF823F /* ListResourcesInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesInteractorInput.swift; sourceTree = "<group>"; };
 		BA04B7FF1E5B1FC100DF823F /* ListResourcesInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesInteractorOutput.swift; sourceTree = "<group>"; };
-		BA04B8021E5B1FC100DF823F /* ListResourcesPresenterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesPresenterInput.swift; sourceTree = "<group>"; };
+		BA04B8021E5B1FC100DF823F /* ListResourcesModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesModuleInput.swift; sourceTree = "<group>"; };
 		BA04B8041E5B1FC100DF823F /* ListResourcesViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesViewInput.swift; sourceTree = "<group>"; };
 		BA04B8051E5B1FC100DF823F /* ListResourcesViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesViewOutput.swift; sourceTree = "<group>"; };
 		BA04B8171E5B28A800DF823F /* ListResourcesRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesRouterInput.swift; sourceTree = "<group>"; };
+		BA37F1A11E65BF7300D21569 /* EditResourcesViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditResourcesViewInput.swift; sourceTree = "<group>"; };
+		BA37F1A31E65BFED00D21569 /* EditResourcesViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditResourcesViewOutput.swift; sourceTree = "<group>"; };
+		BA37F1A51E65C19E00D21569 /* EditResourcesInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditResourcesInteractorOutput.swift; sourceTree = "<group>"; };
+		BA37F1A71E65C1F000D21569 /* EditResourcesInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditResourcesInteractorInput.swift; sourceTree = "<group>"; };
+		BA37F1A91E65C1FC00D21569 /* EditResourcesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditResourcesInteractor.swift; sourceTree = "<group>"; };
+		BA37F1AB1E65DCB200D21569 /* EditResourcesModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditResourcesModuleInput.swift; sourceTree = "<group>"; };
+		BA37F1AD1E65DDE400D21569 /* EditResourcesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditResourcesPresenter.swift; sourceTree = "<group>"; };
+		BA37F1B01E65E0F700D21569 /* EditResourcesInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditResourcesInteractorTests.swift; sourceTree = "<group>"; };
+		BA37F1B21E65E11A00D21569 /* EditResourcesPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditResourcesPresenterTests.swift; sourceTree = "<group>"; };
 		BA6FA1AA1E5E86300036F28F /* AccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		BA6FA1AC1E5E86300036F28F /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		BA6FA1B61E5E89BE0036F28F /* BaseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
@@ -74,19 +94,23 @@
 		BA9100921E50717C0006CAD3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA9100941E50717C0006CAD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA9100961E50717C0006CAD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BA9100A61E50A4E10006CAD3 /* Accounts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Accounts.storyboard; sourceTree = "<group>"; };
+		BA9100A61E50A4E10006CAD3 /* ListAccounts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListAccounts.storyboard; sourceTree = "<group>"; };
 		BA9100A91E5149B70006CAD3 /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		BA9100AF1E514E300006CAD3 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		BA9FC12A1E6A355A00F49B47 /* EditAccountRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAccountRouter.swift; sourceTree = "<group>"; };
+		BA9FC12D1E6A359100F49B47 /* EditResourcesRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditResourcesRouterInput.swift; sourceTree = "<group>"; };
 		BAA510CA1E54761A00AE5F99 /* DatabaseUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseUtils.swift; sourceTree = "<group>"; };
 		BAA71F001E5264C6009DB223 /* MooneyDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MooneyDataModel.xcdatamodel; sourceTree = "<group>"; };
+		BAB5568C1E69A5C300DDC1E6 /* ListAccountsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAccountsRouter.swift; sourceTree = "<group>"; };
+		BAB556921E69A7AA00DDC1E6 /* EditAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditAccount.storyboard; sourceTree = "<group>"; };
+		BAB556941E69A82300DDC1E6 /* EditAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
 		BACC7BA31E55272D007BEECA /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		BACC7BA51E55272D007BEECA /* RoundedCornerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
 		BACC7BA81E55275D007BEECA /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
-		BAD3AF721E5DD1F500150F82 /* ListResourcesViewInputDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesViewInputDouble.swift; sourceTree = "<group>"; };
 		BAD7CEAE1E5D2D05005B18E3 /* ListResourcesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesPresenter.swift; sourceTree = "<group>"; };
-		BAD7CEB41E5DB7A1005B18E3 /* ListResourcesInteractorOutputDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesInteractorOutputDouble.swift; sourceTree = "<group>"; };
 		BAD7CEB51E5DB7A1005B18E3 /* ListResourcesInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesInteractorTests.swift; sourceTree = "<group>"; };
 		BAD7CEB81E5DC08E005B18E3 /* ListResourcesPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResourcesPresenterTests.swift; sourceTree = "<group>"; };
+		BAEBD9961E67037B00790295 /* CategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		BAF142121E5334E3007C508B /* MooneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MooneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF142161E5334E4007C508B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE132653747F687A6C542A5E /* Pods_MooneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MooneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,8 +163,8 @@
 		96A0EFCA7D0BE2CF078B403D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BA9100A61E50A4E10006CAD3 /* Accounts.storyboard */,
-				B2290134312CE525414E795F /* AccountsViewController.swift */,
+				BA9100A61E50A4E10006CAD3 /* ListAccounts.storyboard */,
+				B2290134312CE525414E795F /* ListAccountsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,7 +172,6 @@
 		9B5BAB3C21B5338ED39CEA56 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
-				8D05085117B7731C9943A79A /* AccountsConfigurator.swift */,
 				EA7BE38D58F09F7C2CB9D8F2 /* AccountsInitializer.swift */,
 			);
 			path = Configurator;
@@ -157,7 +180,8 @@
 		9F88196556CA99BBA51B9C2D /* Accounts */ = {
 			isa = PBXGroup;
 			children = (
-				BAC411E81E54E8300021273D /* AccountsList */,
+				BAC411E81E54E8300021273D /* ListAccounts */,
+				BAB5568E1E69A75600DDC1E6 /* EditAccount */,
 			);
 			path = Accounts;
 			sourceTree = "<group>";
@@ -166,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				BA04B7FB1E5B1FC100DF823F /* ListResources */,
+				BA37F19C1E649ADE00D21569 /* EditResources */,
 			);
 			path = BaseModules;
 			sourceTree = "<group>";
@@ -174,8 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				BA04B8031E5B1FC100DF823F /* View */,
-				BA04B7FC1E5B1FC100DF823F /* Interactor */,
 				BA04B8001E5B1FC100DF823F /* Presenter */,
+				BA04B7FC1E5B1FC100DF823F /* Interactor */,
 				BA04B8101E5B269100DF823F /* Router */,
 			);
 			path = ListResources;
@@ -194,7 +219,7 @@
 		BA04B8001E5B1FC100DF823F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				BA04B8021E5B1FC100DF823F /* ListResourcesPresenterInput.swift */,
+				BA04B8021E5B1FC100DF823F /* ListResourcesModuleInput.swift */,
 				BAD7CEAE1E5D2D05005B18E3 /* ListResourcesPresenter.swift */,
 			);
 			path = Presenter;
@@ -230,9 +255,58 @@
 			isa = PBXGroup;
 			children = (
 				BA6FA1AA1E5E86300036F28F /* AccountModel.swift */,
+				BAEBD9961E67037B00790295 /* CategoryModel.swift */,
 				BA6FA1AC1E5E86300036F28F /* BaseModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BA37F19C1E649ADE00D21569 /* EditResources */ = {
+			isa = PBXGroup;
+			children = (
+				BA9FC12C1E6A358200F49B47 /* Router */,
+				BA37F1A01E649B5D00D21569 /* View */,
+				BA37F19E1E649B5D00D21569 /* Presenter */,
+				BA37F19D1E649B5D00D21569 /* Interactor */,
+			);
+			path = EditResources;
+			sourceTree = "<group>";
+		};
+		BA37F19D1E649B5D00D21569 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BA37F1A71E65C1F000D21569 /* EditResourcesInteractorInput.swift */,
+				BA37F1A51E65C19E00D21569 /* EditResourcesInteractorOutput.swift */,
+				BA37F1A91E65C1FC00D21569 /* EditResourcesInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BA37F19E1E649B5D00D21569 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BA37F1AB1E65DCB200D21569 /* EditResourcesModuleInput.swift */,
+				BA37F1AD1E65DDE400D21569 /* EditResourcesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BA37F1A01E649B5D00D21569 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA37F1A11E65BF7300D21569 /* EditResourcesViewInput.swift */,
+				BA37F1A31E65BFED00D21569 /* EditResourcesViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA37F1AF1E65DFD400D21569 /* EditResources */ = {
+			isa = PBXGroup;
+			children = (
+				BA37F1B01E65E0F700D21569 /* EditResourcesInteractorTests.swift */,
+				BA37F1B21E65E11A00D21569 /* EditResourcesPresenterTests.swift */,
+			);
+			path = EditResources;
 			sourceTree = "<group>";
 		};
 		BA5CBCDA1E5C868F00F829FF /* Modules */ = {
@@ -246,6 +320,7 @@
 		BA5CBCDB1E5C868F00F829FF /* BaseModules */ = {
 			isa = PBXGroup;
 			children = (
+				BA37F1AF1E65DFD400D21569 /* EditResources */,
 				BAD7CEB31E5DB7A1005B18E3 /* ListResources */,
 			);
 			path = BaseModules;
@@ -338,6 +413,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		BA9FC12C1E6A358200F49B47 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BA9FC12D1E6A359100F49B47 /* EditResourcesRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		BAA510C71E5475E100AE5F99 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,13 +429,48 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		BAC411E81E54E8300021273D /* AccountsList */ = {
+		BAB5568B1E69A59200DDC1E6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BAB5568C1E69A5C300DDC1E6 /* ListAccountsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BAB5568E1E69A75600DDC1E6 /* EditAccount */ = {
+			isa = PBXGroup;
+			children = (
+				BAB556911E69A75600DDC1E6 /* View */,
+				BAB556901E69A75600DDC1E6 /* Router */,
+			);
+			path = EditAccount;
+			sourceTree = "<group>";
+		};
+		BAB556901E69A75600DDC1E6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BA9FC12A1E6A355A00F49B47 /* EditAccountRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BAB556911E69A75600DDC1E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BAB556921E69A7AA00DDC1E6 /* EditAccount.storyboard */,
+				BAB556941E69A82300DDC1E6 /* EditAccountViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BAC411E81E54E8300021273D /* ListAccounts */ = {
 			isa = PBXGroup;
 			children = (
 				96A0EFCA7D0BE2CF078B403D /* View */,
+				BAB5568B1E69A59200DDC1E6 /* Router */,
 				9B5BAB3C21B5338ED39CEA56 /* Configurator */,
 			);
-			path = AccountsList;
+			path = ListAccounts;
 			sourceTree = "<group>";
 		};
 		BACC7BA11E55272D007BEECA /* Utils */ = {
@@ -387,8 +505,6 @@
 			children = (
 				BAD7CEB51E5DB7A1005B18E3 /* ListResourcesInteractorTests.swift */,
 				BAD7CEB81E5DC08E005B18E3 /* ListResourcesPresenterTests.swift */,
-				BAD7CEB41E5DB7A1005B18E3 /* ListResourcesInteractorOutputDouble.swift */,
-				BAD3AF721E5DD1F500150F82 /* ListResourcesViewInputDouble.swift */,
 			);
 			path = ListResources;
 			sourceTree = "<group>";
@@ -493,7 +609,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA9100A71E50A4E10006CAD3 /* Accounts.storyboard in Resources */,
+				BAB556931E69A7AA00DDC1E6 /* EditAccount.storyboard in Resources */,
+				BA9100A71E50A4E10006CAD3 /* ListAccounts.storyboard in Resources */,
 				BA91009A1E50717C0006CAD3 /* LaunchScreen.storyboard in Resources */,
 				BA9100991E50717C0006CAD3 /* Assets.xcassets in Resources */,
 				BA9100AA1E5149B70006CAD3 /* Menu.storyboard in Resources */,
@@ -613,21 +730,32 @@
 				BA04B80C1E5B1FC100DF823F /* ListResourcesViewOutput.swift in Sources */,
 				BA6FA1B01E5E86300036F28F /* BaseModel.swift in Sources */,
 				BA6FA1B91E5F02380036F28F /* Account.swift in Sources */,
-				75520A693C414B2895D83C81 /* AccountsViewController.swift in Sources */,
+				BAB5568D1E69A5C300DDC1E6 /* ListAccountsRouter.swift in Sources */,
+				75520A693C414B2895D83C81 /* ListAccountsViewController.swift in Sources */,
 				BA9100B01E514E300006CAD3 /* API.swift in Sources */,
+				BA37F1A21E65BF7300D21569 /* EditResourcesViewInput.swift in Sources */,
 				BAA71F011E5264C6009DB223 /* MooneyDataModel.xcdatamodeld in Sources */,
+				BA37F1AE1E65DDE400D21569 /* EditResourcesPresenter.swift in Sources */,
+				BAB556951E69A82300DDC1E6 /* EditAccountViewController.swift in Sources */,
 				BACC7BA71E55272D007BEECA /* RoundedCornerButton.swift in Sources */,
+				BA37F1AC1E65DCB200D21569 /* EditResourcesModuleInput.swift in Sources */,
+				BAEBD9971E67037B00790295 /* CategoryModel.swift in Sources */,
+				BA37F1A81E65C1F000D21569 /* EditResourcesInteractorInput.swift in Sources */,
 				BA04B80B1E5B1FC100DF823F /* ListResourcesViewInput.swift in Sources */,
-				4DD41698DF996DD6A810E900 /* AccountsConfigurator.swift in Sources */,
 				BA04B8081E5B1FC100DF823F /* ListResourcesInteractorOutput.swift in Sources */,
+				BA9FC12B1E6A355A00F49B47 /* EditAccountRouter.swift in Sources */,
 				55E56D2D1E375AC46615AA02 /* AccountsInitializer.swift in Sources */,
 				BA6FA1B71E5E89BE0036F28F /* BaseEntity.swift in Sources */,
 				BA04B8061E5B1FC100DF823F /* ListResourcesInteractor.swift in Sources */,
+				BA9FC12E1E6A359100F49B47 /* EditResourcesRouterInput.swift in Sources */,
 				BA04B8181E5B28A800DF823F /* ListResourcesRouterInput.swift in Sources */,
+				BA37F1A61E65C19E00D21569 /* EditResourcesInteractorOutput.swift in Sources */,
 				BA7D10A41E57C18C0066FFA2 /* RoundedFlatTextField.swift in Sources */,
 				BACC7BA91E55275D007BEECA /* UIViewExtensions.swift in Sources */,
 				BACC7BA61E55272D007BEECA /* UIViewControllerExtensions.swift in Sources */,
-				BA04B80A1E5B1FC100DF823F /* ListResourcesPresenterInput.swift in Sources */,
+				BA37F1A41E65BFED00D21569 /* EditResourcesViewOutput.swift in Sources */,
+				BA37F1AA1E65C1FC00D21569 /* EditResourcesInteractor.swift in Sources */,
+				BA04B80A1E5B1FC100DF823F /* ListResourcesModuleInput.swift in Sources */,
 				BAD7CEAF1E5D2D05005B18E3 /* ListResourcesPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,11 +764,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA37F1B11E65E0F700D21569 /* EditResourcesInteractorTests.swift in Sources */,
 				BAD7CEB91E5DC08E005B18E3 /* ListResourcesPresenterTests.swift in Sources */,
 				BAD7CEB71E5DB7A1005B18E3 /* ListResourcesInteractorTests.swift in Sources */,
-				BAD7CEB61E5DB7A1005B18E3 /* ListResourcesInteractorOutputDouble.swift in Sources */,
-				BAD3AF731E5DD1F500150F82 /* ListResourcesViewInputDouble.swift in Sources */,
 				BAA510CB1E54761A00AE5F99 /* DatabaseUtils.swift in Sources */,
+				BA37F1B31E65E11A00D21569 /* EditResourcesPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

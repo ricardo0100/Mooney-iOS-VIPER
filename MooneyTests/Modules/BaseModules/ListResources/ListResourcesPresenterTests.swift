@@ -90,4 +90,36 @@ class ListResourcesPresenterTests: XCTestCase {
         XCTAssertTrue(view.showingBlankstate)
     }
     
+    
+    //MARK: Doubles
+    
+    class ListResourcesViewInputDouble: ListResourcesViewInput {
+        
+        var didShowList = false
+        var showingBlankstate = false
+        var didShowAlert = false
+        var didRemoveCellFromList = false
+        
+        func showList() {
+            didShowList = true
+        }
+        
+        func showBlankstate() {
+            showingBlankstate = true
+        }
+        
+        func hideBlankstate() {
+            showingBlankstate = false
+        }
+        
+        func showAlert(with title: String, and message: String) {
+            didShowAlert = true
+        }
+        
+        func removeCellFromList(at index: Int) {
+            didRemoveCellFromList = true
+        }
+        
+    }
+    
 }

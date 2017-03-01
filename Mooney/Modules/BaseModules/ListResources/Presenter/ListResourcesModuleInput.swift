@@ -6,8 +6,8 @@
 //  Copyright © 2017 ricardofilho.com.br. All rights reserved.
 //
 
-protocol ListResourcesPresenterInput: class {
+protocol ListResourcesModuleInput: class {
     
-    func reloadList()
+    
 
 }

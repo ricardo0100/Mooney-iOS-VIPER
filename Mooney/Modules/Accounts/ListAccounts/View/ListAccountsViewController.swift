@@ -8,23 +8,29 @@
 
 import UIKit
 
-class AccountsViewController: UITableViewController, ListResourcesViewInput {
-
+class ListAccountsViewController: UIViewController, ListResourcesViewInput {
+    
     var output: ListResourcesViewOutput!
     
     @IBOutlet var blankstateView: UIView!
+    @IBOutlet weak var tableView: UITableView!
     
     
     // MARK: Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(blankstateView)
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        view.addSubview(blankstateView)
         blankstateView.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         output.refreshResourcesList()
     }
     
@@ -37,10 +43,12 @@ class AccountsViewController: UITableViewController, ListResourcesViewInput {
     
     func showBlankstate() {
         blankstateView.isHidden = false
+        tableView.isHidden = true
     }
     
     func hideBlankstate() {
         blankstateView.isHidden = true
+        tableView.isHidden = false
     }
     
     func removeCellFromList(at index: Int) {
@@ -50,20 +58,28 @@ class AccountsViewController: UITableViewController, ListResourcesViewInput {
     }
     
     
-    // MARK: UITableViewDataSource
+    //MARK: User events
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    @IBAction func newAccountButtonTapped(_ sender: UIBarButtonItem) {
+        output.didTapNewButton()
+    }
+    
+}
+
+extension ListAccountsViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return output.numberOfItems()
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let item = output.resourceForItem(at: indexPath.row) as! Account
         cell.textLabel?.text = item.name
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
             self.output.didTapDeleteActionFotItem(at: indexPath.row)
         }
@@ -73,13 +89,6 @@ class AccountsViewController: UITableViewController, ListResourcesViewInput {
         }
         
         return [deleteAction, editAction]
-    }
-    
-    
-    //MARK: User events
-    
-    @IBAction func newAccountButtonTapped(_ sender: Any) {
-        output.didTapNewButton()
     }
     
 }

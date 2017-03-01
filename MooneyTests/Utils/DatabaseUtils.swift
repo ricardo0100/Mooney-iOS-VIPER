@@ -22,7 +22,8 @@ class DatabaseUtils {
     }
     
     static func fetchAccounts(in context: NSManagedObjectContext) -> [AccountModel] {
-        return try! context.fetch(AccountModel.fetchRequest()) as [AccountModel]
+        let fetch = NSFetchRequest<AccountModel>(entityName: "Account")
+        return try! context.fetch(fetch)
     }
     
 }

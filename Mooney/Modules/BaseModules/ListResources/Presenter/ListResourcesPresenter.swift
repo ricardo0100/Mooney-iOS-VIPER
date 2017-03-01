@@ -8,10 +8,11 @@
 
 import CoreData
 
-class ListResourcesPresenter<Entity: BaseEntity, Model: BaseModel>: ListResourcesViewOutput,  ListResourcesInteractorOutput {
+class ListResourcesPresenter<Entity: BaseEntity, Model: BaseModel>: ListResourcesModuleInput, ListResourcesViewOutput,  ListResourcesInteractorOutput {
     
     var view: ListResourcesViewInput!
     var interactor: ListResourcesInteractor<Model>!
+    var router: ListAccountsRouter!
     
     private var items: [BaseModel] = []
     
@@ -31,7 +32,7 @@ class ListResourcesPresenter<Entity: BaseEntity, Model: BaseModel>: ListResource
     }
     
     func didTapNewButton() {
-        
+        router.presentEditView(for: nil)
     }
     
     func didSelectItem(at index: Int) {

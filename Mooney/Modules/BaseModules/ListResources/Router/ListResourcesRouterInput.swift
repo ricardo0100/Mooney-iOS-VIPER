@@ -10,6 +10,6 @@ import Foundation
 
 protocol ListResourcesRouterInput {
     
-    func presentEditView(for resource: BaseEntity?)
+    func presentEditView(for resource: BaseModel?)
     
 }

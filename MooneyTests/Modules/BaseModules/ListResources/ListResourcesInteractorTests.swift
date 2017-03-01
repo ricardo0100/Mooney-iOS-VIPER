@@ -60,4 +60,22 @@ class ListResourcesInteractorTests: XCTestCase {
         XCTAssertEqual(account1.name!, "Banco do Brasil")
     }
     
+    //MARK: Doubles
+    
+    class ListResourcesInteractorOutputDouble: ListResourcesInteractorOutput {
+        
+        var didPresentError = false
+        
+        var presentedList: [BaseModel] = []
+        
+        func presentList(with resources: [BaseModel]) {
+            presentedList = resources
+        }
+        
+        func presentError() {
+            didPresentError = true
+        }
+        
+    }
+    
 }

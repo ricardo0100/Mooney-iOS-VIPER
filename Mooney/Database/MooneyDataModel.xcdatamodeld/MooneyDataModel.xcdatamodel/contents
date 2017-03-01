@@ -8,8 +8,12 @@
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
+    <entity name="Category" representedClassName=".CategoryModel" parentEntity="Base" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Account" positionX="-63" positionY="-18" width="128" height="60"/>
         <element name="Base" positionX="-63" positionY="-162" width="128" height="90"/>
+        <element name="Category" positionX="-63" positionY="-81" width="128" height="60"/>
     </elements>
 </model>

@@ -1,15 +1,15 @@
 //
-//  Account+CoreDataClass.swift
+//  CategoryModel.swift
 //  Mooney
 //
-//  Created by Ricardo Gehrke Filho on 22/02/17.
+//  Created by Ricardo Gehrke Filho on 01/03/17.
 //  Copyright © 2017 Ricardo Gehrke Filho. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
-class AccountModel: BaseModel {
+class CategoryModel: BaseModel {
     
     @NSManaged public var name: String?
     
