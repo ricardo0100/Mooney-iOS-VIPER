@@ -1,20 +1,28 @@
 //
-//  Account.swift
+//  AccountModel.swift
 //  Mooney
 //
-//  Created by Ricardo Gehrke Filho on 23/02/17.
+//  Created by Ricardo Gehrke Filho on 11/03/17.
 //  Copyright © 2017 Ricardo Gehrke Filho. All rights reserved.
 //
 
 import Foundation
+import RealmSwift
 
-struct Account: BaseEntity {
+class AccountModel: Object {
     
-    var name: String
+    let remoteID = RealmOptional<Int>()
     
-    init(object: BaseModel) {
-        let account = object as! AccountModel
-        self.name = account.name!
+    dynamic var id = NSUUID().uuidString
+    
+    dynamic var createdAt = NSDate()
+    dynamic var updatedAt = NSDate()
+    
+    dynamic var name = ""
+    
+    override static func primaryKey() -> String? {
+        return "id"
     }
     
 }
+

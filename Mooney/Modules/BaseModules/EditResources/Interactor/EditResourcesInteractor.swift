@@ -7,20 +7,16 @@
 //
 
 import Foundation
-import DATAStack
+import RealmSwift
 
-class EditResourcesInteractor<Model: BaseModel>: EditResourcesInteractorInput {
+class EditResourcesInteractor<Entity: Object, Struct: Any>: EditResourcesInteractorInput {
     
     weak var output: EditResourcesInteractorOutput!
     
-    var dataStack: DATAStack
-    var entityName: String
+    var realm: Realm
     
-    init(with dataStack: DATAStack, andEntityName name: String) {
-        self.dataStack = dataStack
-        self.entityName = name
+    init(with realm: Realm) {
+        self.realm = realm
     }
-    
-    
     
 }

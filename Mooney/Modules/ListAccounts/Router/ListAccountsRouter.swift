@@ -1,5 +1,5 @@
 //
-//  EditResourcesRouterInput.swift
+//  AccountsListRouter.swift
 //  Mooney
 //
 //  Created by Ricardo Gehrke Filho on 03/03/17.
@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
-protocol EditResourcesRouterInput {
-        
+class ListAccountsRouter: ListResourcesRouterInput {
+    
+
 }

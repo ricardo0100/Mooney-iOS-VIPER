@@ -8,18 +8,4 @@
 
 protocol ListResourcesViewOutput {
     
-    func refreshResourcesList()
-    
-    func numberOfItems() -> Int
-    
-    func resourceForItem(at index: Int) -> BaseEntity
-    
-    func didTapNewButton()
-    
-    func didSelectItem(at index: Int)
-    
-    func didTapDeleteActionFotItem(at index: Int)
-    
-    func didTapEditActionFotItem(at index: Int)
-    
 }

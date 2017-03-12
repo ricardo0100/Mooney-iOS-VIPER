@@ -1,5 +1,5 @@
 //
-//  EditResourcesRouterInput.swift
+//  EditAccountRouter.swift
 //  Mooney
 //
 //  Created by Ricardo Gehrke Filho on 03/03/17.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol EditResourcesRouterInput {
-        
+class EditAccountRouter: EditResourcesRouterInput {
+    
 }

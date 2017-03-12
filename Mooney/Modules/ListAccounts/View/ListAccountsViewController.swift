@@ -28,12 +28,6 @@ class ListAccountsViewController: UIViewController, ListResourcesViewInput {
         blankstateView.isHidden = true
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        output.refreshResourcesList()
-    }
-    
     
     // MARK: ListResourcesViewInput
     
@@ -61,7 +55,6 @@ class ListAccountsViewController: UIViewController, ListResourcesViewInput {
     //MARK: User events
     
     @IBAction func newAccountButtonTapped(_ sender: UIBarButtonItem) {
-        output.didTapNewButton()
     }
     
 }
@@ -69,23 +62,19 @@ class ListAccountsViewController: UIViewController, ListResourcesViewInput {
 extension ListAccountsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return output.numberOfItems()
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let item = output.resourceForItem(at: indexPath.row) as! Account
-        cell.textLabel?.text = item.name
         return cell
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
-            self.output.didTapDeleteActionFotItem(at: indexPath.row)
         }
         
         let editAction = UITableViewRowAction(style: .normal, title: "Edit") { (action, indexPath) in
-            self.output.didTapEditActionFotItem(at: indexPath.row)
         }
         
         return [deleteAction, editAction]

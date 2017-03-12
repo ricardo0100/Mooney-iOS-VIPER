@@ -8,68 +8,8 @@
 
 import CoreData
 
-class ListResourcesPresenter<Entity: BaseEntity, Model: BaseModel>: ListResourcesModuleInput, ListResourcesViewOutput,  ListResourcesInteractorOutput {
-    
-    var view: ListResourcesViewInput!
-    var interactor: ListResourcesInteractor<Model>!
-    var router: ListAccountsRouter!
-    
-    private var items: [BaseModel] = []
+class ListResourcesPresenter: ListResourcesModuleInput, ListResourcesViewOutput,  ListResourcesInteractorOutput {
     
     
-    //MARK: ListResourcesViewOutput
-    
-    func refreshResourcesList() {
-        interactor.fetchList()
-    }
-    
-    func numberOfItems() -> Int {
-        return items.count
-    }
-    
-    func resourceForItem(at index: Int) -> BaseEntity {
-        return Entity(object: items[index])
-    }
-    
-    func didTapNewButton() {
-        router.presentEditView(for: nil)
-    }
-    
-    func didSelectItem(at index: Int) {
-        
-    }
-    
-    func didTapDeleteActionFotItem(at index: Int) {
-        if interactor.deleteResource(items[index]) {
-            items.remove(at: index)
-            view.removeCellFromList(at: index)
-            if items.isEmpty {
-                view.showBlankstate()
-            }
-        } else {
-            view.showAlert(with: "Oops", and: "Error deleting item!")
-        }
-    }
-    
-    func didTapEditActionFotItem(at index: Int) {
-        
-    }
-    
-    
-    //MARK: ListResourcesInteractorOutput
-    
-    func presentList(with items: [BaseModel]) {
-        self.items = items
-        if items.isEmpty {
-            view.showBlankstate()
-        } else {
-            view.hideBlankstate()
-            view.showList()
-        }
-    }
-    
-    func presentError() {
-        
-    }
     
 }

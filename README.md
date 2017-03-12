@@ -1,14 +1,12 @@
 # Mooney-iOS-VIPER
+
 Personal Finances Manager for iOS
+
+_iOS 8 or later_
 
 ## Used frameworks
 
-### Pods
-- [DATAStack](https://github.com/SyncDB/DATAStack) Core Data Stack
-- [Sync](https://github.com/SyncDB/Sync) API synchronization
-
-### Others
-- [Generamba](https://github.com/rambler-digital-solutions/Generamba) Code generation based on templates
+- [Realm](https://realm.io) Database 💾
 
 ## VIPER References
 

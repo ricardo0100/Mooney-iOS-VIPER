@@ -1,18 +1,17 @@
 PODS:
-  - DATAStack (7.0.1)
-  - Sync (2.7.0):
-    - DATAStack (~> 7.0.1)
-    - SYNCPropertyMapper (~> 5.2.0)
-  - SYNCPropertyMapper (5.2.0)
+  - Realm (2.4.3):
+    - Realm/Headers (= 2.4.3)
+  - Realm/Headers (2.4.3)
+  - RealmSwift (2.4.3):
+    - Realm (= 2.4.3)
 
 DEPENDENCIES:
-  - Sync (~> 2)
+  - RealmSwift
 
 SPEC CHECKSUMS:
-  DATAStack: 9ca4ba8e8e4f389f1593ad3178d7a4d4df69d648
-  Sync: b02ce41aa8080049a2932fd7342fe189edb2298a
-  SYNCPropertyMapper: b3157f5183285c8a25ba23877b95a06ec2547e73
+  Realm: e08d60b0048ccccd3949c8c28a92c4db5712d7e9
+  RealmSwift: 30d49739ccb3385d201242736ca4dda56aec9dfc
 
-PODFILE CHECKSUM: d8b9215c5621404a5ef752c848c1a21f97d77d50
+PODFILE CHECKSUM: 00a407350b660385ee4bc732945a1737da6c293e
 
 COCOAPODS: 1.2.0

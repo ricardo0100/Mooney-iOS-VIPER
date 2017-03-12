@@ -10,8 +10,5 @@ import CoreData
 
 protocol ListResourcesInteractorOutput: class {
     
-    func presentList(with items: [BaseModel])
-    
-    func presentError()
     
 }

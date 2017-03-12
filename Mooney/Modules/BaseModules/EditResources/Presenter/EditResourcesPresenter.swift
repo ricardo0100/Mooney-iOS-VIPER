@@ -8,7 +8,7 @@
 
 import Foundation
 
-class EditResourcesPresenter<Entity: BaseEntity, Model: BaseModel>: EditResourcesModuleInput, EditResourcesViewOutput, EditResourcesInteractorOutput {
+class EditResourcesPresenter: EditResourcesModuleInput, EditResourcesViewOutput, EditResourcesInteractorOutput {
     
     
     

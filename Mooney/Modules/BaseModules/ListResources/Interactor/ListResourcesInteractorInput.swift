@@ -10,8 +10,4 @@ import Foundation
 
 protocol ListResourcesInteractorInput {
     
-    func fetchList()
-    
-    func deleteResource(_ resource: BaseModel) -> Bool
-    
 }

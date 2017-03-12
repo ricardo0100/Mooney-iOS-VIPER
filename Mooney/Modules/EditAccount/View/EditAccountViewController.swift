@@ -9,9 +9,21 @@
 import UIKit
 
 class EditAccountViewController: UIViewController, EditResourcesViewInput {
-
-    var account: Account?
     
     var output: EditResourcesViewOutput!
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    override func viewWillAppear(_ animated: Bool) {
 
+    }
+    
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+
+    }
+
+    @IBAction func cancelButtonTapped(_ sender: UIButton) {
+
+    }
+    
 }
