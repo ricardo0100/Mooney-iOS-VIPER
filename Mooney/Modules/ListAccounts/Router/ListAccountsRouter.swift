@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import CoreData
+import RealmSwift
 
-class ListAccountsRouter: NSObject, ListItemsRouterInput {
+class ListAccountsRouter: NSObject, ListAccountsRouterInput {
 
     @IBOutlet var listAccountsViewController: ListAccountsViewController!
 
@@ -22,13 +22,22 @@ class ListAccountsRouter: NSObject, ListItemsRouterInput {
     }
     
     func configureModule() {
-        let presenter = ListItemsPresenter()
+        let presenter = ListAccountsPresenter()
+        let realm = try! Realm()
+        let interactor = ListAccountsInteractor(with: realm)
         presenter.router = self
+        presenter.view = listAccountsViewController
+        presenter.interactor = interactor
+        interactor.output = presenter
         listAccountsViewController.output = presenter
     }
     
     func presentNewItemInterface() {
         editAccountRouter.presentNewItemInterface(in: listAccountsViewController)
+    }
+    
+    func presentEditItemInterfaceForItem(with id: String) {
+        editAccountRouter.presentEditItemInterfaceForItem(with: id, in: listAccountsViewController)
     }
     
 }

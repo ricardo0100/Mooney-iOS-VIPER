@@ -1,5 +1,5 @@
 //
-//  EditItemRouterInput.swift
+//  EditAccountRouterInput.swift
 //  Mooney
 //
 //  Created by Ricardo Gehrke Filho on 03/03/17.
@@ -8,9 +8,11 @@
 
 import UIKit
 
-protocol EditItemRouterInput {
+protocol EditAccountRouterInput {
     
     func presentNewItemInterface(in viewController: UIViewController)
+    
+    func presentEditItemInterfaceForItem(with id: String, in viewController: UIViewController)
     
     func dismissInterface()
     

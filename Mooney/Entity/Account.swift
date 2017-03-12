@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class Account: Object {
+class Account: Object, UpdatableFromStruct {
     
     let remoteID = RealmOptional<Int>()
     
@@ -22,6 +22,11 @@ class Account: Object {
     
     override static func primaryKey() -> String? {
         return "id"
+    }
+    
+    func updateFromStruct(itemStruct: BaseStruct) {
+        let accountStruct = itemStruct as! AccountStruct
+        self.name = accountStruct.name
     }
     
 }

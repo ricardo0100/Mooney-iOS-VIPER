@@ -8,14 +8,14 @@
 
 import UIKit
 
-class EditAccountViewController: UIViewController, EditItemViewInput {
+class EditAccountViewController: UIViewController, EditAccountViewInput {
     
-    var output: EditItemViewOutput!
+    var output: EditAccountViewOutput!
     
     @IBOutlet weak var nameTextField: UITextField!
     
     override func viewWillAppear(_ animated: Bool) {
-
+        output.viewIsReady()
     }
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
@@ -26,4 +26,18 @@ class EditAccountViewController: UIViewController, EditItemViewInput {
         output.didTapCancelButton()
     }
     
+    func clearAllFields() {
+        nameTextField.text = ""
+    }
+    
+    func fillFields(with itemStruct: BaseStruct) {
+        let account = itemStruct as! AccountStruct
+        nameTextField.text = account.name
+    }
+    
+    func presentError(with message: String) {
+        showAlert(with: "Warning", and: message)
+    }
+    
 }
+

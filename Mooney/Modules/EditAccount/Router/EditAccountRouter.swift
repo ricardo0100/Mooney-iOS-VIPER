@@ -9,10 +9,11 @@
 import UIKit
 import RealmSwift
 
-class EditAccountRouter: EditItemRouterInput {
+class EditAccountRouter: EditAccountRouterInput {
     
     var editAccountNavigationController: UINavigationController!
     var editAccountViewController: EditAccountViewController!
+    var moduleInput: EditAccountModuleInput!
     
     init() {
         let storyboard = UIStoryboard(name: "EditAccount", bundle: nil)
@@ -22,15 +23,24 @@ class EditAccountRouter: EditItemRouterInput {
     }
     
     func configureModule() {
-        let presenter = EditItemPresenter()
+        let presenter = EditAccountPresenter()
+        moduleInput = presenter
         presenter.router = self
+        presenter.view = editAccountViewController
         let realm = try! Realm()
-        let interactor = EditItemInteractor<Account>(with: realm)
+        let interactor = EditAccountInteractor(with: realm)
+        interactor.output = presenter
         presenter.interactor = interactor
         editAccountViewController.output = presenter
     }
     
     func presentNewItemInterface(in viewController: UIViewController) {
+        moduleInput.prepareEditionForNewItem()
+        viewController.present(editAccountNavigationController, animated: true, completion: nil)
+    }
+    
+    func presentEditItemInterfaceForItem(with id: String, in viewController: UIViewController) {
+        moduleInput.prepareEditionForItem(with: id)
         viewController.present(editAccountNavigationController, animated: true, completion: nil)
     }
     
@@ -39,3 +49,4 @@ class EditAccountRouter: EditItemRouterInput {
     }
     
 }
+

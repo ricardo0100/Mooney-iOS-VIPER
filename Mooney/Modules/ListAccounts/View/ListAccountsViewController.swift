@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ListAccountsViewController: UIViewController, ListItemsViewInput {
+class ListAccountsViewController: UIViewController, ListAccountsViewInput {
     
-    var output: ListItemsViewOutput!
+    var output: ListAccountsViewOutput!
     
     @IBOutlet var blankstateView: UIView!
     @IBOutlet weak var tableView: UITableView!
@@ -28,8 +28,13 @@ class ListAccountsViewController: UIViewController, ListItemsViewInput {
         blankstateView.isHidden = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        output.fetchItems()
+    }
     
-    // MARK: ListResourcesViewInput
+    
+    // MARK: ListItemsViewInput
     
     func showList() {
         tableView.reloadData()
@@ -63,19 +68,23 @@ class ListAccountsViewController: UIViewController, ListItemsViewInput {
 extension ListAccountsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return output.numberOfItems()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let account = output.item(at: indexPath.row) as! AccountStruct
+        cell.textLabel?.text = account.name
         return cell
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            self.output.deleteItem(at: indexPath.row)
         }
         
         let editAction = UITableViewRowAction(style: .normal, title: "Edit") { (action, indexPath) in
+            self.output.presentEditInterfaceForItem(at: indexPath.row)
         }
         
         return [deleteAction, editAction]

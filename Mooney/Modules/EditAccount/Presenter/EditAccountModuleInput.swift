@@ -8,8 +8,10 @@
 
 import Foundation
 
-protocol EditItemModuleInput {
+protocol EditAccountModuleInput {
     
+    func prepareEditionForNewItem()
     
+    func prepareEditionForItem(with id: String)
     
 }

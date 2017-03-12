@@ -1,5 +1,5 @@
 //
-//  ListItemsRouterInput.swift
+//  ListAccountsRouterInput.swift
 //  Mooney
 //
 //  Created by Ricardo Gehrke Filho on 20/02/17.
@@ -8,8 +8,10 @@
 
 import Foundation
 
-protocol ListItemsRouterInput {
+protocol ListAccountsRouterInput {
     
     func presentNewItemInterface()
+    
+    func presentEditItemInterfaceForItem(with id: String)
     
 }
