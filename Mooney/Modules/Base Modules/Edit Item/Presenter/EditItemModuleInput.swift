@@ -1,5 +1,5 @@
 //
-//  EditResourcesViewInput.swift
+//  EditItemPresenterInput.swift
 //  Mooney
 //
 //  Created by Ricardo Gehrke Filho on 28/02/17.
@@ -8,6 +8,8 @@
 
 import Foundation
 
-protocol EditResourcesViewInput {
+protocol EditItemModuleInput {
+    
+    
     
 }

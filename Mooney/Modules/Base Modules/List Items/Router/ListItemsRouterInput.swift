@@ -1,5 +1,5 @@
 //
-//  ListResourcesRouterInput.swift
+//  ListItemsRouterInput.swift
 //  Mooney
 //
 //  Created by Ricardo Gehrke Filho on 20/02/17.
@@ -8,6 +8,8 @@
 
 import Foundation
 
-protocol ListResourcesRouterInput {
+protocol ListItemsRouterInput {
+    
+    func presentNewItemInterface()
     
 }

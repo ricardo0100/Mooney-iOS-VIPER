@@ -1,5 +1,5 @@
 //
-//  EditResourcesViewOutput.swift
+//  EditItemInteractorInput.swift
 //  Mooney
 //
 //  Created by Ricardo Gehrke Filho on 28/02/17.
@@ -8,6 +8,8 @@
 
 import Foundation
 
-protocol EditResourcesViewOutput {
+protocol EditItemInteractorInput {
+    
+    func saveItemWith(name: String)
     
 }

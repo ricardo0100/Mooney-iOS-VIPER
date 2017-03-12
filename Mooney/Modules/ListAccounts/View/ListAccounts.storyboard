@@ -29,7 +29,7 @@
             </objects>
             <point key="canvasLocation" x="88.799999999999997" y="615.74212893553226"/>
         </scene>
-        <!--Accounts View Controller-->
+        <!--List Accounts View Controller-->
         <scene sceneID="KpP-vy-UJM">
             <objects>
                 <viewController id="c6D-yy-7Ys" customClass="ListAccountsViewController" customModule="Mooney" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,7 +65,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="noT-ab-Hp0" id="YCv-r5-r4y">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -98,9 +98,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YZm-eU-AR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="Tjs-Ac-H70" customClass="AccountsModuleInitializer" customModule="Mooney" customModuleProvider="target">
+                <customObject id="IaO-Rr-QxZ" customClass="ListAccountsRouter" customModule="Mooney" customModuleProvider="target">
                     <connections>
-                        <outlet property="accountsViewController" destination="c6D-yy-7Ys" id="sVE-A5-Kmg"/>
+                        <outlet property="listAccountsViewController" destination="c6D-yy-7Ys" id="Bsw-dg-1KC"/>
                     </connections>
                 </customObject>
             </objects>

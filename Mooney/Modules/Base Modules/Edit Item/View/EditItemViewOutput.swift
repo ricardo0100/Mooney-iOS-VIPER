@@ -1,5 +1,5 @@
 //
-//  EditResourcesInteractorInput.swift
+//  EditItemViewOutput.swift
 //  Mooney
 //
 //  Created by Ricardo Gehrke Filho on 28/02/17.
@@ -8,8 +8,10 @@
 
 import Foundation
 
-protocol EditResourcesInteractorInput {
+protocol EditItemViewOutput {
     
+    func didTapCancelButton()
     
+    func didTapSaveButton(name: String)
     
 }

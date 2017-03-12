@@ -8,9 +8,9 @@
 
 import UIKit
 
-class EditAccountViewController: UIViewController, EditResourcesViewInput {
+class EditAccountViewController: UIViewController, EditItemViewInput {
     
-    var output: EditResourcesViewOutput!
+    var output: EditItemViewOutput!
     
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -19,11 +19,11 @@ class EditAccountViewController: UIViewController, EditResourcesViewInput {
     }
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
-
+        output.didTapSaveButton(name: nameTextField.text!)
     }
 
     @IBAction func cancelButtonTapped(_ sender: UIButton) {
-
+        output.didTapCancelButton()
     }
     
 }

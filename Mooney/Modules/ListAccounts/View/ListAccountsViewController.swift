@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ListAccountsViewController: UIViewController, ListResourcesViewInput {
+class ListAccountsViewController: UIViewController, ListItemsViewInput {
     
-    var output: ListResourcesViewOutput!
+    var output: ListItemsViewOutput!
     
     @IBOutlet var blankstateView: UIView!
     @IBOutlet weak var tableView: UITableView!
@@ -55,6 +55,7 @@ class ListAccountsViewController: UIViewController, ListResourcesViewInput {
     //MARK: User events
     
     @IBAction func newAccountButtonTapped(_ sender: UIBarButtonItem) {
+        output.didTapNewItemButton()
     }
     
 }
@@ -81,3 +82,4 @@ extension ListAccountsViewController: UITableViewDataSource, UITableViewDelegate
     }
     
 }
+

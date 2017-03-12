@@ -1,5 +1,5 @@
 //
-//  AccountModel.swift
+//  Account.swift
 //  Mooney
 //
 //  Created by Ricardo Gehrke Filho on 11/03/17.
@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class AccountModel: Object {
+class Account: Object {
     
     let remoteID = RealmOptional<Int>()
     

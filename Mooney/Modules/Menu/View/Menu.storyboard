@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MoT-Lo-EN2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu Tab Bar Controller-->
+        <scene sceneID="Dn4-Pn-MqG">
+            <objects>
+                <tabBarController id="MoT-Lo-EN2" customClass="MenuTabBarController" customModule="Mooney" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="e8g-22-S8V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ne9-n0-aCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="lUt-RM-7kO" customClass="MenuRouter" customModule="Mooney" customModuleProvider="target">
+                    <connections>
+                        <outlet property="menuTabBarController" destination="MoT-Lo-EN2" id="Eu9-9H-Es1"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-1511" y="-517"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,5 +1,5 @@
 //
-//  AccountsAccountsInteractorOutput.swift
+//  ListItemsInteractorOutput.swift
 //  Mooney-iOS-VIPER
 //
 //  Created by Ricardo Gehrke Filho on 12/02/2017.
@@ -8,7 +8,7 @@
 
 import CoreData
 
-protocol ListResourcesInteractorOutput: class {
+protocol ListItemsInteractorOutput: class {
     
     
 }
