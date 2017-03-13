@@ -10,11 +10,9 @@ import Foundation
 
 class EditAccountPresenter: EditAccountViewOutput, EditAccountInteractorOutput, EditAccountModuleInput {
     
-    var interactor: EditAccountInteractor!
-    var router: EditAccountRouterInput!
+    var interactor: EditAccountInteractorInput!
     var view: EditAccountViewInput!
-    
-    var accountToPresent: AccountStruct?
+    var router: EditAccountRouterInput!
     
     //MARK: EditItemViewOutput
     
@@ -23,15 +21,11 @@ class EditAccountPresenter: EditAccountViewOutput, EditAccountInteractorOutput, 
     }
     
     func didTapSaveButton(name: String) {
-        interactor.saveItemWith(itemStruct: AccountStruct(id: nil, name: name))
-        router.dismissInterface()
+        interactor.saveAccountWithName(name: name)
     }
     
     func viewIsReady() {
-        view.clearAllFields()
-        if let account = accountToPresent {
-            view.fillFields(with: account)
-        }
+        interactor.presentItem()
     }
     
     
@@ -41,20 +35,19 @@ class EditAccountPresenter: EditAccountViewOutput, EditAccountInteractorOutput, 
         router.dismissInterface()
     }
     
-    func presentError(with message: String) {
-        view.presentError(with: message)
+    func presentError(with title: String, and message: String) {
+        view.presentError(with: title, and: message)
     }
     
-    func presentItemForEdition(itemStruct: BaseStruct) {
-        view.clearAllFields()
-        self.accountToPresent = itemStruct as? AccountStruct
+    func presentItemForEditionWith(name: String) {
+        view.fillFieldsWith(name: name)
     }
     
     
     //MARK: EditItemModuleInput
     
     func prepareEditionForNewItem() {
-        
+        interactor.prepareNewItemForEdition()
     }
     
     func prepareEditionForItem(with id: String) {

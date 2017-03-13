@@ -38,14 +38,11 @@
 		BA9100971E50717C0006CAD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9100911E50717C0006CAD3 /* AppDelegate.swift */; };
 		BA9100991E50717C0006CAD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9100941E50717C0006CAD3 /* Assets.xcassets */; };
 		BA91009A1E50717C0006CAD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9100951E50717C0006CAD3 /* LaunchScreen.storyboard */; };
-		BABBC6681E7573BE00ADCE24 /* AccountStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABBC6671E7573BE00ADCE24 /* AccountStruct.swift */; };
 		BABBC6B61E75775F00ADCE24 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABBC6B51E75775F00ADCE24 /* Account.swift */; };
 		BACC7BA61E55272D007BEECA /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACC7BA31E55272D007BEECA /* UIViewControllerExtensions.swift */; };
 		BACC7BA71E55272D007BEECA /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACC7BA51E55272D007BEECA /* RoundedCornerButton.swift */; };
 		BACC7BA91E55275D007BEECA /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACC7BA81E55275D007BEECA /* UIViewExtensions.swift */; };
 		BAF961441E7593AD00F1DAF0 /* EditAccountInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF961431E7593AD00F1DAF0 /* EditAccountInteractorTests.swift */; };
-		BAF961541E75ABE400F1DAF0 /* BaseStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF961531E75ABE400F1DAF0 /* BaseStruct.swift */; };
-		BAF961561E75ACB800F1DAF0 /* UpdatableFromStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF961551E75ACB800F1DAF0 /* UpdatableFromStruct.swift */; };
 		BAF9615E1E75B3D500F1DAF0 /* ListAccountsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF9615D1E75B3D500F1DAF0 /* ListAccountsInteractorTests.swift */; };
 		BF094A2F2EB9F5DA8623AA5E /* Pods_Mooney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CD5297A88E127378E88F0D /* Pods_Mooney.framework */; };
 /* End PBXBuildFile section */
@@ -98,7 +95,6 @@
 		BA9100921E50717C0006CAD3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA9100941E50717C0006CAD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA9100961E50717C0006CAD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BABBC6671E7573BE00ADCE24 /* AccountStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStruct.swift; sourceTree = "<group>"; };
 		BABBC6B51E75775F00ADCE24 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		BACC7BA31E55272D007BEECA /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		BACC7BA51E55272D007BEECA /* RoundedCornerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
@@ -106,8 +102,6 @@
 		BAF961411E7593AD00F1DAF0 /* MooneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MooneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF961431E7593AD00F1DAF0 /* EditAccountInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountInteractorTests.swift; sourceTree = "<group>"; };
 		BAF961451E7593AD00F1DAF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAF961531E75ABE400F1DAF0 /* BaseStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseStruct.swift; sourceTree = "<group>"; };
-		BAF961551E75ACB800F1DAF0 /* UpdatableFromStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatableFromStruct.swift; sourceTree = "<group>"; };
 		BAF9615D1E75B3D500F1DAF0 /* ListAccountsInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAccountsInteractorTests.swift; sourceTree = "<group>"; };
 		C1A77B31185631B4A7AC8E2C /* Pods-Mooney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooney.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mooney/Pods-Mooney.release.xcconfig"; sourceTree = "<group>"; };
 		D31FACBC794D9A8D9374C2F8 /* Pods-Mooney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mooney/Pods-Mooney.debug.xcconfig"; sourceTree = "<group>"; };
@@ -304,7 +298,6 @@
 			isa = PBXGroup;
 			children = (
 				BABBC6691E75754D00ADCE24 /* Modules */,
-				BABBC6661E75739C00ADCE24 /* Structs */,
 				BABBC6B21E7576DE00ADCE24 /* Entity */,
 				BA9100901E50717C0006CAD3 /* Application */,
 				BA9100931E50717C0006CAD3 /* Resources */,
@@ -331,15 +324,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		BABBC6661E75739C00ADCE24 /* Structs */ = {
-			isa = PBXGroup;
-			children = (
-				BABBC6671E7573BE00ADCE24 /* AccountStruct.swift */,
-				BAF961531E75ABE400F1DAF0 /* BaseStruct.swift */,
-			);
-			path = Structs;
-			sourceTree = "<group>";
-		};
 		BABBC6691E75754D00ADCE24 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,7 +338,6 @@
 			isa = PBXGroup;
 			children = (
 				BABBC6B51E75775F00ADCE24 /* Account.swift */,
-				BAF961551E75ACB800F1DAF0 /* UpdatableFromStruct.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -603,7 +586,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA9100971E50717C0006CAD3 /* AppDelegate.swift in Sources */,
-				BABBC6681E7573BE00ADCE24 /* AccountStruct.swift in Sources */,
 				BACC7BA71E55272D007BEECA /* RoundedCornerButton.swift in Sources */,
 				BA7D10A41E57C18C0066FFA2 /* RoundedFlatTextField.swift in Sources */,
 				BA59C15A1E76E6D90051D6B9 /* EditAccountInteractorOutput.swift in Sources */,
@@ -611,9 +593,7 @@
 				BA59C17C1E76E7590051D6B9 /* ListItemsViewInput.swift in Sources */,
 				BA59C1741E76E7590051D6B9 /* ListAccountsInteractorInput.swift in Sources */,
 				BA59C1781E76E7590051D6B9 /* ListAccountsRouter.swift in Sources */,
-				BAF961561E75ACB800F1DAF0 /* UpdatableFromStruct.swift in Sources */,
 				BA59C1581E76E6D90051D6B9 /* EditAccountInteractor.swift in Sources */,
-				BAF961541E75ABE400F1DAF0 /* BaseStruct.swift in Sources */,
 				BABBC6B61E75775F00ADCE24 /* Account.swift in Sources */,
 				BA59C1771E76E7590051D6B9 /* ListAccountsModuleInput.swift in Sources */,
 				BA59C17D1E76E7590051D6B9 /* ListItemsViewOutput.swift in Sources */,

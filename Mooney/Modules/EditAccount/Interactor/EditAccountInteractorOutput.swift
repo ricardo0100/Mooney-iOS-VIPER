@@ -12,8 +12,8 @@ protocol EditAccountInteractorOutput {
     
     func successCallback()
     
-    func presentError(with message: String)
+    func presentError(with title: String, and message: String)
     
-    func presentItemForEdition(itemStruct: BaseStruct)
+    func presentItemForEditionWith(name: String)
     
 }

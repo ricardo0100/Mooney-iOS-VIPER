@@ -10,10 +10,8 @@ import Foundation
 
 protocol EditAccountViewInput {
     
-    func clearAllFields()
+    func fillFieldsWith(name: String)
     
-    func fillFields(with itemStruct: BaseStruct)
-    
-    func presentError(with message: String)
+    func presentError(with title: String, and message: String)
     
 }

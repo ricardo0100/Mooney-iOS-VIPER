@@ -14,7 +14,9 @@ protocol ListAccountsInteractorInput {
     
     func numberOfItems() -> Int
     
-    func item(at index: Int) -> BaseStruct
+    func itemID(at index: Int) -> String
+    
+    func itemName(at index: Int) -> String
     
     func deleteItem(at index: Int)
     

@@ -26,17 +26,12 @@ class EditAccountViewController: UIViewController, EditAccountViewInput {
         output.didTapCancelButton()
     }
     
-    func clearAllFields() {
-        nameTextField.text = ""
+    func fillFieldsWith(name: String) {
+        nameTextField.text = name
     }
     
-    func fillFields(with itemStruct: BaseStruct) {
-        let account = itemStruct as! AccountStruct
-        nameTextField.text = account.name
-    }
-    
-    func presentError(with message: String) {
-        showAlert(with: "Warning", and: message)
+    func presentError(with title: String, and message: String) {
+        showAlert(with: title, and: message)
     }
     
 }

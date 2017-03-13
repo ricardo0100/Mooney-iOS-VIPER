@@ -25,8 +25,8 @@ class EditAccountRouter: EditAccountRouterInput {
     func configureModule() {
         let presenter = EditAccountPresenter()
         moduleInput = presenter
-        presenter.router = self
         presenter.view = editAccountViewController
+        presenter.router = self
         let realm = try! Realm()
         let interactor = EditAccountInteractor(with: realm)
         interactor.output = presenter

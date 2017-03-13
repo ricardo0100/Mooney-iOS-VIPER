@@ -26,8 +26,8 @@ class ListAccountsPresenter: ListAccountsViewOutput, ListAccountsInteractorOutpu
         return interactor.numberOfItems()
     }
     
-    func item(at index: Int) -> BaseStruct {
-        return interactor.item(at: index)
+    func itemName(at index: Int) -> String {
+        return interactor.itemName(at: index)
     }
     
     func deleteItem(at index: Int) {
@@ -37,8 +37,7 @@ class ListAccountsPresenter: ListAccountsViewOutput, ListAccountsInteractorOutpu
     }
     
     func presentEditInterfaceForItem(at index: Int) {
-        let account = interactor.item(at: index) as! AccountStruct
-        router.presentEditItemInterfaceForItem(with: account.id!)
+        router.presentEditItemInterfaceForItem(with: interactor.itemID(at: index))
     }
     
     

@@ -13,16 +13,19 @@ import RealmSwift
 
 class EditAccountInteractorTests: XCTestCase {
     
-    var interactor: EditAccountInteractor!
+    var interactor: EditAccountInteractorInput!
     var output: EditAccountInteractorOutputDouble!
     var realm: Realm!
     var databaseHelper: DatabaseHelper!
     
     override func setUp() {
         super.setUp()
+        
         realm = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: "UnitTestRealm"))
         databaseHelper = DatabaseHelper(with: realm)
-        interactor = EditAccountInteractor(with: realm)
+        
+        let interactor = EditAccountInteractor(with: realm)
+        self.interactor = interactor
         output = EditAccountInteractorOutputDouble()
         interactor.output = output
     }
@@ -36,28 +39,31 @@ class EditAccountInteractorTests: XCTestCase {
     
     func testDidPresentBlankAccountForEdition() {
         interactor.prepareNewItemForEdition()
-        XCTAssertNotNil(output.accountStruct)
-        XCTAssertNil(output.accountStruct!.id)
-        XCTAssertEqual(output.accountStruct!.name, "")
+        XCTAssertEqual(output.accountName, "")
     }
     
     func testDidPresentExistingAccountForEdition() {
         let id = databaseHelper.addAccountWith(name: "Foo Bank")
         interactor.prepareForEditionItem(with: id)
-        XCTAssertNotNil(output.accountStruct)
-        XCTAssertNotNil(output.accountStruct!.id)
-        XCTAssertEqual(output.accountStruct!.name, "Foo Bank")
+        XCTAssertEqual(output.accountName, "Foo Bank")
     }
     
     func testSaveNewItemDidPresentSuccess() {
-        interactor.saveItemWith(itemStruct: AccountStruct(id: nil, name: "Foo Bank"))
+        interactor.saveAccountWithName(name: "Foo Bank")
         XCTAssertTrue(output.didCallSuccessCallback)
     }
     
-    func testSaveNewItemDidSaveObjectInRealm() {
-        interactor.saveItemWith(itemStruct: AccountStruct(id: nil, name: "Foo Bank"))
-        let realmObject = realm.objects(Account.self)[0]
-        XCTAssertEqual(realmObject.name, "Foo Bank")
+    func testSaveNewItemDidSaveIntoDatabase() {
+        interactor.saveAccountWithName(name: "Foo Bank")
+        XCTAssertEqual(databaseHelper.getAllAccounts().first!.name, "Foo Bank")
+    }
+    
+    func testSaveExistingItemDidSaveIntoCorrectObjectInDatabase() {
+        let id = databaseHelper.addAccountWith(name: "Foo Bank")
+        interactor.prepareForEditionItem(with: id)
+        interactor.saveAccountWithName(name: "Bar Bank")
+        XCTAssertEqual(databaseHelper.getAllAccounts().count, 1)
+        XCTAssertEqual(databaseHelper.getAllAccounts().first!.name, "Bar Bank")
     }
     
     
@@ -71,13 +77,13 @@ class EditAccountInteractorTests: XCTestCase {
         }
         
         var errorMessage: String?
-        func presentError(with message: String) {
+        func presentError(with title: String, and message: String) {
             errorMessage = message
         }
         
-        var accountStruct: AccountStruct?
-        func presentItemForEdition(itemStruct: BaseStruct) {
-            accountStruct = itemStruct as? AccountStruct
+        var accountName: String?
+        func presentItemForEditionWith(name: String) {
+            accountName = name
         }
         
     }

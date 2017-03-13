@@ -10,12 +10,12 @@ import Foundation
 
 protocol EditAccountInteractorInput {
     
-    associatedtype Struct: BaseStruct
-    
-    func saveItemWith(itemStruct: Struct)
-    
     func prepareNewItemForEdition()
     
-    func prepareForEditionItem(with id: String?)
+    func prepareForEditionItem(with id: String)
+    
+    func presentItem()
+    
+    func saveAccountWithName(name: String)
     
 }

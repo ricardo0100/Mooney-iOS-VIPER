@@ -10,37 +10,46 @@ import RealmSwift
 
 class EditAccountInteractor: EditAccountInteractorInput {
     
-    typealias Struct = AccountStruct
-    
     var output: EditAccountInteractorOutput!
     
     var realm: Realm
+    
+    var account: Account?
     
     init(with realm: Realm) {
         self.realm = realm
     }
     
-    func saveItemWith(itemStruct: Struct) {
-        do {
-            let account = Account()
-            account.updateFromStruct(itemStruct: itemStruct)
-            try realm.write {
-                realm.add(account)
-            }
-            output.successCallback()
-        } catch {
-            
+    func prepareNewItemForEdition() {
+        account = nil
+    }
+    
+    func prepareForEditionItem(with id: String) {
+        account = realm.objects(Account.self).filter("id = '\(id)'").first
+    }
+    
+    func presentItem() {
+        if let account = account {
+            output.presentItemForEditionWith(name: account.name)
+        } else {
+            output.presentItemForEditionWith(name: "")
         }
     }
     
-    func prepareNewItemForEdition() {
-        output.presentItemForEdition(itemStruct: AccountStruct(id: nil, name: ""))
-    }
-    
-    func prepareForEditionItem(with id: String?) {
-        if let id = id {
-            let account = realm.objects(Account.self).filter("id = '\(id)'").first!
-            output.presentItemForEdition(itemStruct: AccountStruct(id: account.id, name: account.name))
+    func saveAccountWithName(name: String) {
+        do {
+            try realm.write {
+                if self.account == nil {
+                    self.account = Account()
+                }
+                if let account = self.account {
+                    account.name = name
+                    realm.add(account)
+                }
+            }
+            output.successCallback()
+        } catch {
+            output.presentError(with: "Error", and: "Error saving item")
         }
     }
     

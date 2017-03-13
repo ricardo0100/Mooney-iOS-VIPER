@@ -14,7 +14,7 @@ protocol ListAccountsViewOutput {
     
     func numberOfItems() -> Int
     
-    func item(at index: Int) -> BaseStruct
+    func itemName(at index: Int) -> String
     
     func deleteItem(at index: Int)
     

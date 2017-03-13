@@ -46,8 +46,7 @@ class ListAccountsInteractorTests: XCTestCase {
     func testDidPresentOneItemWithCorrectName() {
         _ = databaseHelper.addAccountWith(name: "Foo Bank")
         interactor.fetchItems()
-        let account = interactor.item(at: 0) as! AccountStruct
-        XCTAssertEqual(account.name, "Foo Bank")
+        XCTAssertEqual(interactor.itemName(at: 0), "Foo Bank")
     }
     
     func testDidDeleteItem() {

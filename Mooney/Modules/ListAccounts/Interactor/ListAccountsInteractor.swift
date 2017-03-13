@@ -33,9 +33,14 @@ class ListAccountsInteractor: ListAccountsInteractorInput {
         return accounts.count
     }
     
-    func item(at index: Int) -> BaseStruct {
+    func itemName(at index: Int) -> String {
         let object = accounts[index]
-        return AccountStruct(id: object.id, name: object.name)
+        return object.name
+    }
+    
+    func itemID(at index: Int) -> String {
+        let object = accounts[index]
+        return object.id
     }
     
     func deleteItem(at index: Int) {
