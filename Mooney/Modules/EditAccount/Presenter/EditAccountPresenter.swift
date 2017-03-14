@@ -14,7 +14,7 @@ class EditAccountPresenter: EditAccountViewOutput, EditAccountInteractorOutput, 
     var view: EditAccountViewInput!
     var router: EditAccountRouterInput!
     
-    //MARK: EditItemViewOutput
+    //MARK: EditAccountViewOutput
     
     func didTapCancelButton() {
         router.dismissInterface()
@@ -25,11 +25,12 @@ class EditAccountPresenter: EditAccountViewOutput, EditAccountInteractorOutput, 
     }
     
     func viewIsReady() {
+        clearAllErrorMessages()
         interactor.presentItem()
     }
     
     
-    //MARK: EditItemInteractorOutput
+    //MARK: EditAccountInteractorOutput
     
     func successCallback() {
         router.dismissInterface()
@@ -39,16 +40,22 @@ class EditAccountPresenter: EditAccountViewOutput, EditAccountInteractorOutput, 
         view.presentError(with: title, and: message)
     }
     
-    func presentItemForEditionWith(name: String) {
-        view.fillFieldsWith(name: name)
-    }
-    
-    func setTitle(title: String) {
+    func presentItemForEditionWith(title: String, name: String) {
         view.setTitle(title: title)
+        view.setNameField(name: name)
+    }
+    
+    func presentError(for field: String, with message: String?) {
+        switch field {
+        case "name":
+            view.setErrorForName(with: message)
+        default:
+            return
+        }
     }
     
     
-    //MARK: EditItemModuleInput
+    //MARK: EditAccountModuleInput
     
     func prepareEditionForNewItem() {
         interactor.prepareNewItemForEdition()
@@ -56,6 +63,13 @@ class EditAccountPresenter: EditAccountViewOutput, EditAccountInteractorOutput, 
     
     func prepareEditionForItem(with id: String) {
         interactor.prepareForEditionItem(with: id)
+    }
+    
+    
+    //MARK: Private methods
+    
+    func clearAllErrorMessages() {
+        view.setErrorForName(with: nil)
     }
     
 }

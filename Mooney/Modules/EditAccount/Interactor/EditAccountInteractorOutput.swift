@@ -14,8 +14,8 @@ protocol EditAccountInteractorOutput {
     
     func presentError(with title: String, and message: String)
     
-    func presentItemForEditionWith(name: String)
+    func presentItemForEditionWith(title: String, name: String)
     
-    func setTitle(title: String)
+    func presentError(for field: String, with message: String?)
     
 }

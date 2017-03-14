@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbS-hm-piY" customClass="RoundedCornerButton" customModule="Mooney" customModuleProvider="target">
-                                <rect key="frame" x="279" y="62" width="80" height="30"/>
+                                <rect key="frame" x="279" y="80.5" width="80" height="30"/>
                                 <color key="backgroundColor" red="0.51372549020000002" green="0.59215686270000001" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Save">
@@ -45,7 +45,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmE-9M-8y8" customClass="RoundedCornerButton" customModule="Mooney" customModuleProvider="target">
-                                <rect key="frame" x="16" y="62" width="80" height="30"/>
+                                <rect key="frame" x="16" y="80.5" width="80" height="30"/>
                                 <color key="backgroundColor" red="0.51372549020000002" green="0.59215686270000001" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="fjV-tN-OBx"/>
@@ -58,14 +58,23 @@
                                     <action selector="cancelButtonTapped:" destination="KRM-O1-GpF" eventType="touchUpInside" id="RTq-sF-Aca"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error field" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0KL-sS-f84">
+                                <rect key="frame" x="24" y="50" width="335" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="0KL-sS-f84" firstAttribute="trailing" secondItem="uEq-C3-mix" secondAttribute="trailing" id="30L-N7-QWw"/>
+                            <constraint firstItem="0KL-sS-f84" firstAttribute="leading" secondItem="uEq-C3-mix" secondAttribute="leading" constant="8" id="5JK-VL-vrk"/>
                             <constraint firstItem="nbS-hm-piY" firstAttribute="top" secondItem="WmE-9M-8y8" secondAttribute="top" id="9Pu-Ff-MSQ"/>
                             <constraint firstItem="nbS-hm-piY" firstAttribute="width" secondItem="WmE-9M-8y8" secondAttribute="width" id="CBX-TV-GoG"/>
                             <constraint firstItem="uEq-C3-mix" firstAttribute="leading" secondItem="NtQ-i9-OvD" secondAttribute="leadingMargin" id="Fkz-zX-Dni"/>
+                            <constraint firstItem="WmE-9M-8y8" firstAttribute="top" secondItem="0KL-sS-f84" secondAttribute="bottom" constant="16" id="Gnz-ZT-Hx4"/>
                             <constraint firstItem="WmE-9M-8y8" firstAttribute="leading" secondItem="uEq-C3-mix" secondAttribute="leading" id="Mdr-JP-BSw"/>
-                            <constraint firstItem="WmE-9M-8y8" firstAttribute="top" secondItem="uEq-C3-mix" secondAttribute="bottom" constant="16" id="ZsM-FR-ygJ"/>
+                            <constraint firstItem="0KL-sS-f84" firstAttribute="top" secondItem="uEq-C3-mix" secondAttribute="bottom" constant="4" id="aER-33-mR7"/>
                             <constraint firstItem="uEq-C3-mix" firstAttribute="top" secondItem="bJ4-if-SVY" secondAttribute="bottom" constant="16" id="frA-iD-dFz"/>
                             <constraint firstItem="nbS-hm-piY" firstAttribute="trailing" secondItem="uEq-C3-mix" secondAttribute="trailing" id="nDX-lK-mjc"/>
                             <constraint firstItem="uEq-C3-mix" firstAttribute="trailing" secondItem="NtQ-i9-OvD" secondAttribute="trailingMargin" id="vFq-cb-xu9"/>
@@ -73,6 +82,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="New account" id="m1X-jK-cgG"/>
                     <connections>
+                        <outlet property="nameErrorLabel" destination="0KL-sS-f84" id="CQg-xo-Uhw"/>
                         <outlet property="nameTextField" destination="uEq-C3-mix" id="sbJ-eJ-OhW"/>
                     </connections>
                 </viewController>
@@ -85,7 +95,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B6A-fz-VH2" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="O6W-6l-gr8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="O6W-6l-gr8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.53725490200000003" green="0.41176470590000003" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

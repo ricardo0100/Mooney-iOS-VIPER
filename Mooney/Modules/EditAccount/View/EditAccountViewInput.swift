@@ -12,7 +12,9 @@ protocol EditAccountViewInput {
     
     func setTitle(title: String)
     
-    func fillFieldsWith(name: String)
+    func setNameField(name: String)
+    
+    func setErrorForName(with message: String?)
     
     func presentError(with title: String, and message: String)
     

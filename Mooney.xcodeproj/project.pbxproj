@@ -187,9 +187,9 @@
 		BA59C1491E76E6D90051D6B9 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				BA59C14A1E76E6D90051D6B9 /* EditAccountInteractor.swift */,
 				BA59C14B1E76E6D90051D6B9 /* EditAccountInteractorInput.swift */,
 				BA59C14C1E76E6D90051D6B9 /* EditAccountInteractorOutput.swift */,
+				BA59C14A1E76E6D90051D6B9 /* EditAccountInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -206,8 +206,8 @@
 		BA59C1501E76E6D90051D6B9 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				BA59C1511E76E6D90051D6B9 /* EditAccountRouter.swift */,
 				BA59C1521E76E6D90051D6B9 /* EditAccountRouterInput.swift */,
+				BA59C1511E76E6D90051D6B9 /* EditAccountRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -215,10 +215,10 @@
 		BA59C1531E76E6D90051D6B9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BA59C1541E76E6D90051D6B9 /* EditAccount.storyboard */,
-				BA59C1551E76E6D90051D6B9 /* EditAccountViewController.swift */,
 				BA59C1561E76E6D90051D6B9 /* EditAccountViewInput.swift */,
 				BA59C1571E76E6D90051D6B9 /* EditAccountViewOutput.swift */,
+				BA59C1551E76E6D90051D6B9 /* EditAccountViewController.swift */,
+				BA59C1541E76E6D90051D6B9 /* EditAccount.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";

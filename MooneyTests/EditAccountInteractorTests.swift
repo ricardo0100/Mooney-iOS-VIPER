@@ -40,7 +40,7 @@ class EditAccountInteractorTests: XCTestCase {
     func testDidPresentBlankAccountForEdition() {
         interactor.prepareNewItemForEdition()
         interactor.presentItem()
-        XCTAssertEqual(output.accountName, "")
+        XCTAssertEqual(output.name, "")
         XCTAssertEqual(output.title, "New account")
         
     }
@@ -49,7 +49,7 @@ class EditAccountInteractorTests: XCTestCase {
         let id = databaseHelper.addAccountWith(name: "Foo Bank")
         interactor.prepareForEditionItem(with: id)
         interactor.presentItem()
-        XCTAssertEqual(output.accountName, "Foo Bank")
+        XCTAssertEqual(output.name, "Foo Bank")
         XCTAssertEqual(output.title, "Foo Bank")
     }
     
@@ -71,6 +71,17 @@ class EditAccountInteractorTests: XCTestCase {
         XCTAssertEqual(databaseHelper.getAllAccounts().first!.name, "Bar Bank")
     }
     
+    func testShouldPresentErrorForEmptyName() {
+        interactor.saveAccountWithName(name: "")
+        XCTAssertEqual(output.errorField, "name")
+        XCTAssertNotNil(output.fieldErrorMessage)
+    }
+    
+    func testShouldNotSaveAccountWithEmptyNameInDatabase() {
+        interactor.saveAccountWithName(name: "")
+        XCTAssertEqual(databaseHelper.getAllAccounts().count, 0)
+    }
+    
     
     //MARK: Test Doubles
     
@@ -87,15 +98,20 @@ class EditAccountInteractorTests: XCTestCase {
         }
         
         var title: String?
-        func setTitle(title: String) {
+        var name: String?
+        func presentItemForEditionWith(title: String, name: String) {
             self.title = title
+            self.name = name
         }
         
-        var accountName: String?
-        func presentItemForEditionWith(name: String) {
-            accountName = name
+        var errorField: String?
+        var fieldErrorMessage: String?
+        func presentError(for field: String, with message: String?) {
+            self.errorField = field
+            self.fieldErrorMessage = message
         }
         
     }
     
 }
+

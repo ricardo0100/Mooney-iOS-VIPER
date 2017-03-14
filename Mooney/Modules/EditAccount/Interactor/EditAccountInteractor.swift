@@ -30,28 +30,30 @@ class EditAccountInteractor: EditAccountInteractorInput {
     
     func presentItem() {
         if let account = account {
-            output.presentItemForEditionWith(name: account.name)
-            output.setTitle(title: account.name)
+            output.presentItemForEditionWith(title: account.name, name: account.name)
         } else {
-            output.setTitle(title: "New account")
-            output.presentItemForEditionWith(name: "")
+            output.presentItemForEditionWith(title: "New account", name: "")
         }
     }
     
     func saveAccountWithName(name: String) {
-        do {
-            try realm.write {
-                if self.account == nil {
-                    self.account = Account()
+        if name.isEmpty {
+            output.presentError(for: "name", with: "Name should not be empty")
+        } else {
+            do {
+                try realm.write {
+                    if self.account == nil {
+                        self.account = Account()
+                    }
+                    if let account = self.account {
+                        account.name = name
+                        realm.add(account)
+                    }
                 }
-                if let account = self.account {
-                    account.name = name
-                    realm.add(account)
-                }
+                output.successCallback()
+            } catch {
+                output.presentError(with: "Error", and: "Error saving item")
             }
-            output.successCallback()
-        } catch {
-            output.presentError(with: "Error", and: "Error saving item")
         }
     }
     

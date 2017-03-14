@@ -25,8 +25,8 @@ class ListAccountsRouter: NSObject, ListAccountsRouterInput {
         let presenter = ListAccountsPresenter()
         let realm = try! Realm()
         let interactor = ListAccountsInteractor(with: realm)
-        presenter.router = self
         presenter.view = listAccountsViewController
+        presenter.router = self
         presenter.interactor = interactor
         interactor.output = presenter
         listAccountsViewController.output = presenter
