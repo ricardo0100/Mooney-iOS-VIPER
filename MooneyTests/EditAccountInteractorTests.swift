@@ -39,13 +39,18 @@ class EditAccountInteractorTests: XCTestCase {
     
     func testDidPresentBlankAccountForEdition() {
         interactor.prepareNewItemForEdition()
+        interactor.presentItem()
         XCTAssertEqual(output.accountName, "")
+        XCTAssertEqual(output.title, "New account")
+        
     }
     
     func testDidPresentExistingAccountForEdition() {
         let id = databaseHelper.addAccountWith(name: "Foo Bank")
         interactor.prepareForEditionItem(with: id)
+        interactor.presentItem()
         XCTAssertEqual(output.accountName, "Foo Bank")
+        XCTAssertEqual(output.title, "Foo Bank")
     }
     
     func testSaveNewItemDidPresentSuccess() {
@@ -79,6 +84,11 @@ class EditAccountInteractorTests: XCTestCase {
         var errorMessage: String?
         func presentError(with title: String, and message: String) {
             errorMessage = message
+        }
+        
+        var title: String?
+        func setTitle(title: String) {
+            self.title = title
         }
         
         var accountName: String?
