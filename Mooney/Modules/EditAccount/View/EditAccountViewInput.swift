@@ -10,6 +10,8 @@ import Foundation
 
 protocol EditAccountViewInput {
     
+    func setTitle(title: String)
+    
     func fillFieldsWith(name: String)
     
     func presentError(with title: String, and message: String)

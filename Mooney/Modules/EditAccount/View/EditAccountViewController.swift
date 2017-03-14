@@ -26,6 +26,10 @@ class EditAccountViewController: UIViewController, EditAccountViewInput {
         output.didTapCancelButton()
     }
     
+    func setTitle(title: String) {
+        self.title = title
+    }
+    
     func fillFieldsWith(name: String) {
         nameTextField.text = name
     }

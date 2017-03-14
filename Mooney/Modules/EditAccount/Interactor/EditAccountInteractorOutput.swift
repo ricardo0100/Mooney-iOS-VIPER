@@ -16,4 +16,6 @@ protocol EditAccountInteractorOutput {
     
     func presentItemForEditionWith(name: String)
     
+    func setTitle(title: String)
+    
 }

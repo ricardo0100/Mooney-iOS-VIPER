@@ -43,6 +43,10 @@ class EditAccountPresenter: EditAccountViewOutput, EditAccountInteractorOutput, 
         view.fillFieldsWith(name: name)
     }
     
+    func setTitle(title: String) {
+        view.setTitle(title: title)
+    }
+    
     
     //MARK: EditItemModuleInput
     

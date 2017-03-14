@@ -31,7 +31,9 @@ class EditAccountInteractor: EditAccountInteractorInput {
     func presentItem() {
         if let account = account {
             output.presentItemForEditionWith(name: account.name)
+            output.setTitle(title: account.name)
         } else {
+            output.setTitle(title: "New account")
             output.presentItemForEditionWith(name: "")
         }
     }
