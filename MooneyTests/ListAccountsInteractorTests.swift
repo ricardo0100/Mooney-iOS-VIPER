@@ -82,6 +82,14 @@ class ListAccountsInteractorTests: XCTestCase {
         XCTAssertEqual(interactor.numberOfItems(), 2)
     }
     
+    func testDidFilterItemsCaseInsensitive() {
+        _ = databaseHelper.addAccountWith(name: "Foo Bank")
+        interactor.fetchItems()
+        interactor.filterItems(with: "foo")
+        XCTAssertEqual(interactor.numberOfItems(), 1)
+        XCTAssertEqual(interactor.itemName(at: 0), "Foo Bank")
+    }
+    
     
     //MARK: Test Doubles
     

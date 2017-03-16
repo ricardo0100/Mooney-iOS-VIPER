@@ -59,7 +59,7 @@ class ListAccountsInteractor: ListAccountsInteractorInput {
             self.filteredAccounts = self.accounts
         } else {
             self.filteredAccounts = self.accounts.filter({ (account) -> Bool in
-                return account.name.contains(searchText)
+                return account.name.lowercased().contains(searchText.lowercased())
             })
         }
         output.didFetchItems()
