@@ -20,4 +20,6 @@ protocol ListAccountsViewOutput {
     
     func presentEditInterfaceForItem(at index: Int)
     
+    func filterItems(with searchText: String)
+    
 }

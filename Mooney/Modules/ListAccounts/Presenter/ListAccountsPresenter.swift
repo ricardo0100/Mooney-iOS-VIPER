@@ -40,6 +40,10 @@ class ListAccountsPresenter: ListAccountsViewOutput, ListAccountsInteractorOutpu
         router.presentEditItemInterfaceForItem(with: interactor.itemID(at: index))
     }
     
+    func filterItems(with searchText: String) {
+        interactor.filterItems(with: searchText)
+    }
+    
     
     //MARK: ListItemsInteractorOutput
     

@@ -20,4 +20,6 @@ protocol ListAccountsInteractorInput {
     
     func deleteItem(at index: Int)
     
+    func filterItems(with searchText: String)
+    
 }

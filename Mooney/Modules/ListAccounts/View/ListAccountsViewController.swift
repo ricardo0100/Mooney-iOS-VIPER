@@ -15,6 +15,7 @@ class ListAccountsViewController: UIViewController, ListAccountsViewInput {
     @IBOutlet var blankstateView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
+    let searchController = UISearchController(searchResultsController: nil)
     
     // MARK: Life cycle
     
@@ -26,6 +27,11 @@ class ListAccountsViewController: UIViewController, ListAccountsViewInput {
         
         view.addSubview(blankstateView)
         blankstateView.isHidden = true
+        
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -87,6 +93,14 @@ extension ListAccountsViewController: UITableViewDataSource, UITableViewDelegate
         }
         
         return [deleteAction, editAction]
+    }
+    
+}
+
+extension ListAccountsViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        output.filterItems(with: searchController.searchBar.text!)
     }
     
 }

@@ -14,6 +14,7 @@ class ListAccountsInteractor: ListAccountsInteractorInput {
     var output: ListAccountsInteractorOutput!
     
     var accounts: [Account] = []
+    var filteredAccounts: [Account] = []
     
     var realm: Realm
     init(with realm: Realm) {
@@ -26,28 +27,42 @@ class ListAccountsInteractor: ListAccountsInteractorInput {
         for account in accounts {
             self.accounts.append(account)
         }
+        filteredAccounts = self.accounts
         output.didFetchItems()
     }
     
     func numberOfItems() -> Int {
-        return accounts.count
+        return filteredAccounts.count
     }
     
     func itemName(at index: Int) -> String {
-        let object = accounts[index]
+        let object = filteredAccounts[index]
         return object.name
     }
     
     func itemID(at index: Int) -> String {
-        let object = accounts[index]
+        let object = filteredAccounts[index]
         return object.id
     }
     
     func deleteItem(at index: Int) {
         try! realm.write {
-            realm.delete(accounts[index])
-            accounts.remove(at: index)
+            let accountToDelete = filteredAccounts[index]
+            realm.delete(accountToDelete)
+            filteredAccounts.remove(at: index)
+            accounts.remove(at: accounts.index(of: accountToDelete)!)
         }
+    }
+    
+    func filterItems(with searchText: String) {
+        if searchText.isEmpty {
+            self.filteredAccounts = self.accounts
+        } else {
+            self.filteredAccounts = self.accounts.filter({ (account) -> Bool in
+                return account.name.contains(searchText)
+            })
+        }
+        output.didFetchItems()
     }
     
 }
